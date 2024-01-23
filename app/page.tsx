@@ -15,7 +15,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Kanteen",
-  description: "Kanteen",
+  description: "Our Al Content Creator Transforms Your Phone Videos into Captivating Stories for Your Restaurant s Social Media.",
 };
 
 export default function Home() {
