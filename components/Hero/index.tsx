@@ -4,19 +4,6 @@ import ModalVideo from "react-modal-video";
 import Image from "next/image";
 import { useState } from "react";
 
-const VideoModal = ({ isOpen, onClose, videoSrc }) => {
-  if (!isOpen) return null;
-
-  return (
-    <div className="modal">
-      <video controls autoPlay>
-        <source src={videoSrc} type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <button onClick={onClose}>Close</button>
-    </div>
-  );
-};
 
 
 const Hero = () => {
@@ -25,7 +12,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="bg-[#e7edec] dark:bg-gray-dark relative z-10 overflow-hidden bg-white pb-16 pt-[120px] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]">
+        className="bg-[#e7edec] dark:bg-gray-dark relative z-10 overflow-hidden pb-16 pt-[120px] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">

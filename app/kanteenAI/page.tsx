@@ -4,7 +4,7 @@ import { useState, FormEvent } from 'react';
 import { Metadata } from "next";
 import axios from 'axios';
 import Typography from '@mui/material/Typography';
-   import {Snackbar } from '@mui/material';
+import { Snackbar } from '@mui/material';
 import MuiAlert from '@mui/material/Alert';
 
 
@@ -200,12 +200,12 @@ const SignupPage = () => {
                     </button>
                   </div>
                   {isSubmittedSuccessfully && (
-          <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={handleCloseSnackbar}>
-            <MuiAlert onClose={handleCloseSnackbar} severity="success" sx={{ width: '100%' }}>
-              Form submitted successfully!
-            </MuiAlert>
-          </Snackbar>
-        )}
+                    <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={handleCloseSnackbar}>
+                      <MuiAlert onClose={handleCloseSnackbar} severity="success" sx={{ width: '100%' }}>
+                        Form submitted successfully!
+                      </MuiAlert>
+                    </Snackbar>
+                  )}
                 </form>
 
               </div>
