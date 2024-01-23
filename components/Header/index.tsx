@@ -169,7 +169,7 @@ const Header = () => {
                   href="/kanteenAI"
                   className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-md bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
                 >
-                  Leap AI
+                  Add Restaurant
                 </Link>
                 <div>
                   <ThemeToggler />
