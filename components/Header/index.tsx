@@ -49,7 +49,7 @@ const Header = () => {
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
-            <div className="w-60 max-w-full px-4 xl:mr-12">
+            <div className="w-80 max-w-full px-4 xl:mr-12">
               <Link
                 href="/"
                 className={`header-logo block w-full ${
@@ -57,17 +57,17 @@ const Header = () => {
                 } `}
               >
                 <Image
-                  src="/images/logo/LEAP.png"
+                  src="/images/logo/kanteen.png"
                   alt="logo"
-                  width={140}
-                  height={30}
+                  width={180}
+                  height={60}
                   className="w-full dark:hidden"
                 />
                 <Image
-                  src="/images/logo/LEAP1.png"
+                  src="/images/logo/kanteen.png"
                   alt="logo"
-                  width={140}
-                  height={30}
+                  width={180}
+                  height={60}
                   className="hidden w-full dark:block"
                 />
               </Link>
@@ -166,8 +166,8 @@ const Header = () => {
                   Get Started Now
                 </Link>
                 <Link
-                  href="/signup"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
+                  href="/kanteenAI"
+                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-md bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
                 >
                   Leap AI
                 </Link>

@@ -1,40 +1,110 @@
 "use client";
 
 import { useTheme } from "next-themes";
-
+import React, { useState } from 'react';
+import TextField from '@mui/material/TextField';
+import { Alert } from '@mui/material';
+import InputAdornment from '@mui/material/InputAdornment';
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import RestaurantIcon from '@mui/icons-material/Restaurant';
 const NewsLatterBox = () => {
   const { theme } = useTheme();
+  const [email, setEmail] = useState('');
+  const [restaurantName, setRestaurantName] = useState('');
+  const [showAlert, setShowAlert] = useState(false);
+  const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+  };
 
+  const handleRestaurantNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setRestaurantName(event.target.value);
+  };
+
+  const handleSubmit = async () => {
+    const data = { email, restaurantName };
+    try {
+      const response = await fetch('https://leapback-d796b66e0016.herokuapp.com/api/persona/wait', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (response.ok) {
+        setShowAlert(true);
+        setTimeout(() => setShowAlert(false), 3000); // Dismiss alert after 3 seconds
+      }
+
+      // Additional response handling
+    } catch (error) {
+      // Error handling
+    }
+  };
   return (
     <div
       className="wow fadeInUp shadow-three dark:bg-gray-dark relative z-10 rounded-sm bg-white p-8 sm:p-11 lg:p-8 xl:p-11"
       data-wow-delay=".2s"
     >
       <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
-        Subscribe to receive future updates
+      Add your Restaurant to the Waitlist
       </h3>
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
-        Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare
-        massa quis lectus.
+      Let us manage your restaurant for you so that you can get back to doing what you do best and we look in the future with certainty for life.
       </p>
       <div>
+      <TextField
+              fullWidth
+              id="input-with-icon-textfield"
+              label="Enter the Restaurant Name"
+              variant="outlined"
+              value={restaurantName}
+              onChange={handleRestaurantNameChange}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <RestaurantIcon /> 
+                  </InputAdornment>
+                ),
+              }}
+              sx={{ marginRight:0, backgroundColor: '#fff',
+              '& .MuiInputBase-input': { // This targets the input element itself
+                overflow: 'hidden',
+              },
+            }}
+            />
+             <TextField
+              fullWidth
+              id="input-with-icon-textfield"
+              label="Enter your email"
+              variant="outlined"
+              value={email}
+              onChange={handleEmailChange}
+              InputProps={{
+                startAdornment: (
+                  <InputAdornment position="start">
+                    <MailOutlineIcon /> 
+                  </InputAdornment>
+                ),
+              }}
+              sx={{ marginTop:2 ,marginRight: 0, marginBottom:2 , backgroundColor: '#fff',
+              '& .MuiInputBase-input': {
+                overflow: 'hidden',
+              },
+            }}
+            />
+            
         <input
-          type="text"
-          name="name"
-          placeholder="Enter your name"
-          className="border-stroke dark:text-body-color-dark dark:shadow-two mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Enter your email"
-          className="border-stroke dark:text-body-color-dark dark:shadow-two mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
-        />
-        <input
+          onClick={handleSubmit}
           type="submit"
           value="Subscribe"
           className="shadow-submit dark:shadow-submit-dark mb-5 flex w-full cursor-pointer items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90"
         />
+       {showAlert && (
+        <Alert severity="success" sx={{ marginBottom: 2 }}>
+          Information successfully sent!
+        </Alert>
+      )}
         <p className="dark:text-body-color-dark text-center text-base leading-relaxed text-body-color">
           No spam guaranteed, So please don’t send any spam mail.
         </p>
@@ -64,12 +134,12 @@ const NewsLatterBox = () => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={theme === "light" ? "#cadc73" : "#fff"}
                   stopOpacity="0.62"
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={theme === "light" ? "#cadc73" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>
@@ -100,12 +170,12 @@ const NewsLatterBox = () => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={theme === "light" ? "#cadc73" : "#fff"}
                   stopOpacity="0.62"
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={theme === "light" ? "#cadc73" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>
@@ -136,12 +206,12 @@ const NewsLatterBox = () => {
                 gradientUnits="userSpaceOnUse"
               >
                 <stop
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={theme === "light" ? "#cadc73" : "#fff"}
                   stopOpacity="0.62"
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={theme === "light" ? "#cadc73" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>
@@ -190,11 +260,11 @@ const NewsLatterBox = () => {
               >
                 <stop
                   offset="0.328125"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={theme === "light" ? "#cadc73" : "#fff"}
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={theme === "light" ? "#cadc73" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>
@@ -208,11 +278,11 @@ const NewsLatterBox = () => {
               >
                 <stop
                   offset="0.328125"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={theme === "light" ? "#cadc73" : "#fff"}
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={theme === "light" ? "#cadc73" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>
@@ -226,11 +296,11 @@ const NewsLatterBox = () => {
               >
                 <stop
                   offset="0.328125"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={theme === "light" ? "#cadc73" : "#fff"}
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={theme === "light" ? "#cadc73" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>
@@ -244,11 +314,11 @@ const NewsLatterBox = () => {
               >
                 <stop
                   offset="0.328125"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={theme === "light" ? "#cadc73" : "#fff"}
                 />
                 <stop
                   offset="1"
-                  stopColor={theme === "light" ? "#4A6CF7" : "#fff"}
+                  stopColor={theme === "light" ? "#cadc73" : "#fff"}
                   stopOpacity="0"
                 />
               </linearGradient>

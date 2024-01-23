@@ -160,7 +160,7 @@ const SigninPage = () => {
                 </form>
                 <p className="text-center text-base font-medium text-body-color">
                   Don’t you have an account?{" "}
-                  <Link href="/signup" className="text-primary hover:underline">
+                  <Link href="/kanteenAI" className="text-primary hover:underline">
                     Sign up
                   </Link>
                 </p>
@@ -208,8 +208,8 @@ const SigninPage = () => {
                 y2="453.581"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#cadc73" />
+                <stop offset="1" stopColor="#cadc73" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_95:1005"
@@ -219,8 +219,8 @@ const SigninPage = () => {
                 y2="1192.04"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#4A6CF7" />
-                <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+                <stop stopColor="#cadc73" />
+                <stop offset="1" stopColor="#cadc73" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>
