@@ -20,35 +20,35 @@ const AboutSectionOne = () => {
   return (
     <section id="about" className="pt-10 md:pt-20 lg:pt-28">
       <div className="container">
-        <SectionTitle
-          title="How Kanteen works?"
-          paragraph="Ready to transform your restaurant's social media presence? Our AI-powered video creator is here to help. We specialize in turning your phone videos into captivating stories that resonate with your audience. Whether you're looking to showcase your delectable dishes, highlight customer experiences, or share the unique story of your restaurant, our AI Content Creator is your go-to solution."
-          center
-          mb="80px"
-        />
+
+
+        <div
+          className={`wow fadeInUp w-full ${"mx-auto text-center"}`}
+          data-wow-delay=".1s"
+          style={{ maxWidth: 500, marginBottom: '80px' }}
+        >
+          <h2 className="mb-4 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
+            How Kanteen works?
+          </h2>
+
+          <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
+            Ready to transform your restaurant's social media presence? Our AI-powered video creator is here to help. We specialize in turning your phone videos into captivating stories that resonate with your audience. Whether you're looking to showcase your delectable dishes, highlight customer experiences, or share the unique story of your restaurant, our AI Content Creator is your go-to solution.
+          </p>
+        </div>
+
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap items-center">
-            <div className="w-full px-4 lg:w-1/2">
+            <div className="w-full px-20 lg:w-1/2">
 
               <SectionTitle
                 title="Upload your videos"
+                number="1"
                 paragraph="This step involves selecting and uploading visual content (videos and photos) of your venue. These visuals should ideally showcase the ambiance, products, services, customer interactions, or any special features. Quality visuals are crucial as they play a significant role in engaging potential customers on social media platforms."
                 mb="44px"
               />
-
-              <div className="flex flex-col pb-10 space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                <Link
-                  href="/"
-                  className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
-                >
-                  Get Started For Free.
-                </Link>
-
-              </div>
-
             </div>
 
-            <div className="w-full px-4 lg:w-1/2">
+            <div className="w-full px-20 lg:w-1/2">
               <div
                 className="wow fadeInUp relative mx-auto aspect-[25/24] max-w-[500px] lg:mr-0"
                 data-wow-delay=".2s"

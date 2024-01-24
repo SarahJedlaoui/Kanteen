@@ -1,6 +1,7 @@
 import AboutSectionOne from "@/components/About/AboutSectionOne";
 import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import AboutSectionThree from "@/components/About/AboutSectionThree";
+import NewsLatterBox from "../components/Contact/Waitlist";
 
 import Blog from "@/components/Blog";
 import Brands from "@/components/Brands";
@@ -26,7 +27,7 @@ export default function Home() {
       <AboutSectionOne />
       <AboutSectionTwo />
       <AboutSectionThree/>
-      <Contact />
+      <NewsLatterBox />
     </>
   );
 }
