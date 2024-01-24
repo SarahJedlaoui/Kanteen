@@ -57,14 +57,14 @@ const Header = () => {
                 } `}
               >
                 <Image
-                  src="/images/logo/kanteen.png"
+                  src="/images/logo/kanteen.svg"
                   alt="logo"
                   width={180}
                   height={60}
                   className="w-full dark:hidden"
                 />
                 <Image
-                  src="/images/logo/kanteen.png"
+                  src="/images/logo/kanteen.svg"
                   alt="logo"
                   width={180}
                   height={60}

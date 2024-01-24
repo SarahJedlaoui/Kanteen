@@ -15,14 +15,14 @@ const Footer = () => {
               <div className="mb-12 max-w-[360px] lg:mb-16">
                 <Link href="/" className="mb-8 inline-block">
                   <Image
-                    src="/images/logo/kanteen.png"
+                    src="/images/logo/kanteen.svg"
                     alt="logo"
                     className="w-full dark:hidden"
                     width={140}
                     height={30}
                   />
                   <Image
-                    src="/images/logo/kanteen.png"
+                    src="/images/logo/kanteen.svg"
                     alt="logo"
                     className="hidden w-full dark:block"
                     width={140}
@@ -30,7 +30,7 @@ const Footer = () => {
                   />
                 </Link>
                 <p className="dark:text-body-color-dark mb-9 text-base leading-relaxed text-body-color">
-                We have considered our solutions to support every stage of your growth. We are the fastest and easiest way to launch SaaS showcase for our customers.
+                Elevate your restaurant's social media with our AI-powered video creator. We expertly transform your phone videos into engaging stories that capture your unique culinary experiences and the essence of your restaurant.
                 </p>
                 <div className="flex items-center">
                   <a
@@ -199,7 +199,7 @@ const Footer = () => {
           <div className="h-px w-full bg-gradient-to-r from-transparent via-[#D2D8E183] to-transparent dark:via-[#959CB183]"></div>
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">
-            Copyright © 2023 Ka. All Rights Reserved
+            Copyright © 2023 Kanteen. All Rights Reserved
             </p>
           </div>
         </div>

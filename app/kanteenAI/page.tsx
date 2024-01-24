@@ -10,7 +10,7 @@ import MuiAlert from '@mui/material/Alert';
 
 const SignupPage = () => {
 
-  const [formData, setFormData] = useState({ question: '' });
+  const [formData, setFormData] = useState({ name:'',about:'' });
   const [showAlert, setShowAlert] = useState(false);
 
   const [isSubmittedSuccessfully, setIsSubmittedSuccessfully] = useState(false);
@@ -23,8 +23,8 @@ const SignupPage = () => {
   const [videos, setVideos] = useState('');
   const [openSnackbar, setOpenSnackbar] = useState(false);
 
-  const handleSubmit = async () => {
-
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     const data = {
       name,
       about,
@@ -45,7 +45,7 @@ const SignupPage = () => {
       });
       console.log(response);
       setIsSubmittedSuccessfully(true);
-      setOpenSnackbar(true);
+      setShowAlert(true);
     } catch (error) {
       if (axios.isAxiosError(error) && error.response) {
         // Here you can log more detailed information about the error
@@ -70,7 +70,7 @@ const SignupPage = () => {
   return (
     <>
       <section className="relative z-10 overflow-hidden pb-20 pt-48 md:pb-24 lg:pb-32 lg:pt-[180px]">
-        <div className="container">
+      <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="shadow-three mx-auto max-w-[500px] rounded bg-white px-6 py-10 dark:bg-dark sm:p-[60px]">
@@ -95,7 +95,7 @@ const SignupPage = () => {
                     <input
                       type="text"
                       name="name"
-                      value={formData.question}
+                      value={name}
                       onChange={(event) => setName(event.target.value)}
                       placeholder="e.g. Tavolata"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
@@ -105,7 +105,7 @@ const SignupPage = () => {
 
                   <div className="mb-8">
                     <label
-                      htmlFor="name"
+                      htmlFor="about"
                       className="mb-3 block text-sm text-dark dark:text-white"
                     >
                       {" "}
@@ -114,7 +114,7 @@ const SignupPage = () => {
                     <input
                       type="text"
                       name="about"
-                      value={formData.question}
+                      value={about}
                       onChange={(event) => setAbout(event.target.value)}
                       placeholder="About Restaurant"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
@@ -123,7 +123,7 @@ const SignupPage = () => {
                   </div>
                   <div className="mb-8">
                     <label
-                      htmlFor="name"
+                      htmlFor="customerLove"
                       className="mb-3 block text-sm text-dark dark:text-white"
                     >
                       {" "}
@@ -132,7 +132,7 @@ const SignupPage = () => {
                     <input
                       type="text"
                       name="customerLove"
-                      value={formData.question}
+                      value={customerLove}
                       onChange={(event) => setCustomerLove(event.target.value)}
                       placeholder="What Customers Love"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
@@ -141,7 +141,7 @@ const SignupPage = () => {
                   </div>
                   <div className="mb-8">
                     <label
-                      htmlFor="name"
+                      htmlFor="opportunities"
                       className="mb-3 block text-sm text-dark dark:text-white"
                     >
                       {" "}
@@ -150,7 +150,7 @@ const SignupPage = () => {
                     <input
                       type="text"
                       name="opportunities"
-                      value={formData.question}
+                      value={opportunities}
                       onChange={(event) => setOpportunities(event.target.value)}
                       placeholder="Opportunities for imporvement"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
@@ -159,7 +159,7 @@ const SignupPage = () => {
                   </div>
                   <div className="mb-8">
                     <label
-                      htmlFor="name"
+                      htmlFor="videoParagraph"
                       className="mb-3 block text-sm text-dark dark:text-white"
                     >
                       {" "}
@@ -168,7 +168,7 @@ const SignupPage = () => {
                     <input
                       type="text"
                       name="videoParagraph"
-                      value={formData.question}
+                      value={videoParagraph}
                       onChange={(event) => setVideoParagraph(event.target.value)}
                       placeholder="What to focus on ?"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
@@ -177,7 +177,7 @@ const SignupPage = () => {
                   </div>
                   <div className="mb-8">
                     <label
-                      htmlFor="name"
+                      htmlFor="videos"
                       className="mb-3 block text-sm text-dark dark:text-white"
                     >
                       {" "}
@@ -186,7 +186,7 @@ const SignupPage = () => {
                     <input
                       type="text"
                       name="videos"
-                      value={formData.question}
+                      value={videos}
                       onChange={(event) => setVideos(event.target.value)}
                       placeholder="Add Shared link to videos "
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
@@ -199,15 +199,15 @@ const SignupPage = () => {
                       Submit
                     </button>
                   </div>
-                  {isSubmittedSuccessfully && (
-                    <Snackbar open={openSnackbar} autoHideDuration={6000} onClose={handleCloseSnackbar}>
+                 
+                </form>
+                {isSubmittedSuccessfully && (
+                   
                       <MuiAlert onClose={handleCloseSnackbar} severity="success" sx={{ width: '100%' }}>
                         Form submitted successfully!
                       </MuiAlert>
-                    </Snackbar>
+                   
                   )}
-                </form>
-
               </div>
             </div>
           </div>
