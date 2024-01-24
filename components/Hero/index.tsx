@@ -24,7 +24,7 @@ const Hero = () => {
                   AI-Powered Video Creator for your Restaurant
                 </h1>
                 <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
-                  Our Al Content Creator Transforms Your Phone Videos into Captivating Stories for Your Restaurant s Social Media.
+                  Our Al Content Creator Transforms Your Phone Videos into Captivating Stories for Your Restaurant&apos;s Social Media.
                 </p>
 
 
