@@ -47,64 +47,40 @@ const NewsLatterBox = () => {
       data-wow-delay=".2s"
     >
       <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
-      Add your Restaurant to the Waitlist
+        Add your Restaurant to the Waitlist
       </h3>
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
-      Let us manage your restaurant for you so that you can get back to doing what you do best and we look in the future with certainty for life.
+        Let us manage your restaurant for you so that you can get back to doing what you do best and we look in the future with certainty for life.
       </p>
       <div>
-      <TextField
-              fullWidth
-              id="input-with-icon-textfield"
-              label="Enter the Restaurant Name"
-              variant="outlined"
-              value={restaurantName}
-              onChange={handleRestaurantNameChange}
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <RestaurantIcon /> 
-                  </InputAdornment>
-                ),
-              }}
-              sx={{ marginRight:0, backgroundColor: '#fff',
-              '& .MuiInputBase-input': { // This targets the input element itself
-                overflow: 'hidden',
-              },
-            }}
-            />
-             <TextField
-              fullWidth
-              id="input-with-icon-textfield"
-              label="Enter your email"
-              variant="outlined"
-              value={email}
-              onChange={handleEmailChange}
-              InputProps={{
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <MailOutlineIcon /> 
-                  </InputAdornment>
-                ),
-              }}
-              sx={{ marginTop:2 ,marginRight: 0, marginBottom:2 , backgroundColor: '#fff',
-              '& .MuiInputBase-input': {
-                overflow: 'hidden',
-              },
-            }}
-            />
-            
+        <input
+          type="text"
+          name="name"
+          value={restaurantName}
+          onChange={handleRestaurantNameChange}
+          placeholder="Enter your name"
+          className="border-stroke dark:text-body-color-dark dark:shadow-two mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+        />
+        <input
+          type="email"
+          name="email"
+          value={email}
+          onChange={handleEmailChange}
+          placeholder="Enter your email"
+          className="border-stroke dark:text-body-color-dark dark:shadow-two mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+        />
+
         <input
           onClick={handleSubmit}
           type="submit"
           value="Add"
           className="shadow-submit dark:shadow-submit-dark mb-5 flex w-full cursor-pointer items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90"
         />
-       {showAlert && (
-        <Alert severity="success" sx={{ marginBottom: 2 }}>
-          Information successfully sent!
-        </Alert>
-      )}
+        {showAlert && (
+          <Alert severity="success" sx={{ marginBottom: 2 }}>
+            Information successfully sent!
+          </Alert>
+        )}
         <p className="dark:text-body-color-dark text-center text-base leading-relaxed text-body-color">
           No spam guaranteed, So please don’t send any spam mail.
         </p>
