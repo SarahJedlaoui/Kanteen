@@ -233,7 +233,7 @@ const BlogDetailsPage = () => {
                           cx="37.5"
                           cy="37.5"
                           r="37.5"
-                          fill="#cadc73"
+                          fill="#c9f269"
                         />
                         <mask
                           id="mask0_111:596"
@@ -249,7 +249,7 @@ const BlogDetailsPage = () => {
                             cx="37.5"
                             cy="37.5"
                             r="37.5"
-                            fill="#cadc73"
+                            fill="#c9f269"
                           />
                         </mask>
                         <g mask="url(#mask0_111:596)">

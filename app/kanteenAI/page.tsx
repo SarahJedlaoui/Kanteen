@@ -252,8 +252,8 @@ const SignupPage = () => {
                 y2="453.581"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#cadc73" />
-                <stop offset="1" stopColor="#cadc73" stopOpacity="0" />
+                <stop stopColor="#c9f269" />
+                <stop offset="1" stopColor="#c9f269" stopOpacity="0" />
               </linearGradient>
               <linearGradient
                 id="paint1_linear_95:1005"
@@ -263,8 +263,8 @@ const SignupPage = () => {
                 y2="1192.04"
                 gradientUnits="userSpaceOnUse"
               >
-                <stop stopColor="#cadc73" />
-                <stop offset="1" stopColor="#cadc73" stopOpacity="0" />
+                <stop stopColor="#c9f269" />
+                <stop offset="1" stopColor="#c9f269" stopOpacity="0" />
               </linearGradient>
             </defs>
           </svg>
