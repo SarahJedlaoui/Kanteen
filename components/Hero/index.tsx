@@ -7,12 +7,7 @@ import './styles.css'
 
 
 const Hero = () => {
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isOpen, setOpen] = useState(false);
-  useEffect(() => {
-    const className = document.body.className;
-    setIsDarkMode(className.includes('dark')); 
-  }, [document.body.className]);
   return (
     <>
       <section

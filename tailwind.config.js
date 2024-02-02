@@ -51,10 +51,6 @@ module.exports = {
         "stroke-dark": "#353943",
         "bg-color-dark": "#171C28",
       },
-      backgroundImage: {
-        // Define your gradients here
-        'green-gradient': 'linear-gradient(180deg, #083c2f 0%, #083c2f82 100%)',
-      },
 
       boxShadow: {
         signUp: "0px 5px 10px rgba(4, 10, 34, 0.2)",
