@@ -55,7 +55,7 @@ const Header = () => {
                   }`}
               >
                 <span
-                  className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight"
+                  className="mb-5 text-3xl font-bold leading-tight text-green dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight"
                 >
                   Kanteen
                 </span>
@@ -96,8 +96,8 @@ const Header = () => {
                           <Link
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${usePathName === menuItem.path
-                                ? "text-primary dark:text-white"
-                                : "text-dark hover:text-primary dark:text-white/70 dark:hover:text-white"
+                                ? "text-green dark:text-white"
+                                : "text-dark hover:text-green/80 dark:text-white/70 dark:hover:text-white"
                               }`}
                           >
                             {menuItem.title}

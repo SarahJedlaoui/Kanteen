@@ -37,7 +37,8 @@ module.exports = {
         transparent: "transparent",
         white: "#FFFFFF",
         noir:'#000000',
-        black: "#121723",
+        green:'#083c2f',
+        black: "#083c2f",
         dark: "#1D2430",
         primary: "#c9f269",
         yellow: "#FBB040",
@@ -49,6 +50,10 @@ module.exports = {
         stroke: "#E3E8EF",
         "stroke-dark": "#353943",
         "bg-color-dark": "#171C28",
+      },
+      backgroundImage: {
+        // Define your gradients here
+        'green-gradient': 'linear-gradient(180deg, #083c2f 0%, #083c2f82 100%)',
       },
 
       boxShadow: {

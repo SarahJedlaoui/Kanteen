@@ -2,12 +2,17 @@
 import Link from "next/link";
 import ModalVideo from "react-modal-video";
 import Image from "next/image";
-import { useState } from "react";
-
+import React, { useEffect, useState } from 'react';
+import './styles.css'
 
 
 const Hero = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const [isOpen, setOpen] = useState(false);
+  useEffect(() => {
+    const className = document.body.className;
+    setIsDarkMode(className.includes('dark')); 
+  }, [document.body.className]);
   return (
     <>
       <section
@@ -20,9 +25,10 @@ const Hero = () => {
                 className="wow fadeInUp mx-auto max-w-[800px] text-center"
                 data-wow-delay=".2s"
               >
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                <h1 className="mb-5 text-3xl font-bold leading-tight text-green dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                   AI-Powered Video Creator for your Restaurant
                 </h1>
+
                 <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
                   Our Al Content Creator Transforms Your Phone Videos into Captivating Stories for Your Restaurant&apos;s Social Media.
                 </p>
