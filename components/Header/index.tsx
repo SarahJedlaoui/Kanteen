@@ -149,7 +149,7 @@ const Header = () => {
                   Get Started Now
                 </Link>
                 {/**  <Link
-                  href="/kanteenAI"
+                  href="/addRestaurant"
                   className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
                 >
                   Add Restaurant
