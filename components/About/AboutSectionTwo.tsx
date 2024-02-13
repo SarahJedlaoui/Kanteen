@@ -31,7 +31,7 @@ const AboutSectionTwo = () => {
                     2- Chat with our marketing experts
                   </h2>
                   <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  Our team will request a detailed description of your business, including its type, location, unique features, and services, to craft a customized promotional strategy highlighting your venue's most attractive aspects.
+                  Our team will request a detailed description of your business, including its type, location, unique features, and services, to craft a customized promotional strategy highlighting your venue&apos;s most attractive aspects.
                   </p>
                 </div>
                 
