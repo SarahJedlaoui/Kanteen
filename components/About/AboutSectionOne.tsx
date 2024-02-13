@@ -32,7 +32,7 @@ const AboutSectionOne = () => {
           </h2>
 
           <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-          Transform your restaurant's social media presence with our AI-powered video creator, turning phone videos into captivating stories. Showcase dishes, highlight customer experiences, or share your unique story effortlessly.
+          Transform your restaurant&apos;s social media presence with our AI-powered video creator, turning phone videos into captivating stories. Showcase dishes, highlight customer experiences, or share your unique story effortlessly.
           </p>
         </div>
 
