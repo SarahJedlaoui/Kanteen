@@ -20,13 +20,13 @@ const AboutSectionThree = () => {
   return (
     <section id="about" className="pt-0 md:pt-10 lg:pt-18">
       <div className="container">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+        
           <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-20 lg:w-1/2">
 
               <SectionTitle
                number="3"
-                title="Download your content"
+                title="3- Download your content"
                 paragraph="Download the videos crafted for you through our AI technology, overseen by our expert team. We value your feedback and would appreciate any suggestions for improvements for future creations."
                 mb="44px"
               />
@@ -55,7 +55,7 @@ const AboutSectionThree = () => {
               </div>
             </div>
           </div>
-        </div>
+      
       </div>
     </section>
   );

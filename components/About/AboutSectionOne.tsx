@@ -25,25 +25,25 @@ const AboutSectionOne = () => {
         <div
           className={`wow fadeInUp w-full ${"mx-auto text-center"}`}
           data-wow-delay=".1s"
-          style={{ maxWidth: 500, marginBottom: '80px' }}
+          style={{ maxWidth: 600, marginBottom: '80px' }}
         >
           <h2 className="mb-4 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
             How Kanteen works?
           </h2>
 
           <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-            Ready to transform your restaurant&apos;s social media presence? Our AI-powered video creator is here to help. We specialize in turning your phone videos into captivating stories that resonate with your audience. Whether you&apos;re looking to showcase your delectable dishes, highlight customer experiences, or share the unique story of your restaurant, our AI Content Creator is your go-to solution.
+          Transform your restaurant's social media presence with our AI-powered video creator, turning phone videos into captivating stories. Showcase dishes, highlight customer experiences, or share your unique story effortlessly.
           </p>
         </div>
 
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+       
           <div className="-mx-4 flex flex-wrap items-center">
             <div className="w-full px-20 lg:w-1/2">
 
               <SectionTitle
-                title="Upload your videos"
-                number="1"
-                paragraph="This step involves selecting and uploading visual content (videos and photos) of your venue. These visuals should ideally showcase the ambiance, products, services, customer interactions, or any special features. Quality visuals are crucial as they play a significant role in engaging potential customers on social media platforms."
+                title="1- Upload your videos"
+                number=""
+                paragraph="Select and upload high-quality visuals (videos and photos) of your venue, showcasing ambiance, products, services, and special features, to engage potential customers on social media."
                 mb="44px"
               />
             </div>
@@ -68,7 +68,7 @@ const AboutSectionOne = () => {
               </div>
             </div>
           </div>
-        </div>
+     
       </div>
     </section>
   );
