@@ -73,7 +73,7 @@ const Hero = () => {
                   href="https://calendly.com/benromdhaneeya"
                   className="rounded-md bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                 >
-                  Get Started For Free
+                  Book a free session
                 </Link>
 
               </div>

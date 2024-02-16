@@ -33,7 +33,6 @@ const Footer = () => {
                   Useful Links
                 </h2>
                 <ul>
-                 
                   <li>
                     <a
                       href="/about"
