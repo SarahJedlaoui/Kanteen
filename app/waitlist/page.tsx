@@ -3,8 +3,8 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 import NewsLatterBox from "../../components/Contact/Waitlist";
 export const metadata: Metadata = {
-  title: "Contact Page ",
-  description: "This is Contact Page.",
+  title: "Waitlist Page ",
+  description: "This is Waitlist Page.",
   // other metadata
 };
 
