@@ -7,11 +7,26 @@ import { Alert } from '@mui/material';
 import InputAdornment from '@mui/material/InputAdornment';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import RestaurantIcon from '@mui/icons-material/Restaurant';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+
 const NewsLatterBox = () => {
     const { theme } = useTheme();
     const [email, setEmail] = useState('');
     const [restaurantName, setRestaurantName] = useState('');
+    const [needs, setNeeds] = useState('');
+    const [contact, setContact] = useState('');
     const [showAlert, setShowAlert] = useState(false);
+    const [value, setValue] = React.useState('yes');
+
+
+
+    const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setValue((event.target as HTMLInputElement).value);
+    };
     const handleEmailChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setEmail(event.target.value);
     };
@@ -19,9 +34,12 @@ const NewsLatterBox = () => {
     const handleRestaurantNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setRestaurantName(event.target.value);
     };
+    const handleNeedsChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setNeeds(event.target.value);
+    };
 
     const handleSubmit = async () => {
-        const data = { email, restaurantName };
+        const data = { email, restaurantName, needs, value };
         try {
             const response = await fetch('https://leapback-d796b66e0016.herokuapp.com/api/persona/wait', {
                 method: 'POST',
@@ -41,6 +59,8 @@ const NewsLatterBox = () => {
             // Error handling
         }
     };
+
+
     return (
         <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
             <div className="container">
@@ -57,13 +77,13 @@ const NewsLatterBox = () => {
                                 Let us manage your restaurant for you so that you can get back to doing what you do best and we look in the future with certainty for life.
                             </p>
                             <div>
-                               
+
                                 <input
                                     type="text"
                                     name="name"
                                     value={restaurantName}
                                     onChange={handleRestaurantNameChange}
-                                    placeholder="Enter your name"
+                                    placeholder="Enter your restaurant name"
                                     className="border-stroke dark:text-body-color-dark dark:shadow-two mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                                 />
                                 <input
@@ -74,6 +94,43 @@ const NewsLatterBox = () => {
                                     placeholder="Enter your email"
                                     className="border-stroke dark:text-body-color-dark dark:shadow-two mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                                 />
+                                <input
+                                    type="text"
+                                    name="needs"
+                                    value={needs}
+                                    onChange={handleNeedsChange}
+                                    placeholder="Tell us about your social media needs"
+                                    className="border-stroke dark:text-body-color-dark dark:shadow-two mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+                                />
+
+                                <p className="mb-0  pb-0 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
+                                    Would you like of social media team to contact you?
+                                </p>
+
+                                <FormControl>
+
+                                    <RadioGroup
+                                        row
+                                        aria-labelledby="demo-controlled-radio-buttons-group"
+                                        name="controlled-radio-buttons-group"
+                                        value={value}
+                                        onChange={handleChange}
+                                    >
+                                        <FormControlLabel className="mb-0  pb-0 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25"
+                                            value="yes"
+                                            control={<Radio />}
+                                            label="Yes" />
+                                        <FormControlLabel className="mb-0  pb-0 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25"
+                                            value="no"
+                                            control={<Radio />}
+                                            label="No" />
+                                        <FormControlLabel className="mb-0  pb-0 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25"
+                                            value="maybe"
+                                            control={<Radio />}
+                                            label="Maybe" 
+                                          />
+                                    </RadioGroup>
+                                </FormControl>
                                 <input
                                     onClick={handleSubmit}
                                     type="submit"
@@ -310,7 +367,7 @@ const NewsLatterBox = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     );
 };
 
