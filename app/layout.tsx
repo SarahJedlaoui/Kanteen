@@ -20,21 +20,17 @@ export default function RootLayout({
         <head /> will contain the components returned by the nearest parent
         head.js. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-
-      <head />
       <Head>
         <title>Kanteen</title>
         <meta name="kanteen" content="AI-Powered Video Creator for your Restaurant" />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPVVV7N9XM"/>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-HPVVV7N9XM"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-HPVVV7N9XM', {
-              page_path: window.location.pathname,
-            });
+            gtag('config', 'G-HPVVV7N9XM');
           `,
           }}
         />
