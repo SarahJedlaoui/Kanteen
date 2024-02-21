@@ -20,25 +20,26 @@ export default function RootLayout({
   return (
     <>
       <Head>
-        {/* Existing head content */}
-
-        {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-HPVVV7N9XM"
-          strategy="afterInteractive"
-        />
-        <Script
-          id="google-analytics"
-          strategy="afterInteractive"
-        >
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-HPVVV7N9XM');
-          `}
-        </Script>
+      <title>Kanteen</title>
       </Head>
+
+      {/* Next.js Script component for Google Analytics */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-HPVVV7N9XM"
+        strategy="afterInteractive"
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+      >
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-HPVVV7N9XM');
+        `}
+      </Script>
+
       <body className={` ${inter.className}`}>
         <Providers>
           <Header />
