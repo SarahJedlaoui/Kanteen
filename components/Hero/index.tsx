@@ -71,7 +71,7 @@ const Hero = () => {
                     >
                       <div className="relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop  controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="/images/video/Tavolata.mp4" type="video/mp4" />
+                          <source src="/images/video/Nue.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       
@@ -89,7 +89,7 @@ const Hero = () => {
                     >
                       <div className="relative items-center justify-center h-[400px]">
                       <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="/images/video/Nue.mp4" type="video/mp4" />
+                          <source src="/images/video/Canlis.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                        
