@@ -43,7 +43,7 @@ const Header = () => {
       <header
         className={`header left-0 top-0 z-40 flex w-full items-center ${sticky
           ? "dark:bg-gray-light dark:shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
-          : "absolute bg-transparent"
+          : "bg-green shadow-sticky-dark fixed z-[9999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
           }`}
       >
         <div className="container">
@@ -64,7 +64,7 @@ const Header = () => {
                   className="w-full dark:hidden"
                 />
                 <Image
-                  src="/images/logo/dark.svg"
+                  src="/images/logo/light.svg"
                   alt="logo"
                   width={100}
                   height={20}
@@ -114,8 +114,8 @@ const Header = () => {
                           <Link
                             href={menuItem.path}
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${usePathName === menuItem.path
-                              ? "text-green dark:text-white"
-                              : "text-dark hover:text-green/80 dark:text-white/70 dark:hover:text-white"
+                              ? "text-white dark:text-white"
+                              : "text-white hover:text-white/70 dark:text-white/70 dark:hover:text-white"
                               }`}
                           >
                             {menuItem.title}
@@ -172,9 +172,7 @@ const Header = () => {
                 >
                   Add Restaurant
                 </Link> */}
-                <div>
-                  <ThemeToggler />
-                </div>
+               
               </div>
             </div>
           </div>
