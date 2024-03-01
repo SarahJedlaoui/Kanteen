@@ -44,7 +44,7 @@ const Header = () => {
         className={`header left-0 top-0 z-40 flex w-full items-center ${
           sticky
             ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-green !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
-            : "absolute bg-transparent shadow-sticky-dark"
+            : "absolute bg-green shadow-sticky-dark"
         }`}
       >
         <div className="container">
