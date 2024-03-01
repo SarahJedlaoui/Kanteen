@@ -6,19 +6,35 @@ const Footer = () => {
   return (
     <>
       <footer
-        className="wow fadeInUp dark:bg-gray-dark relative z-10 bg-white pt-16 md:pt-20 lg:pt-24"
+        className="wow fadeInUp dark:bg-gray-dark relative z-10 bg-green pt-16 md:pt-20 lg:pt-24"
         data-wow-delay=".1s"
       >
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-5/12">
+            <div className="w-full px-0 md:w-1/2 lg:w-4/12 xl:w-5/12">
               <div className="mb-6 max-w-[390px] lg:mb-5">
                 <Link href="/" className="mb-8 inline-block">
+
+                <Image
+                  src="/images/logo/light.svg"
+                  alt="logo"
+                  width={80}
+                  height={20}
+                  className="w-full dark:hidden"
+                />
+                <Image
+                  src="/images/logo/light.svg"
+                  alt="logo"
+                  width={100}
+                  height={20}
+                  className="hidden w-full dark:block"
+                />
+                {/** 
                 <span
-                  className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight"
+                  className="mb-5 text-3xl font-bold leading-tight text-white dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight"
                 >
                   Kanteen
-                </span>
+                </span>*/}
                 </Link>
                 <p className="dark:text-body-color-dark mb-9 text-base leading-relaxed text-body-color">
                 Elevate your restaurant&apos;s social media with our AI-powered video creator. We expertly transform your phone videos into engaging stories that capture your unique culinary experiences and the essence of your restaurant.
@@ -29,7 +45,7 @@ const Footer = () => {
 
             <div className="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-2/12 xl:w-2/12">
               <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
+                <h2 className="mb-10 text-xl font-bold text-white dark:text-white">
                   Useful Links
                 </h2>
                 <ul>
@@ -55,7 +71,7 @@ const Footer = () => {
 
             <div className="w-full px-4 md:w-1/2 lg:w-4/12 xl:w-3/12">
               <div className="mb-12 lg:mb-16">
-                <h2 className="mb-10 text-xl font-bold text-black dark:text-white">
+                <h2 className="mb-10 text-xl font-bold text-white dark:text-white">
                   Support & Help
                 </h2>
                 <ul>
