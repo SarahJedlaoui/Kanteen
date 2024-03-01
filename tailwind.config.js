@@ -60,6 +60,7 @@ module.exports = {
         sticky: "inset 0 -1px 0 0 rgba(0, 0, 0, 0.1)",
         "sticky-dark": "inset 0 -1px 0 0 rgba(255, 255, 255, 0.1)",
         "feature-2": "0px 10px 40px rgba(48, 86, 211, 0.12)",
+        "sticky-green": "inset 0 -1px 0 0 rgba(8, 60, 47, 1)",
         submit: "0px 5px 20px rgba(4, 10, 34, 0.1)",
         "submit-dark": "0px 5px 20px rgba(4, 10, 34, 0.1)",
         btn: "0px 1px 2px rgba(4, 10, 34, 0.15)",
