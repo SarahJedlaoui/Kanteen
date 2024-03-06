@@ -1,0 +1,20 @@
+/* Gradient text for light mode */
+.text-green-gradient {
+    background: linear-gradient(180deg, #083c2f 0%, #083c2f82 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+}
+
+/* Fallback for browsers that do not support background-clip text */
+.no-bg-clip .text-green-gradient {
+    background: none;
+    -webkit-text-fill-color: initial;
+    text-fill-color: initial;
+}
+
+/* Dark mode text color */
+.dark-mode-text {
+    color: #FFFFFF;
+}

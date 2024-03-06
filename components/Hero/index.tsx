@@ -20,7 +20,7 @@ const Hero = () => {
                 className="wow fadeInUp mx-auto max-w-[800px] text-center"
                 data-wow-delay=".2s"
               >
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                <h1 className="mb-5 mt-10 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                   AI-Powered Video Creator for your Restaurant
                 </h1>
 
@@ -38,8 +38,8 @@ const Hero = () => {
                       data-wow-delay=".15s"
                     >
                       <div className="relative  items-center justify-center h-[400px]">
-                      <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="/images/video/Nue.mp4" type="video/mp4" />
+                      <video autoPlay muted loop  className="absolute inset-0 w-full h-full object-cover"  >
+                          <source src="/images/video/HEARTH.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -53,8 +53,8 @@ const Hero = () => {
                       data-wow-delay=".15s"
                     >
                       <div className="relative items-center justify-center h-[400px] ">
-                      <video controls autoPlay muted loop  className="absolute inset-0 w-full h-full object-cover">
-                          <source src="/images/video/Canlis.mp4" type="video/mp4" />
+                      <video  autoPlay muted loop  className="absolute inset-0 w-full h-full object-cover">
+                          <source src="/images/video/mortonssteak.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                        
@@ -70,8 +70,8 @@ const Hero = () => {
                       data-wow-delay=".15s"
                     >
                       <div className="relative  items-center justify-center h-[400px]">
-                        <video autoPlay muted loop  controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="/images/video/Nue.mp4" type="video/mp4" />
+                        <video autoPlay muted loop   className="absolute inset-0 w-full h-full object-cover">
+                          <source src="/images/video/MAYDAN.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       
@@ -88,8 +88,8 @@ const Hero = () => {
                       data-wow-delay=".15s"
                     >
                       <div className="relative items-center justify-center h-[400px]">
-                      <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="/images/video/Canlis.mp4" type="video/mp4" />
+                      <video autoPlay muted loop  className="absolute inset-0 w-full h-full object-cover">
+                          <source src="/images/video/outback.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                        

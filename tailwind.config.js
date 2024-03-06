@@ -32,6 +32,9 @@ module.exports = {
       // => @media (min-width: 1400px) { ... }
     },
     extend: {
+      backgroundImage: {
+        'persona-gradient': "linear-gradient(180deg, #ffffff 0%, #00af8382 100%)",
+      },
       colors: {
         current: "currentColor",
         transparent: "transparent",
@@ -42,6 +45,7 @@ module.exports = {
         dark: "#1D2430",
         primary: "#c9f269",
         yellow: "#FBB040",
+        persona:"linear-gradient(180deg, #ffff 0%, #00af8382 100%)",
         "body-color": "#788293",
         "body-color-dark": "#959CB1",
         "gray-dark": "#1E232E",
