@@ -68,7 +68,7 @@ const Persona = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="/images/video/mortonssteak.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/outback.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -113,7 +113,7 @@ const Persona = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="/images/video/mortonssteak.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/outback.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -158,7 +158,7 @@ const Persona = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="/images/video/mortonssteak.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/outback.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -204,7 +204,7 @@ const Persona = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="/images/video/mortonssteak.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/outback.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -250,7 +250,7 @@ const Persona = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="/images/video/mortonssteak.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/outback.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -295,7 +295,7 @@ const Persona = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="/images/video/mortonssteak.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/outback.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -340,7 +340,7 @@ const Persona = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="/images/video/mortonssteak.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/outback.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -386,7 +386,7 @@ const Persona = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="/images/video/mortonssteak.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/outback.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
