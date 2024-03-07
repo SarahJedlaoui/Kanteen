@@ -8,6 +8,11 @@ import './styles.css'
 
 const Hero = () => {
   const [isOpen, setOpen] = useState(false);
+  const [video, setVideo] = useState<any>(null);
+  useEffect(()=>{
+ //setVideo(<ReactPlayer> </ReactPlayer>)
+
+  })
   return (
     <>
       <section
@@ -39,7 +44,7 @@ const Hero = () => {
                     >
                       <div className="relative  items-center justify-center h-[400px]">
                       <video autoPlay muted loop  className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="/images/video/HEARTH.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/HEARTH.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -54,7 +59,7 @@ const Hero = () => {
                     >
                       <div className="relative items-center justify-center h-[400px] ">
                       <video  autoPlay muted loop  className="absolute inset-0 w-full h-full object-cover">
-                          <source src="/images/video/mortonssteak.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/mortonssteak.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                        
@@ -71,7 +76,7 @@ const Hero = () => {
                     >
                       <div className="relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop   className="absolute inset-0 w-full h-full object-cover">
-                          <source src="/images/video/MAYDAN.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/MAYDAN_1.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       
@@ -89,7 +94,7 @@ const Hero = () => {
                     >
                       <div className="relative items-center justify-center h-[400px]">
                       <video autoPlay muted loop  className="absolute inset-0 w-full h-full object-cover">
-                          <source src="/images/video/outback.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/outback.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                        
