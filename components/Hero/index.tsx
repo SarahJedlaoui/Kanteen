@@ -9,8 +9,8 @@ import './styles.css'
 const Hero = () => {
   const [isOpen, setOpen] = useState(false);
   const [video, setVideo] = useState<any>(null);
-  useEffect(()=>{
- //setVideo(<ReactPlayer> </ReactPlayer>)
+  useEffect(() => {
+    //setVideo(<ReactPlayer> </ReactPlayer>)
 
   })
   return (
@@ -37,16 +37,21 @@ const Hero = () => {
                 <div className="-mx-4 flex flex-wrap">
 
 
-                <div className="w-1/2 sm:w-1/4 px-1 py-1">
+                  <div className="w-1/2 sm:w-1/4 px-1 py-1">
                     <div
                       className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
                       data-wow-delay=".15s"
                     >
                       <div className="relative  items-center justify-center h-[400px]">
-                      <video autoPlay muted loop  className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/HEARTH.mp4" type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
+                        <iframe
+                          src="https://player.vimeo.com/video/920479248?badge=0&autopause=0&player_id=0&app_id=58479&loop=1&controls=0&muted=1&autoplay=1"
+
+                          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                          title="Hearth"
+                        >
+                        </iframe>
+
                       </div>
                     </div>
                   </div>
@@ -58,11 +63,15 @@ const Hero = () => {
                       data-wow-delay=".15s"
                     >
                       <div className="relative items-center justify-center h-[400px] ">
-                      <video  autoPlay muted loop  className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/mortonssteak.mp4" type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
-                       
+                        <iframe
+                          src="https://player.vimeo.com/video/920474921?badge=0&autopause=0&player_id=0&app_id=58479&loop=1&controls=0&muted=1&autoplay=1"
+
+                          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                          title="mortonssteak"
+                        >
+                        </iframe>
+
                       </div>
                     </div>
                   </div>
@@ -75,11 +84,15 @@ const Hero = () => {
                       data-wow-delay=".15s"
                     >
                       <div className="relative  items-center justify-center h-[400px]">
-                        <video autoPlay muted loop   className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/MAYDAN_1.mp4" type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
-                      
+                        <iframe
+                          src="https://player.vimeo.com/video/920480495?badge=0&autopause=0&player_id=0&app_id=58479&loop=1&controls=0&muted=1&autoplay=1"
+
+                          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                          title="maydan"
+                        >
+                        </iframe>
+
                       </div>
                     </div>
                   </div>
@@ -89,18 +102,20 @@ const Hero = () => {
 
                   <div className="w-1/2 sm:w-1/4 px-1 py-1">
                     <div
-                      className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
+                      className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-4lg" 
                       data-wow-delay=".15s"
                     >
                       <div className="relative items-center justify-center h-[400px]">
-                      <video autoPlay muted loop  className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/outback.mp4" type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
-                       
+                        <iframe
+                          src="https://player.vimeo.com/video/920487294?badge=0&autopause=0&player_id=0&app_id=58479&loop=1&controls=0&muted=1&autoplay=1"
+                          allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                          style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                          title="mortonssteak"
+                        ></iframe>
                       </div>
                     </div>
                   </div>
+
 
                 </div>
               </div>
