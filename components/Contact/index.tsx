@@ -49,9 +49,9 @@ const Contact = () => {
 
   return (
     <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
-    <div className="container">
+      <div className="container">
         <div className="flex items-center justify-center">
-            <div className="-mx-4 flex flex-wrap mx-auto ">
+          <div className="-mx-4 flex flex-wrap mx-auto ">
             <div
               className="wow fadeInUp shadow-three dark:bg-gray-dark mb-12 rounded-sm bg-white px-8 py-11 sm:p-[55px] lg:mb-5 lg:px-8 xl:p-[55px]"
               data-wow-delay=".15s
@@ -127,15 +127,15 @@ const Contact = () => {
                 </div>
               </form>
               {isSubmittedSuccessfully && (
-                   
-                   <MuiAlert severity="success" sx={{ width: '100%' }}>
-                     Form submitted successfully!
-                   </MuiAlert>
-                
-               )}
+
+                <MuiAlert severity="success" sx={{ width: '100%' }}>
+                  Form submitted successfully!
+                </MuiAlert>
+
+              )}
             </div>
           </div>
-          
+
         </div>
       </div>
     </section>
