@@ -152,7 +152,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Indulge in your aperitif at L'Mida with our delightful cocktails!
+                      Indulge in your aperitif at L&apos;Mida with our delightful cocktails!
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate2}
@@ -204,7 +204,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                       L'Mida Drinks!
+                       L&apos;Mida Drinks!
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate3}
@@ -257,7 +257,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        L'Mida positive reviews
+                        L&apos;Mida positive reviews
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate4}
@@ -679,7 +679,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      L’mida team is dedicated to transforming your events into unforgettable experiences
+                      L&apos;mida team is dedicated to transforming your events into unforgettable experiences
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate12}
