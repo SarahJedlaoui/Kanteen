@@ -98,7 +98,7 @@ const Persona = () => {
                         </video>
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Step into a world where every bite tells a story, and every dish creates an atmosphere of culinary delight
+                      Every bite tells a story
                       </p>
 
                       <Rating name="unique-rating"
@@ -152,7 +152,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Indulge in your aperitif at L&apos;Mida with our delightful cocktails!
+                      Our delightful cocktails!
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate2}
@@ -204,7 +204,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                       L&apos;Mida Drinks!
+                       L&apos;Mida Delightful Drinks!
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate3}
@@ -309,7 +309,7 @@ const Persona = () => {
                         </video>
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Dive into the mesmerizing Moroccan mediterranean vibes right in the heart of Marina, San Francisco
+                      Dive into the Moroccan mediterranean vibes
                       </p>
 
                       <Rating name="unique-rating"
@@ -362,7 +362,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Dive into the mesmerizing Moroccan mediterranean vibes right in the heart of Marina, San Francisco
+                      Dive into the Moroccan mediterranean vibes
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate6}
@@ -414,7 +414,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Embark on a Journey of Flavor: Discover Our New Menu
+                      Discover Our New Menu
 
 
                       </p>
@@ -469,7 +469,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      L&apos;mida team is dedicated to transforming your events into unforgettable experiences
+                      Transforming your events into unforgettable experiences
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate8}
@@ -521,7 +521,7 @@ const Persona = () => {
                         </video>
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Step into a world where every bite tells a story, and every dish creates an atmosphere of culinary delight
+                      Every dish creates an atmosphere of culinary delight
                       </p>
 
                       <Rating name="unique-rating"
@@ -574,7 +574,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Embark on a Journey of Flavor: Discover Our New Menu
+                      Embark on a Journey of Flavor
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate10}
@@ -626,7 +626,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Embark on a Journey of Flavor: Discover Our New Menu
+                      Discover Our New Menu
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate11}
@@ -679,7 +679,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      L&apos;mida team is dedicated to transforming your events into unforgettable experiences
+                      Transforming your events into unforgettable experiences
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate12}
