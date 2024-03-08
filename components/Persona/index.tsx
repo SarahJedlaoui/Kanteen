@@ -101,13 +101,10 @@ const Persona = () => {
                       Every bite tells a story
                       </p>
 
-                      <Rating name="unique-rating"
+                      <Rating name="size-large"
                         defaultValue={rate1}
                         onChange={(event, newValue) => {
                           console.log("New Rating Value:", newValue);
-                          setRate1(newValue ?? 5);
-                        }}
-                        onChangeActive={(event, newValue) => {
                           setRate1(newValue ?? 5);
                         }}
                         size="large"
