@@ -142,9 +142,7 @@ const NewsLatterBox = () => {
                                         Information successfully sent!
                                     </Alert>
                                 )}
-                                <p className="dark:text-body-color-dark text-center text-base leading-relaxed text-body-color">
-                                    No spam guaranteed, So please don’t send any spam mail.
-                                </p>
+                                
                             </div>
 
                             <div>
