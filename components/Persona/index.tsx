@@ -414,7 +414,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Discover Our New Menu
+                      Embark on a Journey of Flavor with Our New Menu
 
 
                       </p>
@@ -469,7 +469,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Transforming your events into unforgettable experiences
+                      Transform your events into unforgettable experiences
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate8}
@@ -574,7 +574,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Embark on a Journey of Flavor
+                      Embark on a Journey of Flavor with Our New Menu
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate10}
@@ -626,7 +626,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Discover Our New Menu
+                      Embark on a Journey of Flavor with Our New Menu
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate11}
@@ -679,7 +679,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Transforming your events into unforgettable experiences
+                      Transform your events into unforgettable experiences
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate12}
