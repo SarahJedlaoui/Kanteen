@@ -48,7 +48,7 @@ const Persona = () => {
                 data-wow-delay=".2s"
               >
                 <h1 className="mb-5 mt-10 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  L'Mida San Francisco
+                  L&apos;Mida San Francisco
                 </h1>
                 <div className="-mx-4 flex flex-wrap px-4">
                   <div className="flex-1">
@@ -58,9 +58,9 @@ const Persona = () => {
 
                     <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
 
-                      L'Mida in San Francisco is an elegant Moroccan restaurant that offers a fine dining experience in the city. It prides itself on bringing authentic Moroccan flavors to the table, serving dishes that reflect the rich culinary traditions of Morocco. The restaurant features a cozy and inviting interior, where guests can enjoy their meals in a warm and welcoming atmosphere. The open kitchen allows diners to witness the creation of their meals, including the baking of fresh bread, which adds an element of engagement and freshness to the dining experience.
+                      L&apos;Mida in San Francisco is an elegant Moroccan restaurant that offers a fine dining experience in the city. It prides itself on bringing authentic Moroccan flavors to the table, serving dishes that reflect the rich culinary traditions of Morocco. The restaurant features a cozy and inviting interior, where guests can enjoy their meals in a warm and welcoming atmosphere. The open kitchen allows diners to witness the creation of their meals, including the baking of fresh bread, which adds an element of engagement and freshness to the dining experience.
 
-                      The menu at L'Mida is a celebration of Moroccan cuisine, offering a variety of dishes that showcase the country's vibrant flavors and ingredients. Guests can start their meal with a selection of flatbreads, which are perfect for sharing and pair well with the restaurant's assortment of dips and spreads. Main courses include traditional tagines, which are slow-cooked stews made with tender meats, aromatic spices, and vegetables. The grilled whole fish, served with homemade harissa, is another highlight, offering a taste of Morocco's coastal cuisine.                    </p>
+                      The menu at L&apos;Mida is a celebration of Moroccan cuisine, offering a variety of dishes that showcase the country&apos;s vibrant flavors and ingredients. Guests can start their meal with a selection of flatbreads, which are perfect for sharing and pair well with the restaurant&apos;s assortment of dips and spreads. Main courses include traditional tagines, which are slow-cooked stews made with tender meats, aromatic spices, and vegetables. The grilled whole fish, served with homemade harissa, is another highlight, offering a taste of Morocco&apos;s coastal cuisine.                    </p>
                   </div>
                 </div>
                 <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
