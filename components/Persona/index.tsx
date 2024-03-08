@@ -10,11 +10,11 @@ import Snackbar from '@mui/material/Snackbar';
 import { useEffect, useState } from 'react';
 import * as React from 'react';
 import './styles.css'
-
+import axios from 'axios';
 
 const Persona = () => {
   const [isOpen, setOpen] = useState(false);
-  const [feedbacks, setfeedbacks] = useState('');
+  const [feedback, setFeedback] = useState('');
   const [openAlert, setOpenAlert] = useState(false);
   const [rate1, setRate1] = React.useState<number | null>(2);
   const [rate2, setRate2] = useState(4);
@@ -26,14 +26,29 @@ const Persona = () => {
   const [rate8, setRate8] = useState(4);
   const [rate9, setRate9] = useState(4);
   const [rate10, setRate10] = useState(4);
-  const [value, setValue] = React.useState<number | null>(2);
+  const [rate11, setRate11] = useState(4);
+  const [rate12, setRate12] = useState(4);
 
-
-  const handleClick = (urlvid: any) => {
-
-    const url = urlvid;
-    window.location.href = url; // Redirects to the URL if persona is not null
-
+  const handleSubmit = async () => {
+    try {
+      axios.post('https://api.elasticemail.com/v2/email/send', null, {
+      params: {
+          apikey: process.env.ELASTIC_EMAIL_API_KEY, 
+          subject: "L'Mida Feedback",
+          from: "sarajedlaoui999@gmail.com",
+          to: "sarah.jedlaoui@bei.dev",
+          bodyText: `L'Mida feedback: video rating: video1:${rate1}\n video2:${rate2}\n video3:${rate3}\n video4:${rate4}\n video5:${rate5}\n video6:${rate6}\n video7:${rate7}\n 
+          video8:${rate8}\n video9:${rate9}\n 
+          video10:${rate10}\n video11:${rate11}\n video12:${rate12}\n 
+          Feedback: ${feedback}\n
+          `,
+      }
+  })
+      console.log('Reviw Submitted:');
+      setOpenAlert(true);
+    } catch (error) {
+      console.error('Error while saving data:', error);
+    }
   };
   return (
     <>
@@ -83,7 +98,7 @@ const Persona = () => {
                         </video>
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        Christmas themed videos with Xmas themed drinks
+                      Step into a world where every bite tells a story, and every dish creates an atmosphere of culinary delight
                       </p>
 
                       <Rating name="unique-rating"
@@ -137,16 +152,16 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        Christmas themed videos with Xmas themed drinks
+                      Indulge in your aperitif at L'Mida with our delightful cocktails!
                       </p>
                       <Rating name="unique-rating"
-                        defaultValue={rate1}
+                        defaultValue={rate2}
                         onChange={(event, newValue) => {
                           console.log("New Rating Value:", newValue);
-                          setRate1(newValue ?? 5);
+                          setRate2(newValue ?? 5);
                         }}
                         onChangeActive={(event, newValue) => {
-                          setRate1(newValue ?? 5);
+                          setRate2(newValue ?? 5);
                         }}
                         size="large"
                         sx={{
@@ -156,12 +171,19 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <Link
-                          href="#contact"
+                        <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905830/fjgu3wwjdoxy7m3bsa7h.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
                           className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                         >
-                          download
-                        </Link>
+                          Download
+                        </button>
                       </div>
 
                     </div>
@@ -182,16 +204,16 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        Christmas themed videos with Xmas themed drinks
+                       L'Mida Drinks!
                       </p>
                       <Rating name="unique-rating"
-                        defaultValue={rate1}
+                        defaultValue={rate3}
                         onChange={(event, newValue) => {
                           console.log("New Rating Value:", newValue);
-                          setRate1(newValue ?? 5);
+                          setRate3(newValue ?? 5);
                         }}
                         onChangeActive={(event, newValue) => {
-                          setRate1(newValue ?? 5);
+                          setRate3(newValue ?? 5);
                         }}
                         size="large"
                         sx={{
@@ -201,12 +223,19 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <Link
-                          href="#contact"
+                        <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905824/nfadoet9it524dwcjpaf.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
                           className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                         >
-                          download
-                        </Link>
+                          Download
+                        </button>
                       </div>
 
                     </div>
@@ -228,16 +257,16 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        Christmas themed videos with Xmas themed drinks
+                        L'Mida positive reviews
                       </p>
                       <Rating name="unique-rating"
-                        defaultValue={rate1}
+                        defaultValue={rate4}
                         onChange={(event, newValue) => {
                           console.log("New Rating Value:", newValue);
-                          setRate1(newValue ?? 5);
+                          setRate4(newValue ?? 5);
                         }}
                         onChangeActive={(event, newValue) => {
-                          setRate1(newValue ?? 5);
+                          setRate4(newValue ?? 5);
                         }}
                         size="large"
                         sx={{
@@ -247,12 +276,19 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <Link
-                          href="#contact"
+                      <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905806/yq8blzyxr97cse8nzohl.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
                           className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                         >
-                          download
-                        </Link>
+                          Download
+                        </button>
                       </div>
 
                     </div>
@@ -273,17 +309,17 @@ const Persona = () => {
                         </video>
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        Christmas themed videos with Xmas themed drinks
+                      Dive into the mesmerizing Moroccan mediterranean vibes right in the heart of Marina, San Francisco
                       </p>
 
                       <Rating name="unique-rating"
-                        defaultValue={rate1}
+                        defaultValue={rate5}
                         onChange={(event, newValue) => {
                           console.log("New Rating Value:", newValue);
-                          setRate1(newValue ?? 5);
+                          setRate5(newValue ?? 5);
                         }}
                         onChangeActive={(event, newValue) => {
-                          setRate1(newValue ?? 5);
+                          setRate5(newValue ?? 5);
                         }}
                         size="large"
                         sx={{
@@ -293,12 +329,19 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <Link
-                          href="#contact"
+                      <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905778/j7e8hq1fwg6684wldkpm.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
                           className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                         >
-                          download
-                        </Link>
+                          Download
+                        </button>
                       </div>
 
                     </div>
@@ -319,16 +362,16 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        Christmas themed videos with Xmas themed drinks
+                      Dive into the mesmerizing Moroccan mediterranean vibes right in the heart of Marina, San Francisco
                       </p>
                       <Rating name="unique-rating"
-                        defaultValue={rate1}
+                        defaultValue={rate6}
                         onChange={(event, newValue) => {
                           console.log("New Rating Value:", newValue);
-                          setRate1(newValue ?? 5);
+                          setRate6(newValue ?? 5);
                         }}
                         onChangeActive={(event, newValue) => {
-                          setRate1(newValue ?? 5);
+                          setRate6(newValue ?? 5);
                         }}
                         size="large"
                         sx={{
@@ -338,12 +381,19 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <Link
-                          href="#contact"
+                      <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905763/uy2ly3gvxt0agtbbfshi.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
                           className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                         >
-                          download
-                        </Link>
+                          Download
+                        </button>
                       </div>
 
                     </div>
@@ -364,16 +414,18 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        Christmas themed videos with Xmas themed drinks
+                      Embark on a Journey of Flavor: Discover Our New Menu
+
+
                       </p>
                       <Rating name="unique-rating"
-                        defaultValue={rate1}
+                        defaultValue={rate7}
                         onChange={(event, newValue) => {
                           console.log("New Rating Value:", newValue);
-                          setRate1(newValue ?? 5);
+                          setRate7(newValue ?? 5);
                         }}
                         onChangeActive={(event, newValue) => {
-                          setRate1(newValue ?? 5);
+                          setRate7(newValue ?? 5);
                         }}
                         size="large"
                         sx={{
@@ -383,12 +435,19 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <Link
-                          href="#contact"
+                      <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905745/sfm6sij48benjolovqga.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
                           className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                         >
-                          download
-                        </Link>
+                          Download
+                        </button>
                       </div>
 
                     </div>
@@ -410,16 +469,16 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        Christmas themed videos with Xmas themed drinks
+                      L&apos;mida team is dedicated to transforming your events into unforgettable experiences
                       </p>
                       <Rating name="unique-rating"
-                        defaultValue={rate1}
+                        defaultValue={rate8}
                         onChange={(event, newValue) => {
                           console.log("New Rating Value:", newValue);
-                          setRate1(newValue ?? 5);
+                          setRate8(newValue ?? 5);
                         }}
                         onChangeActive={(event, newValue) => {
-                          setRate1(newValue ?? 5);
+                          setRate8(newValue ?? 5);
                         }}
                         size="large"
                         sx={{
@@ -429,12 +488,19 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <Link
-                          href="#contact"
+                      <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905733/zq43rj9cl57dztfk79he.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
                           className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                         >
-                          download
-                        </Link>
+                          Download
+                        </button>
                       </div>
 
                     </div>
@@ -455,17 +521,17 @@ const Persona = () => {
                         </video>
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        Christmas themed videos with Xmas themed drinks
+                      Step into a world where every bite tells a story, and every dish creates an atmosphere of culinary delight
                       </p>
 
                       <Rating name="unique-rating"
-                        defaultValue={rate1}
+                        defaultValue={rate9}
                         onChange={(event, newValue) => {
                           console.log("New Rating Value:", newValue);
-                          setRate1(newValue ?? 5);
+                          setRate9(newValue ?? 5);
                         }}
                         onChangeActive={(event, newValue) => {
-                          setRate1(newValue ?? 5);
+                          setRate9(newValue ?? 5);
                         }}
                         size="large"
                         sx={{
@@ -475,12 +541,19 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <Link
-                          href="#contact"
+                      <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905692/cvqqcmkd4avd4ubvtt61.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
                           className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                         >
-                          download
-                        </Link>
+                          Download
+                        </button>
                       </div>
 
                     </div>
@@ -501,16 +574,16 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        Christmas themed videos with Xmas themed drinks
+                      Embark on a Journey of Flavor: Discover Our New Menu
                       </p>
                       <Rating name="unique-rating"
-                        defaultValue={rate1}
+                        defaultValue={rate10}
                         onChange={(event, newValue) => {
                           console.log("New Rating Value:", newValue);
-                          setRate1(newValue ?? 5);
+                          setRate10(newValue ?? 5);
                         }}
                         onChangeActive={(event, newValue) => {
-                          setRate1(newValue ?? 5);
+                          setRate10(newValue ?? 5);
                         }}
                         size="large"
                         sx={{
@@ -520,12 +593,19 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <Link
-                          href="#contact"
+                      <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905691/mcce2jzmlwpledaj2ag4.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
                           className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                         >
-                          download
-                        </Link>
+                          Download
+                        </button>
                       </div>
 
                     </div>
@@ -546,16 +626,16 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        Christmas themed videos with Xmas themed drinks
+                      Embark on a Journey of Flavor: Discover Our New Menu
                       </p>
                       <Rating name="unique-rating"
-                        defaultValue={rate1}
+                        defaultValue={rate11}
                         onChange={(event, newValue) => {
                           console.log("New Rating Value:", newValue);
-                          setRate1(newValue ?? 5);
+                          setRate11(newValue ?? 5);
                         }}
                         onChangeActive={(event, newValue) => {
-                          setRate1(newValue ?? 5);
+                          setRate11(newValue ?? 5);
                         }}
                         size="large"
                         sx={{
@@ -565,12 +645,19 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <Link
-                          href="#contact"
+                      <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905663/tgspyma63f5qd1an8v5q.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
                           className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                         >
-                          download
-                        </Link>
+                          Download
+                        </button>
                       </div>
 
                     </div>
@@ -592,16 +679,16 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        Christmas themed videos with Xmas themed drinks
+                      L’mida team is dedicated to transforming your events into unforgettable experiences
                       </p>
                       <Rating name="unique-rating"
-                        defaultValue={rate1}
+                        defaultValue={rate12}
                         onChange={(event, newValue) => {
                           console.log("New Rating Value:", newValue);
-                          setRate1(newValue ?? 5);
+                          setRate12(newValue ?? 5);
                         }}
                         onChangeActive={(event, newValue) => {
-                          setRate1(newValue ?? 5);
+                          setRate12(newValue ?? 5);
                         }}
                         size="large"
                         sx={{
@@ -611,35 +698,50 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <Link
-                          href="#contact"
+                      <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905733/zq43rj9cl57dztfk79he.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
                           className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                         >
-                          download
-                        </Link>
+                          Download
+                        </button>
                       </div>
 
                     </div>
                   </div>
 
                 </div>
+
+
+
                 <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
                   Feedback
                 </h3>
                 <p className="dark:text-body-color-dark mb-5 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
                   Your feedback will be genuinely appreciated.
                 </p>
-                <TextField id="standard-basic" label="" variant="standard" fullWidth />
+                <TextField onChange={(e) => setFeedback(e.target.value)} id="standard-basic" label="" variant="standard" fullWidth maxRows={4} multiline />
               </div>
 
               <div className="flex flex-col pt-10 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                <Link
-                  href="#contact"
+                <button
+                  onClick={handleSubmit}
                   className="rounded-md bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                 >
                   Submit Review
-                </Link>
+                </button>
               </div>
+              <Snackbar open={openAlert} autoHideDuration={6000} onClose={() => setOpenAlert(false)}>
+            <Alert onClose={() => setOpenAlert(false)} severity="success" sx={{ width: '90%' }}>
+              Review submitted
+            </Alert>
+          </Snackbar>
             </div>
           </div>
         </div>
