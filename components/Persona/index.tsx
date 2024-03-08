@@ -737,11 +737,11 @@ const Persona = () => {
                   Submit Review
                 </button>
               </div>
-              <Snackbar open={openAlert} autoHideDuration={6000} onClose={() => setOpenAlert(false)}>
+              
             <Alert onClose={() => setOpenAlert(false)} severity="success" sx={{ width: '90%' }}>
               Review submitted
             </Alert>
-          </Snackbar>
+         
             </div>
           </div>
         </div>
