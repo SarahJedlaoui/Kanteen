@@ -36,7 +36,7 @@ const Persona = () => {
           apikey: process.env.ELASTIC_EMAIL_API_KEY, 
           subject: "L'Mida Feedback",
           from: "sarajedlaoui999@gmail.com",
-          to: "sarah.jedlaoui@bei.dev",
+          to: "maher@bei.dev",
           bodyText: `L'Mida feedback: video rating: video1:${rate1}\n video2:${rate2}\n video3:${rate3}\n video4:${rate4}\n video5:${rate5}\n video6:${rate6}\n video7:${rate7}\n 
           video8:${rate8}\n video9:${rate9}\n 
           video10:${rate10}\n video11:${rate11}\n video12:${rate12}\n 
@@ -44,7 +44,7 @@ const Persona = () => {
           `,
       }
   })
-      console.log('Reviw Submitted:');
+      console.log('Reviw Submitted:', rate1, rate3, feedback);
       setOpenAlert(true);
     } catch (error) {
       console.error('Error while saving data:', error);
