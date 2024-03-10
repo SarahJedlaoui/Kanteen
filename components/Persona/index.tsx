@@ -32,8 +32,8 @@ const Persona = () => {
   const handleSubmit = async () => {
     try {
       axios.post('https://api.elasticemail.com/v2/email/send', null, {
-      params: {
-          apikey: process.env.ELASTIC_EMAIL_API_KEY, 
+        params: {
+          apikey: process.env.ELASTIC_EMAIL_API_KEY,
           subject: "L'Mida Feedback",
           from: "sarajedlaoui999@gmail.com",
           to: "maher@bei.dev",
@@ -42,8 +42,8 @@ const Persona = () => {
           video10:${rate10}\n video11:${rate11}\n video12:${rate12}\n 
           Feedback: ${feedback}\n
           `,
-      }
-  })
+        }
+      })
       console.log('Reviw Submitted:', rate1, rate3, feedback);
       setOpenAlert(true);
     } catch (error) {
@@ -98,7 +98,7 @@ const Persona = () => {
                         </video>
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Every bite tells a story
+                        Every bite tells a story
                       </p>
 
                       <Rating name="size-large"
@@ -149,7 +149,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Our delightful cocktails!
+                        Our delightful cocktails!
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate2}
@@ -201,7 +201,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                       L&apos;Mida Delightful Drinks!
+                        L&apos;Mida Delightful Drinks!
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate3}
@@ -273,7 +273,7 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                      <button
+                        <button
                           onClick={() => {
                             const link = document.createElement("a");
                             link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905806/yq8blzyxr97cse8nzohl.mp4";
@@ -306,7 +306,7 @@ const Persona = () => {
                         </video>
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Dive into the Moroccan mediterranean vibes
+                        Dive into the Moroccan mediterranean vibes
                       </p>
 
                       <Rating name="unique-rating"
@@ -326,7 +326,7 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                      <button
+                        <button
                           onClick={() => {
                             const link = document.createElement("a");
                             link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905778/j7e8hq1fwg6684wldkpm.mp4";
@@ -359,7 +359,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Dive into the Moroccan mediterranean vibes
+                        Dive into the Moroccan mediterranean vibes
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate6}
@@ -378,7 +378,7 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                      <button
+                        <button
                           onClick={() => {
                             const link = document.createElement("a");
                             link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905763/uy2ly3gvxt0agtbbfshi.mp4";
@@ -411,7 +411,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Embark on a Journey of Flavor with Our New Menu
+                        Embark on a Journey of Flavor with Our New Menu
 
 
                       </p>
@@ -432,7 +432,7 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                      <button
+                        <button
                           onClick={() => {
                             const link = document.createElement("a");
                             link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905745/sfm6sij48benjolovqga.mp4";
@@ -466,7 +466,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Transform your events into unforgettable experiences
+                        Transform your events into unforgettable experiences
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate8}
@@ -485,7 +485,7 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                      <button
+                        <button
                           onClick={() => {
                             const link = document.createElement("a");
                             link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905733/zq43rj9cl57dztfk79he.mp4";
@@ -518,7 +518,7 @@ const Persona = () => {
                         </video>
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Every dish creates an atmosphere of culinary delight
+                        Every dish creates an atmosphere of culinary delight
                       </p>
 
                       <Rating name="unique-rating"
@@ -538,7 +538,7 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                      <button
+                        <button
                           onClick={() => {
                             const link = document.createElement("a");
                             link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905692/cvqqcmkd4avd4ubvtt61.mp4";
@@ -571,7 +571,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Embark on a Journey of Flavor with Our New Menu
+                        Embark on a Journey of Flavor with Our New Menu
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate10}
@@ -590,7 +590,7 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                      <button
+                        <button
                           onClick={() => {
                             const link = document.createElement("a");
                             link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905691/mcce2jzmlwpledaj2ag4.mp4";
@@ -623,7 +623,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Embark on a Journey of Flavor with Our New Menu
+                        Embark on a Journey of Flavor with Our New Menu
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate11}
@@ -642,7 +642,7 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                      <button
+                        <button
                           onClick={() => {
                             const link = document.createElement("a");
                             link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905663/tgspyma63f5qd1an8v5q.mp4";
@@ -676,7 +676,7 @@ const Persona = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Transform your events into unforgettable experiences
+                        Transform your events into unforgettable experiences
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate12}
@@ -695,7 +695,7 @@ const Persona = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                      <button
+                        <button
                           onClick={() => {
                             const link = document.createElement("a");
                             link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905733/zq43rj9cl57dztfk79he.mp4";
@@ -734,11 +734,11 @@ const Persona = () => {
                   Submit Review
                 </button>
               </div>
-              
-            <Alert onClose={() => setOpenAlert(false)} severity="success" sx={{ width: '90%' }}>
-              Review submitted
-            </Alert>
-         
+
+              <Alert onClose={() => setOpenAlert(false)} severity="success" sx={{ width: '90%' }}>
+                Review submitted
+              </Alert>
+
             </div>
           </div>
         </div>
