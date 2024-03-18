@@ -8,7 +8,7 @@ import { Inter } from "next/font/google";
 import Script from 'next/script';
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
-import Head from 'next/head'; // Import the Head component
+import Head from 'next/head';
 
 const inter = Inter({ subsets: ["latin"] });
 

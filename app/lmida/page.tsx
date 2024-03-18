@@ -1,11 +1,12 @@
 
 import Persona from "@/components/Persona";
+import Restaurant from "@/components/Persona/restaurant";
 import ScrollUp from "@/components/Common/ScrollUp";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Page ",
-  description: "This is About Page ",
+  title: "Restaurant Page",
+  description: "This is Restaurant Page ",
   // other metadata
 };
 
@@ -13,7 +14,7 @@ const AboutPage = () => {
   return (
     <>
       <ScrollUp />
-      <Persona />
+      <Restaurant />
     </>
   );
 };
