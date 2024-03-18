@@ -118,10 +118,10 @@ const Restaurant = () => {
     try {
       axios.post('https://api.elasticemail.com/v2/email/send', null, {
         params: {
-          apikey: process.env.ELASTIC_EMAIL_API_KEY,
+          apikey: 'BC4C0088210F0049D2AB1093AB13032B4EBB49989F8B67CD2C0BDD065B09F3127CAB259734A59EA316A4BF49CFDA9C99',
           subject: "L'Mida Feedback",
-          from: "sarajedlaoui999@gmail.com",
-          to: "sarah.jedlaoui@bei.dev",
+          from: "sarah.jedlaoui@bei.dev",
+          to: "benromdhaneeya2000@gmail.com",
           bodyText: `L Mida feedback: video rating: video1: rate :${rate1} , decision: ${lastClicked1}, feedback:  ${feedback1}
           \n video2:${rate2}, decision: ${lastClicked2}, feedback:  ${feedback2}
           \n video3:${rate3}, decision: ${lastClicked3}, feedback:  ${feedback3}
