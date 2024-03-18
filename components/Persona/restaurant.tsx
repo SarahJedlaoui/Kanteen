@@ -39,18 +39,18 @@ const Restaurant = () => {
   const { id } = useParams<{ id: string }>();
   const [feedback, setFeedback] = useState('');
   const [openAlert, setOpenAlert] = useState(false);
-  const [rate1, setRate1] = React.useState<number | null>(2);
-  const [rate2, setRate2] = useState(4);
-  const [rate3, setRate3] = useState(4);
-  const [rate4, setRate4] = useState(4);
-  const [rate5, setRate5] = useState(4);
-  const [rate6, setRate6] = useState(4);
-  const [rate7, setRate7] = useState(4);
-  const [rate8, setRate8] = useState(4);
-  const [rate9, setRate9] = useState(4);
-  const [rate10, setRate10] = useState(4);
-  const [rate11, setRate11] = useState(4);
-  const [rate12, setRate12] = useState(4);
+  const [rate1, setRate1] = React.useState<number | null>(3);
+  const [rate2, setRate2] = React.useState<number | null>(3);
+  const [rate3, setRate3] = React.useState<number | null>(3);
+  const [rate4, setRate4] = React.useState<number | null>(3);
+  const [rate5, setRate5] = React.useState<number | null>(3);
+  const [rate6, setRate6] = React.useState<number | null>(3);
+  const [rate7, setRate7] = React.useState<number | null>(3);
+  const [rate8, setRate8] = React.useState<number | null>(3);
+  const [rate9, setRate9] = React.useState<number | null>(3);
+  const [rate10, setRate10] = React.useState<number | null>(3);
+  const [rate11, setRate11] = React.useState<number | null>(3);
+  const [rate12, setRate12] = React.useState<number | null>(3);
   const [lastClicked1, setLastClicked1] = useState('');
   const [lastClicked2, setLastClicked2] = useState('');
   const [lastClicked3, setLastClicked3] = useState('');
@@ -121,19 +121,19 @@ const Restaurant = () => {
           apikey: 'BC4C0088210F0049D2AB1093AB13032B4EBB49989F8B67CD2C0BDD065B09F3127CAB259734A59EA316A4BF49CFDA9C99',
           subject: "L'Mida Feedback",
           from: "sarah.jedlaoui@bei.dev",
-          to: "maher@bei.dev",
-          bodyText: `L Mida feedback: video rating: video1: rate :${rate1} , decision: ${lastClicked1}, feedback:  ${feedback1}
-          \n video2:${rate2}, decision: ${lastClicked2}, feedback:  ${feedback2}
-          \n video3:${rate3}, decision: ${lastClicked3}, feedback:  ${feedback3}
-          \n video4:${rate4}, decision: ${lastClicked4}, feedback:  ${feedback4}
-          \n video5:${rate5}, decision: ${lastClicked5}, feedback:  ${feedback5}
-          \n video6:${rate6}, decision: ${lastClicked6}, feedback:  ${feedback6}
-          \n video7:${rate7}, decision: ${lastClicked7}, feedback:  ${feedback7}
-          \nvideo8:${rate8}, decision: ${lastClicked8}, feedback:  ${feedback8}
-          \n video9:${rate9}, decision: ${lastClicked9}, feedback:  ${feedback9}
-          \n video10:${rate10}, decision: ${lastClicked10}, feedback:  ${feedback10}
-          \n video11:${rate11}, decision: ${lastClicked11}, feedback:  ${feedback11}
-          \n video12:${rate12} , decision: ${lastClicked12}, feedback:  ${feedback12} \n 
+          to: "sarah.jedlaoui@bei.dev",
+          bodyText: `L Mida feedback:\n video rating:\n video1: rate :${rate1} , decision: ${lastClicked1}, feedback:  ${feedback1}
+          \n video2:rate ${rate2}, decision: ${lastClicked2}, feedback:  ${feedback2}
+          \n video3:rate ${rate3}, decision: ${lastClicked3}, feedback:  ${feedback3}
+          \n video4:rate ${rate4}, decision: ${lastClicked4}, feedback:  ${feedback4}
+          \n video5:rate ${rate5}, decision: ${lastClicked5}, feedback:  ${feedback5}
+          \n video6:rate ${rate6}, decision: ${lastClicked6}, feedback:  ${feedback6}
+          \n video7:rate ${rate7}, decision: ${lastClicked7}, feedback:  ${feedback7}
+          \nvideo8:rate ${rate8}, decision: ${lastClicked8}, feedback:  ${feedback8}
+          \n video9:rate ${rate9}, decision: ${lastClicked9}, feedback:  ${feedback9}
+          \n video10:rate ${rate10}, decision: ${lastClicked10}, feedback:  ${feedback10}
+          \n video11:rate ${rate11}, decision: ${lastClicked11}, feedback:  ${feedback11}
+          \n video12:rate ${rate12} , decision: ${lastClicked12}, feedback:  ${feedback12} \n 
           Feedback: ${feedback}\n
           `,
         }
