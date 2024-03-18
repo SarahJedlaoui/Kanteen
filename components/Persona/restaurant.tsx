@@ -11,6 +11,8 @@ import { useEffect, useState } from 'react';
 import * as React from 'react';
 import './styles.css'
 import axios from 'axios';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
 interface Video {
   url: string;
   rating: number;
@@ -49,7 +51,7 @@ const Restaurant = () => {
   const [rate10, setRate10] = useState(4);
   const [rate11, setRate11] = useState(4);
   const [rate12, setRate12] = useState(4);
-
+  const [activeButton, setActiveButton] = useState(null);
   const handleSubmit = async () => {
     try {
       axios.post('https://api.elasticemail.com/v2/email/send', null, {
@@ -70,6 +72,10 @@ const Restaurant = () => {
     } catch (error) {
       console.error('Error while saving data:', error);
     }
+  };
+
+  const handleButtonClick = (name: string) => {
+    setActiveButton(name);
   };
   return (
     <>
@@ -139,6 +145,18 @@ const Restaurant = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                      <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>post</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>edit</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>discard</Button>
+                        </ButtonGroup>
+                      </div>
+
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                      <TextField onChange={(e) => setFeedback(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                      </div>
+
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
@@ -173,7 +191,7 @@ const Restaurant = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                       2- Our delightful cocktails!
+                        2- Our delightful cocktails!
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate2}
@@ -191,6 +209,13 @@ const Restaurant = () => {
                           }
                         }}
                       />
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>post</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>edit</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>discard</Button>
+                        </ButtonGroup>
+                      </div>
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <button
                           onClick={() => {
@@ -225,7 +250,7 @@ const Restaurant = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      3- L&apos;Mida Delightful Drinks!
+                        3- L&apos;Mida Delightful Drinks!
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate3}
@@ -243,6 +268,13 @@ const Restaurant = () => {
                           }
                         }}
                       />
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                       <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>post</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>edit</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>discard</Button>
+                        </ButtonGroup>
+                      </div>
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <button
                           onClick={() => {
@@ -278,7 +310,7 @@ const Restaurant = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                       4- Every bite tells a story
+                        4- Every bite tells a story
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate4}
@@ -296,6 +328,13 @@ const Restaurant = () => {
                           }
                         }}
                       />
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                       <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>post</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>edit</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>discard</Button>
+                        </ButtonGroup>
+                      </div>
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <button
                           onClick={() => {
@@ -316,6 +355,7 @@ const Restaurant = () => {
                   </div>
 
                 </div>
+
 
                 <div className="-mx-3 flex flex-wrap items-center justify-center mb-8" >
 
@@ -351,6 +391,13 @@ const Restaurant = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                       <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>post</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>edit</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>discard</Button>
+                        </ButtonGroup>
+                      </div>
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
@@ -384,7 +431,7 @@ const Restaurant = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                       6- Dive into the Moroccan mediterranean vibes
+                        6- Dive into the Moroccan mediterranean vibes
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate6}
@@ -402,6 +449,13 @@ const Restaurant = () => {
                           }
                         }}
                       />
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                       <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>post</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>edit</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>discard</Button>
+                        </ButtonGroup>
+                      </div>
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <button
                           onClick={() => {
@@ -436,7 +490,7 @@ const Restaurant = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                       7- Embark on a Journey of Flavor with Our New Menu
+                        7- Embark on a Journey of Flavor with Our New Menu
 
 
                       </p>
@@ -456,6 +510,13 @@ const Restaurant = () => {
                           }
                         }}
                       />
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                       <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>post</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>edit</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>discard</Button>
+                        </ButtonGroup>
+                      </div>
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <button
                           onClick={() => {
@@ -491,7 +552,7 @@ const Restaurant = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      8- Transform your events into unforgettable experiences
+                        8- Transform your events into unforgettable experiences
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate8}
@@ -509,6 +570,13 @@ const Restaurant = () => {
                           }
                         }}
                       />
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                       <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>post</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>edit</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>discard</Button>
+                        </ButtonGroup>
+                      </div>
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <button
                           onClick={() => {
@@ -529,8 +597,6 @@ const Restaurant = () => {
                   </div>
 
                 </div>
-
-
 
 
                 <div className="-mx-3 flex flex-wrap items-center justify-center mb-8" >
@@ -567,6 +633,13 @@ const Restaurant = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                       <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>post</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>edit</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>discard</Button>
+                        </ButtonGroup>
+                      </div>
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
@@ -600,7 +673,7 @@ const Restaurant = () => {
 
                       </div>
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                      Dive into the Moroccan mediterranean vibes
+                        Dive into the Moroccan mediterranean vibes
                       </p>
                       <Rating name="unique-rating"
                         defaultValue={rate10}
@@ -618,6 +691,13 @@ const Restaurant = () => {
                           }
                         }}
                       />
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                       <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>post</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>edit</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>discard</Button>
+                        </ButtonGroup>
+                      </div>
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <button
                           onClick={() => {
@@ -670,6 +750,13 @@ const Restaurant = () => {
                         }}
                       />
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                       <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>post</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>edit</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>discard</Button>
+                        </ButtonGroup>
+                      </div>
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
@@ -720,6 +807,13 @@ const Restaurant = () => {
                           }
                         }}
                       />
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                       <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>post</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>edit</Button>
+                          <Button sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}>discard</Button>
+                        </ButtonGroup>
+                      </div>
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <button
                           onClick={() => {
