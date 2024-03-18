@@ -234,9 +234,9 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                        {lastClicked1 && <p>Last action: {lastClicked1}</p>}
+                        
                       </div>
-
+                      {lastClicked1 && <p>{lastClicked1}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <TextField onChange={(e) => setFeedback1(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
                       </div>
@@ -316,8 +316,9 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                        {lastClicked2 && <p>Last action: {lastClicked2}</p>}
+                       
                       </div>
+                      {lastClicked2 && <p>{lastClicked2}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <TextField onChange={(e) => setFeedback2(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
                       </div>
@@ -395,8 +396,9 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                        {lastClicked3 && <p>Last action: {lastClicked3}</p>}
+                     
                       </div>
+                      {lastClicked3 && <p>{lastClicked3}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <TextField onChange={(e) => setFeedback3(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
                       </div>
@@ -475,8 +477,9 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                        {lastClicked4 && <p>Last action: {lastClicked4}</p>}
+                     
                       </div>
+                      {lastClicked4 && <p>{lastClicked4}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <TextField onChange={(e) => setFeedback4(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
                       </div>
@@ -557,8 +560,9 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                        {lastClicked5 && <p>Last action: {lastClicked5}</p>}
+                      
                       </div>
+                      {lastClicked5 && <p> {lastClicked5}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <TextField onChange={(e) => setFeedback5(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
                       </div>
@@ -636,8 +640,9 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                        {lastClicked6 && <p>Last action: {lastClicked6}</p>}
+                    
                       </div>
+                      {lastClicked6 && <p>{lastClicked6}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <TextField onChange={(e) => setFeedback6(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
                       </div>
@@ -717,8 +722,9 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                        {lastClicked7 && <p>Last action: {lastClicked7}</p>}
+                      
                       </div>
+                      {lastClicked7 && <p>{lastClicked7}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <TextField onChange={(e) => setFeedback7(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
                       </div>
@@ -797,8 +803,9 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                        {lastClicked8 && <p>Last action: {lastClicked8}</p>}
+                      
                       </div>
+                      {lastClicked8 && <p>{lastClicked8}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <TextField onChange={(e) => setFeedback8(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
                       </div>
@@ -879,8 +886,9 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                        {lastClicked9 && <p>Last action: {lastClicked9}</p>}
+                     
                       </div>
+                      {lastClicked9 && <p>{lastClicked9}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <TextField onChange={(e) => setFeedback9(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
                       </div>
@@ -958,8 +966,9 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                        {lastClicked10 && <p>Last action: {lastClicked10}</p>}
+                     
                       </div>
+                      {lastClicked10 && <p>{lastClicked10}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <TextField onChange={(e) => setFeedback10(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
                       </div>
@@ -1036,8 +1045,9 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                        {lastClicked11 && <p>Last action: {lastClicked11}</p>}
+                    
                       </div>
+                      {lastClicked11 && <p> {lastClicked11}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <TextField onChange={(e) => setFeedback11(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
                       </div>
@@ -1114,8 +1124,9 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                        {lastClicked12 && <p>Last action: {lastClicked12}</p>}
+                     
                       </div>
+                      {lastClicked12 && <p>{lastClicked12}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <TextField onChange={(e) => setFeedback12(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
                       </div>
