@@ -168,9 +168,26 @@ const Restaurant = () => {
 
                     <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
 
-                      L&apos;Mida in San Francisco is an elegant Moroccan restaurant that offers a fine dining experience in the city. It prides itself on bringing authentic Moroccan flavors to the table, serving dishes that reflect the rich culinary traditions of Morocco. The restaurant features a cozy and inviting interior, where guests can enjoy their meals in a warm and welcoming atmosphere. The open kitchen allows diners to witness the creation of their meals, including the baking of fresh bread, which adds an element of engagement and freshness to the dining experience.
+                     
+                      We are dedicated to maintaining a consistent social media posting schedule, with four posts per week, as detailed below:
 
-                      The menu at L&apos;Mida is a celebration of Moroccan cuisine, offering a variety of dishes that showcase the country&apos;s vibrant flavors and ingredients. Guests can start their meal with a selection of flatbreads, which are perfect for sharing and pair well with the restaurant&apos;s assortment of dips and spreads. Main courses include traditional tagines, which are slow-cooked stews made with tender meats, aromatic spices, and vegetables. The grilled whole fish, served with homemade harissa, is another highlight, offering a taste of Morocco&apos;s coastal cuisine.                    </p>
+                      Tuesday: 12 am, 1 am, or 6 am
+                      Thursday: 6 am or 4 pm
+                      Friday: 2 am, 11 am, or 1 pm
+
+                      Our advertising strategy involves selecting one video for a 7-day campaign, with the goal of achieving 50 conversions before the video gains viral momentum. Each post will include a captivating caption and relevant hashtags.
+
+                      On TikTok, our posting frequency will align with other platforms, with varied timings for optimal engagement:
+
+                      Monday: 12 PM or 4 PM
+                      Tuesday: 4 AM, 8 AM, 10 AM, or 3 PM
+                      Thursday: 5 AM, 3 PM, or 6 PM
+                      Sunday: 1 AM, 2 AM, 1 PM, 2 PM, or 10 PM
+
+                      While we respect Sunday as a day of rest, it offers ample opportunities for posting, especially on TikTok. This diversified posting strategy aims to maximize our presence and engagement across all platforms.
+
+
+                    </p>
                   </div>
                 </div>
                 <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
@@ -234,7 +251,7 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                        
+
                       </div>
                       {lastClicked1 && <p style={{ color: 'red' }}>{lastClicked1}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
@@ -316,7 +333,7 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                       
+
                       </div>
                       {lastClicked2 && <p style={{ color: 'red' }}>{lastClicked2}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
@@ -396,7 +413,7 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                     
+
                       </div>
                       {lastClicked3 && <p style={{ color: 'red' }}>{lastClicked3}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
@@ -477,7 +494,7 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                     
+
                       </div>
                       {lastClicked4 && <p style={{ color: 'red' }}>{lastClicked4}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
@@ -560,7 +577,7 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                      
+
                       </div>
                       {lastClicked5 && <p style={{ color: 'red' }}> {lastClicked5}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
@@ -640,7 +657,7 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                    
+
                       </div>
                       {lastClicked6 && <p style={{ color: 'red' }}>{lastClicked6}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
@@ -722,7 +739,7 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                      
+
                       </div>
                       {lastClicked7 && <p style={{ color: 'red' }}>{lastClicked7}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
@@ -803,7 +820,7 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                      
+
                       </div>
                       {lastClicked8 && <p style={{ color: 'red' }}>{lastClicked8}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
@@ -886,7 +903,7 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                     
+
                       </div>
                       {lastClicked9 && <p style={{ color: 'red' }}>{lastClicked9}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
@@ -966,7 +983,7 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                     
+
                       </div>
                       {lastClicked10 && <p style={{ color: 'red' }}>{lastClicked10}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
@@ -1045,7 +1062,7 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                    
+
                       </div>
                       {lastClicked11 && <p style={{ color: 'red' }}> {lastClicked11}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
@@ -1124,7 +1141,7 @@ const Restaurant = () => {
                           </Button>
                         </ButtonGroup>
                         {/* Optionally, display the last clicked action */}
-                     
+
                       </div>
                       {lastClicked12 && <p style={{ color: 'red' }}>{lastClicked12}</p>}
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
