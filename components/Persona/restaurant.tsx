@@ -169,11 +169,11 @@ const Restaurant = () => {
                     <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
 
                      
-                      We are dedicated to maintaining a consistent social media posting schedule, with four posts per week, as detailed below:
+                      We are dedicated to maintaining a consistent social media posting schedule, with four posts per week, as detailed below: \n
 
-                      Tuesday: 12 am, 1 am, or 6 am
-                      Thursday: 6 am or 4 pm
-                      Friday: 2 am, 11 am, or 1 pm
+                      Tuesday: 12 am, 1 am, or 6 am \n 
+                      Thursday: 6 am or 4 pm \n 
+                      Friday: 2 am, 11 am, or 1 pm \n
 
                       Our advertising strategy involves selecting one video for a 7-day campaign, with the goal of achieving 50 conversions before the video gains viral momentum. Each post will include a captivating caption and relevant hashtags.
 
