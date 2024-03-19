@@ -163,7 +163,7 @@ const Restaurant = () => {
                 <div className="-mx-4 flex flex-wrap px-4">
                   <div className="flex-1">
                     <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
-                      About Section
+                     Social Media Strategy 
                     </h3>
 
                     <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
