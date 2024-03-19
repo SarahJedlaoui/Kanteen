@@ -42,9 +42,9 @@ export default function RootLayout({
 
       <body className={` ${inter.className}`}>
         <Providers>
-         
+          <Header />
           {children}
-         
+          <Footer />
           <ScrollToTop />
         </Providers>
       </body>
