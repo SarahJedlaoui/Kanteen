@@ -195,7 +195,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://res.cloudinary.com/dfjuxc3h3/video/upload/v1710758739/ct5tfnue5izkptjo8rse.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/24.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -274,7 +274,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://res.cloudinary.com/dfjuxc3h3/video/upload/v1710854977/cc74g7qx7mcpat7mbkat.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/21.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -354,7 +354,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://res.cloudinary.com/dfjuxc3h3/video/upload/v1710856004/gidxvhwynsvye1vqrw2b.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/7.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -435,7 +435,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905806/yq8blzyxr97cse8nzohl.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/15.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -518,7 +518,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://res.cloudinary.com/dfjuxc3h3/video/upload/v1710855905/khpxqujlrwufdqlgf0qt.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/6.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -598,7 +598,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://res.cloudinary.com/dfjuxc3h3/video/upload/v1710856200/bxjb0kccplwgnvcezzxc.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/22.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -670,7 +670,6 @@ const Restaurant = () => {
                   </div>
 
 
-
                   <div className="w-1/2 sm:w-1/4 px-1 py-1">
                     <div
                       className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
@@ -678,7 +677,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://res.cloudinary.com/dfjuxc3h3/video/upload/v1710854631/skm1zroiankkavaht7ad.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/20.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -752,8 +751,6 @@ const Restaurant = () => {
                   </div>
 
 
-
-
                   <div className="w-1/2 sm:w-1/4 px-1 py-1">
                     <div
                       className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
@@ -761,7 +758,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://res.cloudinary.com/dfjuxc3h3/video/upload/v1710855711/y694ums1ecvvje9uymg4.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/4.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -844,7 +841,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://res.cloudinary.com/dfjuxc3h3/video/upload/v1710757944/s6ywluqm2lzjpkjawqpl.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/19.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -924,7 +921,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://res.cloudinary.com/dfjuxc3h3/video/upload/v1710856559/widqpqpjzjtw4szpdlfb.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/10.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -1003,7 +1000,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://res.cloudinary.com/dfjuxc3h3/video/upload/v1710758773/lgegiixw5kfhdorjmwdw.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/23.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -1082,7 +1079,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://res.cloudinary.com/dfjuxc3h3/video/upload/v1710856772/zdotw4tiaxajnkenepep.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/11.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
