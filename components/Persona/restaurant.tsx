@@ -380,7 +380,7 @@ const Restaurant = () => {
   };
 
   
-  const videoData = value === 'firstWeek' ? videoData1 : videoData2;
+  const videoData = value === 'firstWeek' ? videoData2 : videoData1;
 
   return (
     <>
