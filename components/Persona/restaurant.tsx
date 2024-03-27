@@ -292,7 +292,7 @@ const Restaurant = () => {
     if (value === 'firstWeek') {
       setVideoData(videoData1);
     }
-    else {
+   if (value !== 'firstWeek') {
       setVideoData(videoData2);
     }
     
@@ -354,7 +354,7 @@ const Restaurant = () => {
           apikey: 'BC4C0088210F0049D2AB1093AB13032B4EBB49989F8B67CD2C0BDD065B09F3127CAB259734A59EA316A4BF49CFDA9C99',
           subject: "L'Mida Feedback",
           from: "sarah.jedlaoui@bei.dev",
-          to: "maher@bei.dev",
+          to: "sarah.jedlaoui@bei.dev",
           bodyText: `L Mida feedback:\n video rating:\n video1: rate :${rate1} , decision: ${lastClicked1}, feedback:  ${feedback1}
           \n video2:rate ${rate2}, decision: ${lastClicked2}, feedback:  ${feedback2}
           \n video3:rate ${rate3}, decision: ${lastClicked3}, feedback:  ${feedback3}
