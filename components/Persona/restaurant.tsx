@@ -289,8 +289,10 @@ const Restaurant = () => {
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
     console.log('new value', value)
-      
-    if (value !== 'firstWeek') {
+    if (value === 'firstWeek') {
+      setVideoData(videoData1);
+    }
+    else {
       setVideoData(videoData2);
     }
     
