@@ -89,7 +89,109 @@ const Restaurant = () => {
     setValue(newValue);
   };
 
-  const videoData = [
+  const videoData2 = [
+    {
+      src: "https://d205gdf6tf9tly.cloudfront.net/6.mp4",
+      title: "Dive into the Moroccan mediterranean vibes!",
+      ratingState: rate5,
+      setRatingState: setRate5,
+      feedbackState: [feedback5, setFeedback5],
+      lastClickedState: lastClicked5
+    },
+    {
+      src: "https://d205gdf6tf9tly.cloudfront.net/22.mp4",
+      title: " Dive into the Moroccan mediterranean vibes!",
+      ratingState: rate6,
+      setRatingState: setRate6,
+      feedbackState: [feedback6, setFeedback6],
+      lastClickedState: lastClicked6
+    },
+    {
+      src: "https://d205gdf6tf9tly.cloudfront.net/20.mp4",
+      title: "Embark on a Journey of Flavor with Our New Menu!.",
+      ratingState: rate7,
+      setRatingState: setRate7,
+      feedbackState: [feedback7, setFeedback7],
+      lastClickedState: lastClicked7,
+    },
+    {
+      src: "https://d205gdf6tf9tly.cloudfront.net/4.mp4",
+      title: "Transform your events into unforgettable experiences",
+      ratingState: rate8,
+      setRatingState: setRate8,
+      feedbackState: [feedback8, setFeedback8],
+      lastClickedState: lastClicked8
+    },
+   
+    {
+      src: "https://d205gdf6tf9tly.cloudfront.net/19.mp4",
+      title: "Every dish creates an atmosphere of culinary delight",
+      ratingState: rate9,
+      setRatingState: setRate9,
+      feedbackState: [feedback9, setFeedback9],
+      lastClickedState: lastClicked9
+    },
+    {
+      src: "https://d205gdf6tf9tly.cloudfront.net/10.mp4",
+      title: "Dive into the Moroccan mediterranean vibes!",
+      ratingState: rate10,
+      setRatingState: setRate10,
+      feedbackState: [feedback10, setFeedback10],
+      lastClickedState: lastClicked10
+    },
+    {
+      src: "https://d205gdf6tf9tly.cloudfront.net/23.mp4",
+      title: "Embark on a Journey of Flavor with Our New Menu!.",
+      ratingState: rate11,
+      setRatingState: setRate11,
+      feedbackState: [feedback11, setFeedback11],
+      lastClickedState: lastClicked11
+    },
+    {
+      src: "https://d205gdf6tf9tly.cloudfront.net/11.mp4",
+      title: "Transform your events into unforgettable experiences",
+      ratingState: rate12,
+      setRatingState: setRate12,
+      feedbackState: [feedback12, setFeedback12],
+      lastClickedState: [lastClicked12, setLastClicked12]
+    },
+    {
+      src: "https://d205gdf6tf9tly.cloudfront.net/24.mp4",
+      title: "Presentation of L'Mida",
+      ratingState: rate1,
+      setRatingState: setRate1,
+      feedbackState: [feedback1, setFeedback1],
+      lastClickedState: lastClicked1
+    },
+    {
+      src: "https://d205gdf6tf9tly.cloudfront.net/21.mp4",
+      title: "L'Mida cocktails 0.1",
+      ratingState: rate2,
+      setRatingState: setRate2,
+      feedbackState: [feedback2, setFeedback2],
+      lastClickedState: lastClicked2
+    },
+    {
+      src: "https://d205gdf6tf9tly.cloudfront.net/7.mp4",
+      title: " L'Mida cocktails 0.2!",
+      ratingState: rate3,
+      setRatingState: setRate3,
+      feedbackState: [feedback3, setFeedback3],
+      lastClickedState: lastClicked3
+    },
+    {
+      src: "https://d205gdf6tf9tly.cloudfront.net/15.mp4",
+      title: "L'Mida positive reviews",
+      ratingState: rate4,
+      setRatingState: setRate4,
+      feedbackState: [feedback4, setFeedback4],
+      lastClickedState: lastClicked4
+    },
+   
+  ];
+
+
+  const videoData1 = [
     {
       src: "https://d205gdf6tf9tly.cloudfront.net/24.mp4",
       title: "Presentation of L'Mida",
@@ -185,8 +287,17 @@ const Restaurant = () => {
       setRatingState: setRate12,
       feedbackState: [feedback12, setFeedback12],
       lastClickedState: [lastClicked12, setLastClicked12]
-    }
+    },
   ];
+
+
+
+
+  
+
+
+
+
   const handleButtonClick = (index: number, action: any) => {
     // Construct the state setter function name dynamically
     const setLastClicked = `setLastClicked${index + 1}`;
@@ -266,7 +377,7 @@ const Restaurant = () => {
       console.error('Error while saving data:', error);
     }
   };
-
+  const videoData = value === 0 ? videoData1 : videoData2;
   return (
     <>
       <section
