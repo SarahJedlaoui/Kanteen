@@ -84,12 +84,8 @@ const Restaurant = () => {
   const [feedback11, setFeedback11] = useState('');
   const [feedback12, setFeedback12] = useState('');
   const [value, setValue] =  useState('firstWeek');
-
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
-    setValue(newValue);
-    console.log('new value', value)
-  };
-
+  const [videoData, setVideoData] =  useState([]);
+ 
   const videoData2 = [
     {
       src: "https://d205gdf6tf9tly.cloudfront.net/6.mp4",
@@ -191,7 +187,6 @@ const Restaurant = () => {
    
   ];
 
-
   const videoData1 = [
     {
       src: "https://d205gdf6tf9tly.cloudfront.net/24.mp4",
@@ -291,13 +286,15 @@ const Restaurant = () => {
     },
   ];
 
-
-
-
-  
-
-
-
+  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+    setValue(newValue);
+    console.log('new value', value)
+      
+    if (value !== 'firstWeek') {
+      setVideoData(videoData2);
+    }
+    
+  };
 
   const handleButtonClick = (index: number, action: any) => {
     // Construct the state setter function name dynamically
@@ -379,8 +376,7 @@ const Restaurant = () => {
     }
   };
 
-  
-  const videoData = value === 'firstWeek' ? videoData2 : videoData1;
+
 
   return (
     <>
