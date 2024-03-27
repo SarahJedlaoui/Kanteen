@@ -377,6 +377,8 @@ const Restaurant = () => {
       console.error('Error while saving data:', error);
     }
   };
+
+  
   const videoData = value === 0 ? videoData1 : videoData2;
   return (
     <>
@@ -425,14 +427,14 @@ const Restaurant = () => {
                       }}
 
                     >
-                      <Tab label="First week" />
-                      <Tab label="Second week " />
-                      <Tab label="Third week" />
-                      <Tab label="Fourth week" />
-                      <Tab label="Fifth week" />
-                      <Tab label="Third week" />
-                      <Tab label="Fourth week" />
-                      <Tab label="Fifth week" />
+                      <Tab value={0} label="First week" />
+                      <Tab value={1} label="Second week " />
+                      <Tab value={2} label="Third week" />
+                      <Tab value={3} label="Fourth week" />
+                      <Tab value={4} label="Fifth week" />
+                      <Tab value={5} label="Third week" />
+                      <Tab value={6} label="Fourth week" />
+                      <Tab value={7} label="Fifth week" />
                     </Tabs>
                   </Box>
                 </div>
