@@ -87,6 +87,7 @@ const Restaurant = () => {
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
+    console.log('new value', value)
   };
 
   const videoData2 = [
@@ -380,6 +381,7 @@ const Restaurant = () => {
 
   
   const videoData = value === 0 ? videoData1 : videoData2;
+  
   return (
     <>
       <section
@@ -444,8 +446,6 @@ const Restaurant = () => {
                 <p className="dark:text-body-color-dark mb-5 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
                   Themes, parties, happy hours
                 </p>
-
-
 
 
 
