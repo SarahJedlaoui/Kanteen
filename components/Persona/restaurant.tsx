@@ -299,32 +299,32 @@ const Restaurant = () => {
 
                   </div>
                 </div>
+                <div className="-mx-3 flex flex-wrap items-center justify-center mb-5">
+                  <Box >
+                    <Tabs
+                      value={value}
+                      onChange={handleChange}
+                      variant="scrollable"
+                      scrollButtons="auto"
+                      aria-label="scrollable auto tabs example"
+                      sx={{
+                        "& .Mui-selected": {
+                          color: '#083c2f',
+                        },
+                      }}
 
-                <Box >
-                  <Tabs
-                    value={value}
-                    onChange={handleChange}
-                    variant="scrollable"
-                    scrollButtons="auto"
-                    aria-label="scrollable auto tabs example"
-                    sx={{
-                      "& .Mui-selected": {
-                        color: '#083c2f', 
-                      },
-                    }}
-                   
-                  >
-                    <Tab label="First week" />
-                    <Tab label="Second week " />
-                    <Tab label="Third week" />
-                    <Tab label="Fourth week" />
-                    <Tab label="Fifth week" />
-                    <Tab label="Third week" />
-                    <Tab label="Fourth week" />
-                    <Tab label="Fifth week" />
-                  </Tabs>
-                </Box>
-
+                    >
+                      <Tab label="First week" />
+                      <Tab label="Second week " />
+                      <Tab label="Third week" />
+                      <Tab label="Fourth week" />
+                      <Tab label="Fifth week" />
+                      <Tab label="Third week" />
+                      <Tab label="Fourth week" />
+                      <Tab label="Fifth week" />
+                    </Tabs>
+                  </Box>
+                </div>
                 <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
                   Video Ideas
                 </h3>
@@ -386,9 +386,29 @@ const Restaurant = () => {
                           </ButtonGroup>
                           {/* Optionally, display the last clicked action */}
                         </div>
-                        {video.lastClickedState[0] && <p style={{ color: 'red' }}>{video.lastClickedState}</p>}
+                        {video.lastClickedState[0] && (
+                          <p style={{ color: 'red' }}>
+                            {typeof video.lastClickedState[0] === 'string'
+                              ? video.lastClickedState[0]
+                              : 'edited'}
+                          </p>
+                        )}
+
                         <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                          <TextField onChange={(e) => video.feedbackState[1](e.target.value)} id={`feedback-${index}`} label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                          <TextField
+                            onChange={(e) => {
+                              const setterFunction = video.feedbackState[1];
+                              if (typeof setterFunction === 'function') {
+                                setterFunction(e.target.value);
+                              }
+                            }}
+                            id={`feedback-${index}`}
+                            label="feedback"
+                            variant="standard"
+                            fullWidth
+                            maxRows={4}
+                            multiline
+                          />
                         </div>
                         <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                           <button
