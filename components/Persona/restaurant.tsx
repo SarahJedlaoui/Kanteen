@@ -83,9 +83,9 @@ const Restaurant = () => {
   const [feedback10, setFeedback10] = useState('');
   const [feedback11, setFeedback11] = useState('');
   const [feedback12, setFeedback12] = useState('');
-  const [value, setValue] = React.useState(0);
+  const [value, setValue] =  useState('firstWeek');
 
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
+  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
     console.log('new value', value)
   };
@@ -380,7 +380,7 @@ const Restaurant = () => {
   };
 
   
-  const videoData = value === 0 ? videoData1 : videoData2;
+  const videoData = value === 'firstWeek' ? videoData1 : videoData2;
 
   return (
     <>
@@ -429,14 +429,13 @@ const Restaurant = () => {
                       }}
 
                     >
-                      <Tab label="First week" />
-                      <Tab label="Second week " />
-                      <Tab label="Third week" />
-                      <Tab label="Fourth week" />
-                      <Tab label="Fifth week" />
-                      <Tab label="Third week" />
-                      <Tab label="Fourth week" />
-                      <Tab label="Fifth week" />
+                      <Tab value="firstWeek" label="First week" />
+                      <Tab  value="secondWeek" label="Second week " />
+                      <Tab  value="thirdWeek" label="Third week" />
+                      <Tab  value="fourthWeek" label="Fourth week" />
+                      <Tab  value="fifthWeek" label="Fifth week" />
+                      <Tab  value="sixthWeek" label="Sixth week" />
+                      <Tab  value="seventhWeek" label="Seventh week" />
                     </Tabs>
                   </Box>
                 </div>
