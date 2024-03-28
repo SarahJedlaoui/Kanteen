@@ -261,7 +261,7 @@ const Restaurant = () => {
                 params: {
                     apikey: 'BC4C0088210F0049D2AB1093AB13032B4EBB49989F8B67CD2C0BDD065B09F3127CAB259734A59EA316A4BF49CFDA9C99',
                     subject: "L'Mida Feedback",
-                    from: "sarah.jedlaoui@bei.dev",
+                    from: "sarajedlaoui999@gmail.com",
                     to: "sarajedlaoui99@gmail.com",
                     bodyText: `L Mida feedback:\n video rating:\n video1: rate :${rate1} , decision: ${lastClicked1}, feedback:  ${feedback1}
           \n video2:rate ${rate2}, decision: ${lastClicked2}, feedback:  ${feedback2}
