@@ -383,7 +383,14 @@ const Restaurant = () => {
                                                 console.log(description, link);
                                                 handleClose(); // Close the modal after submission
                                             }}
-                                            sx={{ mt: 2 }}
+                                            sx={{
+                                                mt: 2,
+                                                backgroundColor: '#c9f269', // Button background color
+                                                color: 'black', // Text color
+                                                '&:hover': {
+                                                  backgroundColor: '#b0d457', // Slightly darker on hover for feedback
+                                                },
+                                              }}
                                             variant="contained"
                                         >
                                             Add
