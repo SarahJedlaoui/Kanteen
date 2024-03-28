@@ -19,7 +19,7 @@ import Box from '@mui/material/Box';
 import { FullscreenRounded } from "@mui/icons-material";
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
-import { Modal} from '@mui/material';
+import { Modal, Typography } from '@mui/material';
 
 interface Video {
     url: string;
@@ -46,8 +46,8 @@ interface Persona {
 const Restaurant = () => {
 
 
-    
-  
+
+
     const [currentPage, setCurrentPage] = React.useState(1);
     const itemsPerPage = 8; // however many items you want per page
     const [description, setDescription] = React.useState('');
@@ -300,7 +300,7 @@ const Restaurant = () => {
         border: '2px solid #000',
         boxShadow: 24,
         p: 4,
-      };
+    };
 
     return (
         <>
@@ -336,7 +336,7 @@ const Restaurant = () => {
                                 </div>
                                 <div className="flex flex-col pt-5 items-center justify-end space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                                     <button
-                                     onClick={handleOpen}
+                                        onClick={handleOpen}
                                         className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                                     >
                                         Add Video
@@ -349,43 +349,47 @@ const Restaurant = () => {
                                     Themes, parties, happy hours
                                 </p>
                                 <Modal
-        open={open}
-        onClose={handleClose}
-        aria-labelledby="modal-modal-title"
-        aria-describedby="modal-modal-description"
-      >
-        <Box sx={style}>
-          <TextField
-            id="description"
-            label="Description"
-            variant="standard"
-            fullWidth
-            margin="dense"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-          <TextField
-            id="link"
-            label="Link"
-            variant="standard"
-            fullWidth
-            margin="dense"
-            value={link}
-            onChange={(e) => setLink(e.target.value)}
-          />
-          <Button
-            onClick={() => {
-              // Here you can handle the submission of the data
-              console.log(description, link);
-              handleClose(); // Close the modal after submission
-            }}
-            sx={{ mt: 2 }}
-            variant="contained"
-          >
-            Add
-          </Button>
-        </Box>
-      </Modal>
+                                    open={open}
+                                    onClose={handleClose}
+                                    aria-labelledby="modal-modal-title"
+                                    aria-describedby="modal-modal-description"
+                                >
+                                    <Box sx={style}>
+                                        <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
+                                            New Video
+                                        </h3>
+                                       
+                                        <TextField
+                                            id="description"
+                                            label="Description"
+                                            variant="standard"
+                                            fullWidth
+                                            margin="dense"
+                                            value={description}
+                                            onChange={(e) => setDescription(e.target.value)}
+                                        />
+                                        <TextField
+                                            id="link"
+                                            label="Link"
+                                            variant="standard"
+                                            fullWidth
+                                            margin="dense"
+                                            value={link}
+                                            onChange={(e) => setLink(e.target.value)}
+                                        />
+                                        <Button
+                                            onClick={() => {
+                                                // Here you can handle the submission of the data
+                                                console.log(description, link);
+                                                handleClose(); // Close the modal after submission
+                                            }}
+                                            sx={{ mt: 2 }}
+                                            variant="contained"
+                                        >
+                                            Add
+                                        </Button>
+                                    </Box>
+                                </Modal>
 
 
                                 <div className="-mx-3 flex flex-wrap items-center justify-center mb-5">
