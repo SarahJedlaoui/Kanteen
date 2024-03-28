@@ -259,9 +259,9 @@ const Restaurant = () => {
         try {
             axios.post('https://api.elasticemail.com/v2/email/send', null, {
                 params: {
-                    apikey: 'BC4C0088210F0049D2AB1093AB13032B4EBB49989F8B67CD2C0BDD065B09F3127CAB259734A59EA316A4BF49CFDA9C99',
+                    apikey: 'B1038442B4A8C23147A0EF0916A8A97F5A61BE6A5320B22D89596ED88C421CDF53FD57FBE5714CDF5DBDF8E2FFC8CA2F',
                     subject: "L'Mida Feedback",
-                    from: "sarajedlaoui999@gmail.com",
+                    from: "sarajedlaoui99@gmail.com",
                     to: "benromdhaneeya2000@gmail.com",
                     bodyText: `L Mida feedback:\n video rating:\n video1: rate :${rate1} , decision: ${lastClicked1}, feedback:  ${feedback1}
           \n video2:rate ${rate2}, decision: ${lastClicked2}, feedback:  ${feedback2}
@@ -427,10 +427,17 @@ const Restaurant = () => {
 
 
 
+                                <Stack spacing={2} alignItems="center">
+                                <Pagination
+                                    count={Math.ceil(videoData.length / itemsPerPage)}
+                                    page={currentPage}
+                                    onChange={handleChange}
+                                    size="large"
+                                />
+                            </Stack>
 
 
-
-                                <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
+                                <h3 className="mb-5  text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
                                     Feedback
                                 </h3>
                                 <p className="dark:text-body-color-dark mb-5 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
@@ -447,26 +454,14 @@ const Restaurant = () => {
                                     Submit Review
                                 </button>
                             </div>
-
                             {openAlert && (
                                 <Alert onClose={() => setOpenAlert(false)} severity="success" sx={{ width: '90%' }}>
                                     Review submitted
                                 </Alert>
                             )}
-                            <Stack spacing={2} alignItems="center">
-                                <Pagination
-                                    count={Math.ceil(videoData.length / itemsPerPage)}
-                                    page={currentPage}
-                                    onChange={handleChange}
-                                    size="large"
-                                />
-                            </Stack>
-
                         </div>
                     </div>
                 </div>
-
-
             </section >
         </>
     );
