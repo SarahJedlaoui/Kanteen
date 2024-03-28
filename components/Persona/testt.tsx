@@ -19,6 +19,7 @@ import Box from '@mui/material/Box';
 import { FullscreenRounded } from "@mui/icons-material";
 import Pagination from '@mui/material/Pagination';
 import Stack from '@mui/material/Stack';
+import { Modal} from '@mui/material';
 
 interface Video {
     url: string;
@@ -45,12 +46,14 @@ interface Persona {
 const Restaurant = () => {
 
 
-
+    
+  
     const [currentPage, setCurrentPage] = React.useState(1);
     const itemsPerPage = 8; // however many items you want per page
-
+    const [description, setDescription] = React.useState('');
+    const [link, setLink] = React.useState('');
     const [persona, setPersona] = useState<Persona | null>(null);
-    const [isOpen, setOpen] = useState(false);
+    const [open, setOpen] = React.useState(false);
     const { id } = useParams<{ id: string }>();
     const [feedback, setFeedback] = useState('');
     const [openAlert, setOpenAlert] = useState(false);
@@ -92,7 +95,8 @@ const Restaurant = () => {
     const [feedback12, setFeedback12] = useState('');
     const [value, setValue] = useState('firstWeek');
 
-
+    const handleOpen = () => setOpen(true);
+    const handleClose = () => setOpen(false);
 
 
     const videoData = [
@@ -286,7 +290,17 @@ const Restaurant = () => {
         }
     };
 
-
+    const style = {
+        position: 'absolute',
+        top: '50%',
+        left: '50%',
+        transform: 'translate(-50%, -50%)',
+        width: 400,
+        bgcolor: 'background.paper',
+        border: '2px solid #000',
+        boxShadow: 24,
+        p: 4,
+      };
 
     return (
         <>
@@ -320,14 +334,58 @@ const Restaurant = () => {
 
                                     </div>
                                 </div>
-
+                                <div className="flex flex-col pt-5 items-center justify-end space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                                    <button
+                                     onClick={handleOpen}
+                                        className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
+                                    >
+                                        Add Video
+                                    </button>
+                                </div>
                                 <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
                                     Video Ideas
                                 </h3>
                                 <p className="dark:text-body-color-dark mb-5 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
                                     Themes, parties, happy hours
                                 </p>
-
+                                <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <TextField
+            id="description"
+            label="Description"
+            variant="standard"
+            fullWidth
+            margin="dense"
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+          <TextField
+            id="link"
+            label="Link"
+            variant="standard"
+            fullWidth
+            margin="dense"
+            value={link}
+            onChange={(e) => setLink(e.target.value)}
+          />
+          <Button
+            onClick={() => {
+              // Here you can handle the submission of the data
+              console.log(description, link);
+              handleClose(); // Close the modal after submission
+            }}
+            sx={{ mt: 2 }}
+            variant="contained"
+          >
+            Add
+          </Button>
+        </Box>
+      </Modal>
 
 
                                 <div className="-mx-3 flex flex-wrap items-center justify-center mb-5">
@@ -428,13 +486,13 @@ const Restaurant = () => {
 
 
                                 <Stack spacing={2} alignItems="center">
-                                <Pagination
-                                    count={Math.ceil(videoData.length / itemsPerPage)}
-                                    page={currentPage}
-                                    onChange={handleChange}
-                                    size="large"
-                                />
-                            </Stack>
+                                    <Pagination
+                                        count={Math.ceil(videoData.length / itemsPerPage)}
+                                        page={currentPage}
+                                        onChange={handleChange}
+                                        size="large"
+                                    />
+                                </Stack>
 
 
                                 <h3 className="mb-5  text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
