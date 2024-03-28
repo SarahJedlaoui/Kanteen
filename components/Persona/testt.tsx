@@ -57,18 +57,18 @@ const Restaurant = () => {
     const { id } = useParams<{ id: string }>();
     const [feedback, setFeedback] = useState('');
     const [openAlert, setOpenAlert] = useState(false);
-    const [rate1, setRate1]: [number, React.Dispatch<React.SetStateAction<number>>] = useState(3);
-    const [rate2, setRate2]: [number, React.Dispatch<React.SetStateAction<number>>] = useState(3);
-    const [rate3, setRate3]: [number, React.Dispatch<React.SetStateAction<number>>] = useState(3);
-    const [rate4, setRate4]: [number, React.Dispatch<React.SetStateAction<number>>] = useState(3);
-    const [rate5, setRate5]: [number, React.Dispatch<React.SetStateAction<number>>] = useState(3);
-    const [rate6, setRate6]: [number, React.Dispatch<React.SetStateAction<number>>] = useState(3);
-    const [rate7, setRate7]: [number, React.Dispatch<React.SetStateAction<number>>] = useState(3);
-    const [rate8, setRate8]: [number, React.Dispatch<React.SetStateAction<number>>] = useState(3);
-    const [rate9, setRate9]: [number, React.Dispatch<React.SetStateAction<number>>] = useState(3);
-    const [rate10, setRate10]: [number, React.Dispatch<React.SetStateAction<number>>] = useState(3);
-    const [rate11, setRate11]: [number, React.Dispatch<React.SetStateAction<number>>] = useState(3);
-    const [rate12, setRate12]: [number, React.Dispatch<React.SetStateAction<number>>] = useState(3);
+    const [rate1, setRate1]= useState(3);
+    const [rate2, setRate2] = useState(3);
+    const [rate3, setRate3]= useState(3);
+    const [rate4, setRate4] = useState(3);
+    const [rate5, setRate5]= useState(3);
+    const [rate6, setRate6]= useState(3);
+    const [rate7, setRate7] = useState(3);
+    const [rate8, setRate8] = useState(3);
+    const [rate9, setRate9] = useState(3);
+    const [rate10, setRate10] = useState(3);
+    const [rate11, setRate11] = useState(3);
+    const [rate12, setRate12] = useState(3);
     const [lastClicked1, setLastClicked1] = useState('');
     const [lastClicked2, setLastClicked2] = useState('');
     const [lastClicked3, setLastClicked3] = useState('');
@@ -447,12 +447,12 @@ const Restaurant = () => {
                                                             Discard
                                                         </Button>
                                                     </ButtonGroup>
-                                                    {/* Optionally, display the last clicked action */}
+                                                   
                                                 </div>
-                                                {video.lastClickedState[0] && (
+                                                {video.lastClickedState && (
                                                     <p style={{ color: 'red' }}>
-                                                        {typeof video.lastClickedState[0] === 'string'
-                                                            ? video.lastClickedState[0]
+                                                        {typeof video.lastClickedState === 'string'
+                                                            ? video.lastClickedState
                                                             : 'edited'}
                                                     </p>
                                                 )}
