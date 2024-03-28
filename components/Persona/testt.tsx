@@ -57,12 +57,12 @@ const Restaurant = () => {
     const { id } = useParams<{ id: string }>();
     const [feedback, setFeedback] = useState('');
     const [openAlert, setOpenAlert] = useState(false);
-    const [rate1, setRate1]= useState(3);
+    const [rate1, setRate1] = useState(3);
     const [rate2, setRate2] = useState(3);
-    const [rate3, setRate3]= useState(3);
+    const [rate3, setRate3] = useState(3);
     const [rate4, setRate4] = useState(3);
-    const [rate5, setRate5]= useState(3);
-    const [rate6, setRate6]= useState(3);
+    const [rate5, setRate5] = useState(3);
+    const [rate6, setRate6] = useState(3);
     const [rate7, setRate7] = useState(3);
     const [rate8, setRate8] = useState(3);
     const [rate9, setRate9] = useState(3);
@@ -358,7 +358,7 @@ const Restaurant = () => {
                                         <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
                                             New Video
                                         </h3>
-                                       
+
                                         <TextField
                                             id="description"
                                             label="Description"
@@ -388,9 +388,9 @@ const Restaurant = () => {
                                                 backgroundColor: '#c9f269', // Button background color
                                                 color: 'black', // Text color
                                                 '&:hover': {
-                                                  backgroundColor: '#b0d457', // Slightly darker on hover for feedback
+                                                    backgroundColor: '#b0d457', // Slightly darker on hover for feedback
                                                 },
-                                              }}
+                                            }}
                                             variant="contained"
                                         >
                                             Add
@@ -414,7 +414,7 @@ const Restaurant = () => {
                                                 </p>
                                                 <Rating
                                                     name={`rating-${index}`}
-                                                    defaultValue={video.ratingState[0]}
+                                                    defaultValue={video.ratingState}
                                                     onChange={(event, newValue) => {
                                                         console.log("New Rating Value:", newValue);
                                                         video.setRatingState(newValue ?? 5);
@@ -447,7 +447,7 @@ const Restaurant = () => {
                                                             Discard
                                                         </Button>
                                                     </ButtonGroup>
-                                                   
+
                                                 </div>
                                                 {video.lastClickedState && (
                                                     <p style={{ color: 'red' }}>
