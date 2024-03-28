@@ -49,7 +49,7 @@ const Restaurant = () => {
 
 
     const [currentPage, setCurrentPage] = React.useState(1);
-    const itemsPerPage = 8; // however many items you want per page
+    const itemsPerPage = 12; // however many items you want per page
     const [description, setDescription] = React.useState('');
     const [link, setLink] = React.useState('');
     const [persona, setPersona] = useState<Persona | null>(null);
