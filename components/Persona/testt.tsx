@@ -194,7 +194,7 @@ const Restaurant = () => {
             ratingState: rate12,
             setRatingState: setRate12,
             feedbackState: [feedback12, setFeedback12],
-            lastClickedState: [lastClicked12, setLastClicked12]
+            lastClickedState: lastClicked12
         },
     ];
 
