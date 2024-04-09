@@ -209,10 +209,10 @@ const Restaurant = () => {
 
 
  
-                <div className="-mx-1 flex flex-wrap items-center justify-center mb-5" >
+                <div className="-mx-3 flex flex-wrap items-center justify-center mb-5" >
 
 
-                  <div className="w-1/2 sm:w-1/3 px-1 py-1 flex items-center justify-center ">
+                   <div className="w-1/2 sm:w-1/3 px-1 py-1" >
                     <div
                       className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md items-center justify-center "
                       data-wow-delay=".15s">
@@ -448,7 +448,7 @@ const Restaurant = () => {
                 <div className="-mx-1 flex flex-wrap items-center justify-center mb-8" >
 
 
-                  <div className="w-1/2 sm:w-1/3 px-1 py-1 flex items-center justify-center ">
+                  <div className="w-1/2 sm:w-1/3 px-1 py-1" >
                     <div
                       className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md items-center justify-center "
                       data-wow-delay=".15s">
