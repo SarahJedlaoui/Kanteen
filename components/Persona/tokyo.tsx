@@ -216,7 +216,7 @@ const Restaurant = () => {
                     <div
                       className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md items-center justify-center "
                       data-wow-delay=".15s">
-                      <div className="mb-5 relative  items-center justify-center h-[400px]">
+                      <div className="mb-5 relative  items-center justify-center h-[450px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
                           <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
@@ -292,7 +292,7 @@ const Restaurant = () => {
                       className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
                       data-wow-delay=".15s"
                     >
-                      <div className="mb-5 relative items-center justify-center h-[400px] ">
+                      <div className="mb-5 relative items-center justify-center h-[450px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
                           <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo2.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
@@ -370,7 +370,7 @@ const Restaurant = () => {
                       className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
                       data-wow-delay=".15s"
                     >
-                      <div className="mb-5 relative  items-center justify-center h-[400px]">
+                      <div className="mb-5 relative  items-center justify-center h-[450px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
                           <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo3.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
@@ -452,7 +452,7 @@ const Restaurant = () => {
                     <div
                       className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md items-center justify-center "
                       data-wow-delay=".15s">
-                      <div className="mb-5 relative  items-center justify-center h-[400px]">
+                      <div className="mb-5 relative  items-center justify-center h-[450px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
                           <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo4.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
@@ -530,7 +530,7 @@ const Restaurant = () => {
                       className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
                       data-wow-delay=".15s"
                     >
-                      <div className="mb-5 relative items-center justify-center h-[400px] ">
+                      <div className="mb-5 relative items-center justify-center h-[450px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
                           <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo5.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
@@ -607,7 +607,7 @@ const Restaurant = () => {
                       className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
                       data-wow-delay=".15s"
                     >
-                      <div className="mb-5 relative  items-center justify-center h-[400px]">
+                      <div className="mb-5 relative  items-center justify-center h-[450px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
                           <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo6.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
