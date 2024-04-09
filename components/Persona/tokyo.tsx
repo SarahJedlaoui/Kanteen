@@ -218,7 +218,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/buvette1.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -269,7 +269,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905839/dkbvntgleownxsudtsb9.mp4";
+                            link.href = "";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -294,7 +294,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/buvette2.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo2.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -372,7 +372,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/buvette3.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo3.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -442,84 +442,6 @@ const Restaurant = () => {
                   </div>
 
 
-
-
-                  <div className="w-1/2 sm:w-1/4 px-1 py-1">
-                    <div
-                      className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
-                      data-wow-delay=".15s"
-                    >
-                      <div className="mb-5 relative items-center justify-center h-[400px]">
-                        <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/buvette4.mp4" type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
-
-                      </div>
-                     
-                      <Rating name="unique-rating"
-                        defaultValue={rate4}
-                        onChange={(event, newValue) => {
-                          console.log("New Rating Value:", newValue);
-                          setRate4(newValue ?? 5);
-                        }}
-                        onChangeActive={(event, newValue) => {
-                          setRate4(newValue ?? 5);
-                        }}
-                        size="large"
-                        sx={{
-                          '& .MuiRating-iconFilled': {
-                            color: 'gold',
-                          }
-                        }}
-                      />
-                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
-                          <Button
-                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
-                            onClick={() => handleButtonClick4('post')}
-                          >
-                            Post
-                          </Button>
-                          <Button
-                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
-                            onClick={() => handleButtonClick4('edit')}
-                          >
-                            Edit
-                          </Button>
-                          <Button
-                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
-                            onClick={() => handleButtonClick4('discard')}
-                          >
-                            Discard
-                          </Button>
-                        </ButtonGroup>
-                        
-
-                      </div>
-                      {lastClicked4 && <p style={{ color: 'red' }}>{lastClicked4}</p>}
-                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <TextField onChange={(e) => setFeedback4(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
-                      </div>
-                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <button
-                          onClick={() => {
-                            const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905806/yq8blzyxr97cse8nzohl.mp4";
-                            link.download = "download.mp4"; // You can specify the default filename for the download here
-                            document.body.appendChild(link); // Append to page
-                            link.click(); // Programmatically click the link to trigger the download
-                            document.body.removeChild(link); // Clean up and remove the link
-                          }}
-                          className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
-                        >
-                          Download
-                        </button>
-                      </div>
-
-                    </div>
-                  </div>
-
                 </div>
 
 
@@ -532,7 +454,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/buvette5.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo4.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -610,7 +532,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/buvette6.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo5.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -664,7 +586,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905763/uy2ly3gvxt0agtbbfshi.mp4";
+                            link.href = "";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -687,7 +609,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/buvette7.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo6.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
