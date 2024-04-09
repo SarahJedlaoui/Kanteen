@@ -209,7 +209,7 @@ const Restaurant = () => {
 
 
  
-                <div className="-mx-3 flex flex-wrap items-center justify-center mb-5" >
+                <div className="-mx-1 flex flex-wrap items-center justify-center mb-5" >
 
 
                   <div className="w-1/2 sm:w-1/4 px-1 py-1 flex items-center justify-center ">
@@ -269,7 +269,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/tokyo.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -348,7 +348,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905830/fjgu3wwjdoxy7m3bsa7h.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/tokyo2.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -365,7 +365,7 @@ const Restaurant = () => {
 
 
 
-                  <div className="w-1/2 sm:w-1/4 px-1 py-1">
+                  <div className="w-1/2 sm:w-1/3 px-1 py-1">
                     <div
                       className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
                       data-wow-delay=".15s"
@@ -426,7 +426,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905824/nfadoet9it524dwcjpaf.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/tokyo3.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -508,7 +508,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905778/j7e8hq1fwg6684wldkpm.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/tokyo4.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -586,7 +586,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/tokyo5.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -663,7 +663,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905745/sfm6sij48benjolovqga.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/tokyo6.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
