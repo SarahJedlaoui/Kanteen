@@ -1,4 +1,4 @@
- /**import NextAuth from "next-auth"
+import NextAuth from "next-auth"
 import Cognito from "next-auth/providers/cognito"
 
 export const {handlers: {GET, POST}, auth, signIn, signOut} = NextAuth({
@@ -21,4 +21,3 @@ export const {handlers: {GET, POST}, auth, signIn, signOut} = NextAuth({
     }, 
     debug: process.env.NODE_ENV !== "production"
 });
-*/
