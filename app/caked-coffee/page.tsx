@@ -1,6 +1,6 @@
 
 import Persona from "@/components/Persona";
-import Restaurant from "@/components/Persona/buvette";
+import Restaurant from "@/components/Persona/caked";
 import ScrollUp from "@/components/Common/ScrollUp";
 import { Metadata } from "next";
 
