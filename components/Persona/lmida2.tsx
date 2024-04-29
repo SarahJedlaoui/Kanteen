@@ -222,7 +222,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/24.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida1.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -274,7 +274,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905839/dkbvntgleownxsudtsb9.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida1.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -299,7 +299,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/21.mp4" type="video/mp4" />
+                          <source src="hhttps://d205gdf6tf9tly.cloudfront.net/lmida2.mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -353,7 +353,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905830/fjgu3wwjdoxy7m3bsa7h.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida2.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -377,7 +377,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/7.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida3.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -431,7 +431,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905824/nfadoet9it524dwcjpaf.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida3.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -456,7 +456,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/15.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida4.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -510,7 +510,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905806/yq8blzyxr97cse8nzohl.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida4.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -537,7 +537,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/6.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida5.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -591,7 +591,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905778/j7e8hq1fwg6684wldkpm.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida5.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -615,7 +615,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/22.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida6.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -669,7 +669,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905763/uy2ly3gvxt0agtbbfshi.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida6.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -692,7 +692,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/20.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida7.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -746,7 +746,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905745/sfm6sij48benjolovqga.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida7.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -769,7 +769,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/4.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida8.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -823,7 +823,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905733/zq43rj9cl57dztfk79he.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida8.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -850,7 +850,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/19.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida9.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -903,7 +903,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905692/cvqqcmkd4avd4ubvtt61.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida9.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -927,7 +927,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/10.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida10.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -981,7 +981,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905691/mcce2jzmlwpledaj2ag4.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida10.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -1004,7 +1004,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/23.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida11.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -1058,7 +1058,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905663/tgspyma63f5qd1an8v5q.mp4";
+                            link.href = "hhttps://d205gdf6tf9tly.cloudfront.net/lmida11.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -1074,81 +1074,13 @@ const Restaurant = () => {
                   </div>
 
 
-                  <div className="w-1/2 sm:w-1/4 px-1 py-1">
-                    <div
-                      className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
-                      data-wow-delay=".15s"
-                    >
-                      <div className="mb-5 relative items-center justify-center h-[400px]">
-                        <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/11.mp4" type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
+                 
+                  
+                       
+                       
+                 
 
-                      </div>
-                     
-                      <Rating name="unique-rating"
-                        defaultValue={rate12}
-                        onChange={(event, newValue) => {
-                          console.log("New Rating Value:", newValue);
-                          setRate12(newValue ?? 5);
-                        }}
-                        onChangeActive={(event, newValue) => {
-                          setRate12(newValue ?? 5);
-                        }}
-                        size="large"
-                        sx={{
-                          '& .MuiRating-iconFilled': {
-                            color: 'gold',
-                          }
-                        }}
-                      />
-                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
-                          <Button
-                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
-                            onClick={() => handleButtonClick12('post')}
-                          >
-                            Post
-                          </Button>
-                          <Button
-                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
-                            onClick={() => handleButtonClick12('edit')}
-                          >
-                            Edit
-                          </Button>
-                          <Button
-                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
-                            onClick={() => handleButtonClick12('discard')}
-                          >
-                            Discard
-                          </Button>
-                        </ButtonGroup>
-                        {/* Optionally, display the last clicked action */}
-
-                      </div>
-                      {lastClicked12 && <p style={{ color: 'red' }}>{lastClicked12}</p>}
-                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <TextField onChange={(e) => setFeedback12(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
-                      </div>
-                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <button
-                          onClick={() => {
-                            const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905733/zq43rj9cl57dztfk79he.mp4";
-                            link.download = "download.mp4"; // You can specify the default filename for the download here
-                            document.body.appendChild(link); // Append to page
-                            link.click(); // Programmatically click the link to trigger the download
-                            document.body.removeChild(link); // Clean up and remove the link
-                          }}
-                          className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
-                        >
-                          Download
-                        </button>
-                      </div>
-
-                    </div>
-                  </div>
+                  
 
                 </div>
 
