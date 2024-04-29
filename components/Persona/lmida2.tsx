@@ -226,9 +226,7 @@ const Restaurant = () => {
                           Your browser does not support the video tag.
                         </video>
                       </div>
-                      <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        1- Presentation of L&apos;Mida
-                      </p>
+                     
 
                       <Rating name="size-large"
                         defaultValue={rate1}
@@ -306,9 +304,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                      <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        2- L&apos;Mida cocktails 0.1!
-                      </p>
+                      
                       <Rating name="unique-rating"
                         defaultValue={rate2}
                         onChange={(event, newValue) => {
@@ -386,9 +382,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                      <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        3- L&apos;Mida cocktails 0.2!
-                      </p>
+                     
                       <Rating name="unique-rating"
                         defaultValue={rate3}
                         onChange={(event, newValue) => {
@@ -467,9 +461,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                      <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        4- L&apos;Mida positive reviews
-                      </p>
+                     
                       <Rating name="unique-rating"
                         defaultValue={rate4}
                         onChange={(event, newValue) => {
@@ -549,9 +541,7 @@ const Restaurant = () => {
                           Your browser does not support the video tag.
                         </video>
                       </div>
-                      <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        5- Dive into the Moroccan mediterranean vibes!
-                      </p>
+                     
 
                       <Rating name="unique-rating"
                         defaultValue={rate5}
@@ -630,9 +620,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                      <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        6- Dive into the Moroccan mediterranean vibes!
-                      </p>
+                     
                       <Rating name="unique-rating"
                         defaultValue={rate6}
                         onChange={(event, newValue) => {
@@ -709,11 +697,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                      <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        7- Embark on a Journey of Flavor with Our New Menu!.
-
-
-                      </p>
+                     
                       <Rating name="unique-rating"
                         defaultValue={rate7}
                         onChange={(event, newValue) => {
@@ -790,9 +774,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                      <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        8- Transform your events into unforgettable experiences
-                      </p>
+                    
                       <Rating name="unique-rating"
                         defaultValue={rate8}
                         onChange={(event, newValue) => {
@@ -872,10 +854,7 @@ const Restaurant = () => {
                           Your browser does not support the video tag.
                         </video>
                       </div>
-                      <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        9- Every dish creates an atmosphere of culinary delight
-                      </p>
-
+                      
                       <Rating name="unique-rating"
                         defaultValue={rate9}
                         onChange={(event, newValue) => {
@@ -953,9 +932,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                      <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        10- Dive into the Moroccan mediterranean vibes!
-                      </p>
+                     
                       <Rating name="unique-rating"
                         defaultValue={rate10}
                         onChange={(event, newValue) => {
@@ -1032,9 +1009,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                      <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        11- Embark on a Journey of Flavor with Our New Menu!.
-                      </p>
+                    
                       <Rating name="unique-rating"
                         defaultValue={rate11}
                         onChange={(event, newValue) => {
@@ -1111,9 +1086,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                      <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
-                        12- Transform your events into unforgettable experiences
-                      </p>
+                     
                       <Rating name="unique-rating"
                         defaultValue={rate12}
                         onChange={(event, newValue) => {
