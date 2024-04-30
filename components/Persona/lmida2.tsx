@@ -271,17 +271,14 @@ const Restaurant = () => {
                       </div>
 
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                        <button
+                       <button
   onClick={() => {
     const link = document.createElement("a");
     link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida1.mp4";
-    link.download = "download.mp4"; // You can specify the default filename for the download here
-    document.body.appendChild(link); // Append to page
-    link.click(); // Programmatically click the link to trigger the download
-    // Wait for the download to start, then remove the link
-    setTimeout(() => {
-      document.body.removeChild(link); // Clean up and remove the link
-    }, 100);
+    link.setAttribute('download', 'download.mp4'); // Ensures compatibility
+    document.body.appendChild(link); // Append to body temporarily
+    link.click(); // Trigger download
+    document.body.removeChild(link); // Clean up
   }}
   className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
 >
