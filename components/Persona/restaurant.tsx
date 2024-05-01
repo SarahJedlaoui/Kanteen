@@ -1,18 +1,15 @@
 "use client";
-import Link from "next/link";
-import ModalVideo from "react-modal-video";
-import { useParams } from 'react-router-dom';
-import Image from "next/image";
-import Rating from '@mui/material/Rating';
-import TextField from '@mui/material/TextField';
-import Alert from '@mui/material/Alert';
-import Snackbar from '@mui/material/Snackbar';
-import { useEffect, useState } from 'react';
-import * as React from 'react';
-import './styles.css'
-import axios from 'axios';
-import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
+import { useParams } from "react-router-dom";
+import Rating from "@mui/material/Rating";
+import TextField from "@mui/material/TextField";
+import Alert from "@mui/material/Alert";
+import { useState } from "react";
+import * as React from "react";
+import "@/components/Persona/styles.css"
+import axios from "axios";
+import Button from "@mui/material/Button";
+import ButtonGroup from "@mui/material/ButtonGroup";
+
 interface Video {
   url: string;
   rating: number;
@@ -88,14 +85,14 @@ const Restaurant = () => {
 
   const videoData = [
     {
-      src: "https://d205gdf6tf9tly.cloudfront.net/24.mp4",
+      src: "https://cdn.kanteen.dev/lmida/24.mp4",
       title: "Presentation of L'Mida",
       ratingState: [rate1, setRate1],
       feedbackState: [feedback1, setFeedback1],
       lastClickedState: [lastClicked1, setLastClicked1]
     },
     {
-      src: "https://d205gdf6tf9tly.cloudfront.net/21.mp4",
+      src: "https://cdn.kanteen.dev/lmida/21.mp4",
       title: "L'Mida cocktails 0.1",
       ratingState: [rate2, setRate2],
       feedbackState: [feedback2, setFeedback2],
@@ -145,10 +142,10 @@ const Restaurant = () => {
     try {
       axios.post('https://api.elasticemail.com/v2/email/send', null, {
         params: {
-          apikey: 'BC4C0088210F0049D2AB1093AB13032B4EBB49989F8B67CD2C0BDD065B09F3127CAB259734A59EA316A4BF49CFDA9C99',
-          subject: "L'Mida Feedback",
-          from: "sarah.jedlaoui@bei.dev",
-          to: "maher@bei.dev",
+          apikey: '0946D26959F1CF59C2908E27F6AACF5A69FE5F455050A26ED257A9190B4E7976BAC71E82D69850995B1977C5070E579F',
+          subject: "L'Mida Feedback Dev",
+          from: "sarajedlaoui99@gmail.com",
+          to: "pukajedla@gmail.com",
           bodyText: `L Mida feedback:\n video rating:\n video1: rate :${rate1} , decision: ${lastClicked1}, feedback:  ${feedback1}
           \n video2:rate ${rate2}, decision: ${lastClicked2}, feedback:  ${feedback2}
           \n video3:rate ${rate3}, decision: ${lastClicked3}, feedback:  ${feedback3}
@@ -194,7 +191,7 @@ const Restaurant = () => {
                     </h3>
 
                     <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
-                      {'We are dedicated to maintaining a consistent social media posting schedule, with four posts per week, as detailed below:\n\nTuesday: 12 am, 1 am, or 6 am\nThursday: 6 am or 4 pm\nFriday: 2 am, 11 am, or 1 pm\n\nOur advertising strategy involves selecting one video for a 7-day campaign, with the goal of achieving 50 conversions before the video gains viral momentum. Each post will include a captivating caption and relevant hashtags.\n\nOn TikTok, our posting frequency will align with other platforms, with varied timings for optimal engagement:\n\nMonday: 12 PM or 4 PM\nTuesday: 4 AM, 8 AM, 10 AM, or 3 PM\nThursday: 5 AM, 3 PM, or 6 PM\nSunday: 1 AM, 2 AM, 1 PM, 2 PM, or 10 PM.'.split('\n').map((line, index) => (
+                      {'We are dedicated to maintaining a consistent social media posting schedule, with four posts per week, as detailed below:\n\nTuesday: 12 am, 1 am, or 6 am\nThursday: 6 am or 4 pm\nFriday: 2 am, 11 am, or 1 pm\n\nOur advertising strategy involves selecting one video for a 7-day campaign, with the goal of achieving 50 conversions before the video gains viral momentum. Each post will include a captivating caption and relevant hashtags.\n\nOn TikTok, our posting frequency will align with other platforms, with varied timings for optimal engagement:\n\nMonday: 12 PM or 4 PM\nTuesday: 4 AM, 8 AM, 10 AM, or 3 PM\nThursday: 5 AM, 3 PM, or 6 PM\nSunday: 1 AM, 2 AM, 1 PM, 2 PM, or 10 PM. '.split('\n').map((line, index) => (
                         <React.Fragment key={index}>
                           {line}
                           <br />
@@ -222,7 +219,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/24.mp4" type="video/mp4" />
+                          <source src="https://cdn.kanteen.dev/lmida/24.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -276,7 +273,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905839/dkbvntgleownxsudtsb9.mp4";
+                            link.href = "https://cdn.kanteen.dev/lmida/24.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -301,7 +298,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/21.mp4" type="video/mp4" />
+                          <source src="https://cdn.kanteen.dev/lmida/21.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -357,7 +354,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905830/fjgu3wwjdoxy7m3bsa7h.mp4";
+                            link.href = "https://cdn.kanteen.dev/lmida/21.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -381,7 +378,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/7.mp4" type="video/mp4" />
+                          <source src="https://cdn.kanteen.dev/lmida/7.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -437,7 +434,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905824/nfadoet9it524dwcjpaf.mp4";
+                            link.href = "https://cdn.kanteen.dev/lmida/7.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -462,7 +459,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/15.mp4" type="video/mp4" />
+                          <source src="https://cdn.kanteen.dev/lmida/15.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -518,7 +515,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905806/yq8blzyxr97cse8nzohl.mp4";
+                            link.href = "https://cdn.kanteen.dev/lmida/15.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -545,7 +542,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/6.mp4" type="video/mp4" />
+                          <source src="https://cdn.kanteen.dev/lmida/6.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -601,7 +598,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905778/j7e8hq1fwg6684wldkpm.mp4";
+                            link.href = "https://cdn.kanteen.dev/lmida/6.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -625,7 +622,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/22.mp4" type="video/mp4" />
+                          <source src="https://cdn.kanteen.dev/lmida/22.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -681,7 +678,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905763/uy2ly3gvxt0agtbbfshi.mp4";
+                            link.href = "https://cdn.kanteen.dev/lmida/22.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -704,7 +701,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/20.mp4" type="video/mp4" />
+                          <source src="https://cdn.kanteen.dev/lmida/20.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -762,7 +759,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905745/sfm6sij48benjolovqga.mp4";
+                            link.href = "https://cdn.kanteen.dev/lmida/20.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -785,7 +782,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/4.mp4" type="video/mp4" />
+                          <source src="https://cdn.kanteen.dev/lmida/4.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -841,7 +838,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905733/zq43rj9cl57dztfk79he.mp4";
+                            link.href = "https://cdn.kanteen.dev/lmida/4.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -868,7 +865,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/19.mp4" type="video/mp4" />
+                          <source src="https://cdn.kanteen.dev/lmida/19.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -924,7 +921,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905692/cvqqcmkd4avd4ubvtt61.mp4";
+                            link.href = "https://cdn.kanteen.dev/lmida/19.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -948,7 +945,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/10.mp4" type="video/mp4" />
+                          <source src="https://cdn.kanteen.dev/lmida/10.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -1004,7 +1001,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905691/mcce2jzmlwpledaj2ag4.mp4";
+                            link.href = "https://cdn.kanteen.dev/lmida/10.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -1027,7 +1024,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/23.mp4" type="video/mp4" />
+                          <source src="https://cdn.kanteen.dev/lmida/23.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -1083,7 +1080,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905663/tgspyma63f5qd1an8v5q.mp4";
+                            link.href = "https://cdn.kanteen.dev/lmida/23.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -1106,7 +1103,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/11.mp4" type="video/mp4" />
+                          <source src="https://cdn.kanteen.dev/lmida/11.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -1162,7 +1159,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://res.cloudinary.com/dfjuxc3h3/video/upload/v1709905733/zq43rj9cl57dztfk79he.mp4";
+                            link.href = "https://cdn.kanteen.dev/lmida/11.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
