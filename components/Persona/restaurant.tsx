@@ -281,7 +281,9 @@ const Restaurant = () => {
                           }}
                           className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                         >
-                          Download
+                          
+                          <a href="https://cdn.kanteen.dev/lmida/24.mp4" download>Download</a>
+
                         </button>
 
                       </div>
