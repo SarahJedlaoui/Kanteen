@@ -190,7 +190,7 @@ const Restaurant = () => {
                 <div className="-mx-4 flex flex-wrap px-4">
                   <div className="flex-1">
                     <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
-                     Social Media Strategy 
+                      Social Media Strategy
                     </h3>
 
                     <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
@@ -226,7 +226,7 @@ const Restaurant = () => {
                           Your browser does not support the video tag.
                         </video>
                       </div>
-                     
+
 
                       <Rating name="size-large"
                         defaultValue={rate1}
@@ -271,19 +271,19 @@ const Restaurant = () => {
                       </div>
 
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                       <button
-  onClick={() => {
-    const link = document.createElement("a");
-    link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida1.mp4";
-    link.setAttribute('download', 'download.mp4'); // Ensures compatibility
-    document.body.appendChild(link); // Append to body temporarily
-    link.click(); // Trigger download
-    document.body.removeChild(link); // Clean up
-  }}
-  className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
->
-  Download
-</button>
+                        <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida1.mp4";
+                            link.setAttribute('download', 'download.mp4'); // Ensures compatibility
+                            document.body.appendChild(link); // Append to body temporarily
+                            link.click(); // Trigger download
+                            document.body.removeChild(link); // Clean up
+                          }}
+                          className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
+                        >
+                          Download
+                        </button>
 
 
                       </div>
@@ -305,7 +305,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                      
+
                       <Rating name="unique-rating"
                         defaultValue={rate2}
                         onChange={(event, newValue) => {
@@ -383,7 +383,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                     
+
                       <Rating name="unique-rating"
                         defaultValue={rate3}
                         onChange={(event, newValue) => {
@@ -462,7 +462,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                     
+
                       <Rating name="unique-rating"
                         defaultValue={rate4}
                         onChange={(event, newValue) => {
@@ -542,7 +542,7 @@ const Restaurant = () => {
                           Your browser does not support the video tag.
                         </video>
                       </div>
-                     
+
 
                       <Rating name="unique-rating"
                         defaultValue={rate5}
@@ -621,7 +621,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                     
+
                       <Rating name="unique-rating"
                         defaultValue={rate6}
                         onChange={(event, newValue) => {
@@ -698,7 +698,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                     
+
                       <Rating name="unique-rating"
                         defaultValue={rate7}
                         onChange={(event, newValue) => {
@@ -775,7 +775,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                    
+
                       <Rating name="unique-rating"
                         defaultValue={rate8}
                         onChange={(event, newValue) => {
@@ -855,7 +855,7 @@ const Restaurant = () => {
                           Your browser does not support the video tag.
                         </video>
                       </div>
-                      
+
                       <Rating name="unique-rating"
                         defaultValue={rate9}
                         onChange={(event, newValue) => {
@@ -920,7 +920,6 @@ const Restaurant = () => {
 
                   </div>
 
-
                   <div className="w-1/2 sm:w-1/4 px-1 py-1" >
                     <div
                       className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
@@ -933,7 +932,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                     
+
                       <Rating name="unique-rating"
                         defaultValue={rate10}
                         onChange={(event, newValue) => {
@@ -997,7 +996,6 @@ const Restaurant = () => {
                     </div>
                   </div>
 
-
                   <div className="w-1/2 sm:w-1/4 px-1 py-1">
                     <div
                       className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
@@ -1010,7 +1008,7 @@ const Restaurant = () => {
                         </video>
 
                       </div>
-                    
+
                       <Rating name="unique-rating"
                         defaultValue={rate11}
                         onChange={(event, newValue) => {
@@ -1074,17 +1072,392 @@ const Restaurant = () => {
                     </div>
                   </div>
 
+                  <div className="w-1/2 sm:w-1/4 px-1 py-1">
+                    <div
+                      className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
+                      data-wow-delay=".15s"
+                    >
+                      <div className="mb-5 relative  items-center justify-center h-[400px]">
+                        <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida12.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
 
-                 
-                  
-                       
-                       
-                 
+                      </div>
 
-                  
+                      <Rating name="unique-rating"
+                        defaultValue={rate11}
+                        onChange={(event, newValue) => {
+                          console.log("New Rating Value:", newValue);
+                          setRate11(newValue ?? 5);
+                        }}
+                        onChangeActive={(event, newValue) => {
+                          setRate11(newValue ?? 5);
+                        }}
+                        size="large"
+                        sx={{
+                          '& .MuiRating-iconFilled': {
+                            color: 'gold',
+                          }
+                        }}
+                      />
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick11('post')}
+                          >
+                            Post
+                          </Button>
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick11('edit')}
+                          >
+                            Edit
+                          </Button>
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick11('discard')}
+                          >
+                            Discard
+                          </Button>
+                        </ButtonGroup>
+                        {/* Optionally, display the last clicked action */}
+
+                      </div>
+                      {lastClicked11 && <p style={{ color: 'red' }}> {lastClicked11}</p>}
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <TextField onChange={(e) => setFeedback11(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                      </div>
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "hhttps://d205gdf6tf9tly.cloudfront.net/lmida12.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
+                          className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
+                        >
+                          Download
+                        </button>
+                      </div>
+
+                    </div>
+                  </div>
 
                 </div>
 
+
+                <div className="-mx-3 flex flex-wrap items-center justify-center mb-8" >
+
+
+                  <div className="w-1/2 sm:w-1/4 px-1 py-1 flex items-center justify-center ">
+                    <div
+                      className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md items-center justify-center "
+                      data-wow-delay=".15s">
+                      <div className="mb-5 relative  items-center justify-center h-[400px]">
+                        <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida13.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+
+                      <Rating name="unique-rating"
+                        defaultValue={rate9}
+                        onChange={(event, newValue) => {
+                          console.log("New Rating Value:", newValue);
+                          setRate9(newValue ?? 5);
+                        }}
+                        onChangeActive={(event, newValue) => {
+                          setRate9(newValue ?? 5);
+                        }}
+                        size="large"
+                        sx={{
+                          '& .MuiRating-iconFilled': {
+                            color: 'gold',
+                          }
+                        }}
+                      />
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick9('post')}
+                          >
+                            Post
+                          </Button>
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick9('edit')}
+                          >
+                            Edit
+                          </Button>
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick9('discard')}
+                          >
+                            Discard
+                          </Button>
+                        </ButtonGroup>
+                        {/* Optionally, display the last clicked action */}
+
+                      </div>
+                      {lastClicked9 && <p style={{ color: 'red' }}>{lastClicked9}</p>}
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <TextField onChange={(e) => setFeedback9(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                      </div>
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida13.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
+                          className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
+                        >
+                          Download
+                        </button>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div className="w-1/2 sm:w-1/4 px-1 py-1" >
+                    <div
+                      className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
+                      data-wow-delay=".15s"
+                    >
+                      <div className="mb-5 relative items-center justify-center h-[400px] ">
+                        <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida14.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+
+                      </div>
+
+                      <Rating name="unique-rating"
+                        defaultValue={rate10}
+                        onChange={(event, newValue) => {
+                          console.log("New Rating Value:", newValue);
+                          setRate10(newValue ?? 5);
+                        }}
+                        onChangeActive={(event, newValue) => {
+                          setRate10(newValue ?? 5);
+                        }}
+                        size="large"
+                        sx={{
+                          '& .MuiRating-iconFilled': {
+                            color: 'gold',
+                          }
+                        }}
+                      />
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick10('post')}
+                          >
+                            Post
+                          </Button>
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick10('edit')}
+                          >
+                            Edit
+                          </Button>
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick10('discard')}
+                          >
+                            Discard
+                          </Button>
+                        </ButtonGroup>
+                        {/* Optionally, display the last clicked action */}
+
+                      </div>
+                      {lastClicked10 && <p style={{ color: 'red' }}>{lastClicked10}</p>}
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <TextField onChange={(e) => setFeedback10(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                      </div>
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida14.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
+                          className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
+                        >
+                          Download
+                        </button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div className="w-1/2 sm:w-1/4 px-1 py-1">
+                    <div
+                      className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
+                      data-wow-delay=".15s"
+                    >
+                      <div className="mb-5 relative  items-center justify-center h-[400px]">
+                        <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida15.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+
+                      </div>
+
+                      <Rating name="unique-rating"
+                        defaultValue={rate11}
+                        onChange={(event, newValue) => {
+                          console.log("New Rating Value:", newValue);
+                          setRate11(newValue ?? 5);
+                        }}
+                        onChangeActive={(event, newValue) => {
+                          setRate11(newValue ?? 5);
+                        }}
+                        size="large"
+                        sx={{
+                          '& .MuiRating-iconFilled': {
+                            color: 'gold',
+                          }
+                        }}
+                      />
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick11('post')}
+                          >
+                            Post
+                          </Button>
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick11('edit')}
+                          >
+                            Edit
+                          </Button>
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick11('discard')}
+                          >
+                            Discard
+                          </Button>
+                        </ButtonGroup>
+                        {/* Optionally, display the last clicked action */}
+
+                      </div>
+                      {lastClicked11 && <p style={{ color: 'red' }}> {lastClicked11}</p>}
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <TextField onChange={(e) => setFeedback11(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                      </div>
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "hhttps://d205gdf6tf9tly.cloudfront.net/lmida15.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
+                          className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
+                        >
+                          Download
+                        </button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div className="w-1/2 sm:w-1/4 px-1 py-1">
+                    <div
+                      className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md"
+                      data-wow-delay=".15s"
+                    >
+                      <div className="mb-5 relative  items-center justify-center h-[400px]">
+                        <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida16.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+
+                      </div>
+
+                      <Rating name="unique-rating"
+                        defaultValue={rate11}
+                        onChange={(event, newValue) => {
+                          console.log("New Rating Value:", newValue);
+                          setRate11(newValue ?? 5);
+                        }}
+                        onChangeActive={(event, newValue) => {
+                          setRate11(newValue ?? 5);
+                        }}
+                        size="large"
+                        sx={{
+                          '& .MuiRating-iconFilled': {
+                            color: 'gold',
+                          }
+                        }}
+                      />
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick11('post')}
+                          >
+                            Post
+                          </Button>
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick11('edit')}
+                          >
+                            Edit
+                          </Button>
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick11('discard')}
+                          >
+                            Discard
+                          </Button>
+                        </ButtonGroup>
+                        {/* Optionally, display the last clicked action */}
+
+                      </div>
+                      {lastClicked11 && <p style={{ color: 'red' }}> {lastClicked11}</p>}
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <TextField onChange={(e) => setFeedback11(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                      </div>
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "hhttps://d205gdf6tf9tly.cloudfront.net/lmida16.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
+                          className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
+                        >
+                          Download
+                        </button>
+                      </div>
+
+                    </div>
+                  </div>
+
+                </div>
 
 
                 <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
