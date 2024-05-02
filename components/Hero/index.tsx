@@ -134,7 +134,7 @@ const Hero = () => {
                   href="#contact"
                   className="rounded-md bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                 >
-                  Join our whaitlist
+                  Join our waitlist
                 </Link>
               </div>
             </div>

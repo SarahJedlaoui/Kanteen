@@ -1,4 +1,3 @@
-
 import Persona from "@/components/Persona";
 import Restaurant from "@/components/Persona/caked";
 import ScrollUp from "@/components/Common/ScrollUp";
