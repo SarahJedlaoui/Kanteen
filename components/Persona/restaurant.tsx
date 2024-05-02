@@ -85,14 +85,14 @@ const Restaurant = () => {
 
   const videoData = [
     {
-      src: "https://cdn.kanteen.dev/lmida/24.mp4",
+      src: "https://d205gdf6tf9tly.cloudfront.net/24.mp4",
       title: "Presentation of L'Mida",
       ratingState: [rate1, setRate1],
       feedbackState: [feedback1, setFeedback1],
       lastClickedState: [lastClicked1, setLastClicked1]
     },
     {
-      src: "https://cdn.kanteen.dev/lmida/21.mp4",
+      src: "https://d205gdf6tf9tly.cloudfront.net/21.mp4",
       title: "L'Mida cocktails 0.1",
       ratingState: [rate2, setRate2],
       feedbackState: [feedback2, setFeedback2],
@@ -219,7 +219,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://cdn.kanteen.dev/lmida/24.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/24.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -273,7 +273,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://cdn.kanteen.dev/lmida/24.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/24.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -282,7 +282,7 @@ const Restaurant = () => {
                           className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                         >
                           
-                          <a href="https://cdn.kanteen.dev/lmida/24.mp4" download>Download</a>
+                          <a href="https://d205gdf6tf9tly.cloudfront.net/24.mp4" download>Download</a>
 
                         </button>
 
@@ -300,7 +300,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://cdn.kanteen.dev/lmida/21.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/21.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -354,10 +354,17 @@ const Restaurant = () => {
                       </div>
                       <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                         <button
-                         
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/21.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
                           className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                         >
-                       <a href="https://cdn.kanteen.dev/lmida/21.mp4" download>Download</a>
+                       <a href="https://d205gdf6tf9tly.cloudfront.net/21.mp4" download>Download</a>
                         </button>
                       </div>
 
@@ -373,7 +380,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://cdn.kanteen.dev/lmida/7.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/7.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -429,7 +436,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://cdn.kanteen.dev/lmida/7.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/7.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -454,7 +461,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://cdn.kanteen.dev/lmida/15.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/15.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -510,7 +517,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://cdn.kanteen.dev/lmida/15.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/15.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -537,7 +544,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://cdn.kanteen.dev/lmida/6.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/6.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -593,7 +600,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://cdn.kanteen.dev/lmida/6.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/6.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -617,7 +624,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://cdn.kanteen.dev/lmida/22.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/22.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -673,7 +680,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://cdn.kanteen.dev/lmida/22.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/22.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -696,7 +703,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://cdn.kanteen.dev/lmida/20.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/20.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -754,7 +761,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://cdn.kanteen.dev/lmida/20.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/20.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -777,7 +784,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://cdn.kanteen.dev/lmida/4.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/4.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -833,7 +840,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://cdn.kanteen.dev/lmida/4.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/4.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -860,7 +867,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://cdn.kanteen.dev/lmida/19.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/19.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -916,7 +923,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://cdn.kanteen.dev/lmida/19.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/19.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -940,7 +947,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://cdn.kanteen.dev/lmida/10.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/10.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -996,7 +1003,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://cdn.kanteen.dev/lmida/10.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/10.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -1019,7 +1026,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://cdn.kanteen.dev/lmida/23.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/23.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -1075,7 +1082,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://cdn.kanteen.dev/lmida/23.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/23.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -1098,7 +1105,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://cdn.kanteen.dev/lmida/11.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/11.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -1154,7 +1161,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://cdn.kanteen.dev/lmida/11.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/11.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
