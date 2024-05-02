@@ -149,7 +149,8 @@ const Restaurant = () => {
           subject: "L'Mida Feedback",
           from: "sarajedlaoui99@gmail.com",
           to: "pukajedla@gmail.com",
-          bodyText: `L Mida feedback:\n video rating:\n video1: rate :${rate1} , decision: ${lastClicked1}, feedback:  ${feedback1}
+          bodyText: `L Mida feedback:\n video rating:\n video1: 
+          rate :${rate1} , decision: ${lastClicked1}, feedback:  ${feedback1}
           \n video2:rate ${rate2}, decision: ${lastClicked2}, feedback:  ${feedback2}
           \n video3:rate ${rate3}, decision: ${lastClicked3}, feedback:  ${feedback3}
           \n video4:rate ${rate4}, decision: ${lastClicked4}, feedback:  ${feedback4}
