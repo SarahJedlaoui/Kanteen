@@ -145,7 +145,7 @@ const Restaurant = () => {
     try {
       axios.post('https://api.elasticemail.com/v2/email/send', null, {
         params: {
-          apikey: 'BC4C0088210F0049D2AB1093AB13032B4EBB49989F8B67CD2C0BDD065B09F3127CAB259734A59EA316A4BF49CFDA9C99',
+          apikey: '0946D26959F1CF59C2908E27F6AACF5A69FE5F455050A26ED257A9190B4E7976BAC71E82D69850995B1977C5070E579F',
           subject: "L'Mida Feedback",
           from: "sarajedlaoui99@gmail.com",
           to: "pukajedla@gmail.com",
@@ -166,7 +166,7 @@ const Restaurant = () => {
           `,
         }
       })
-      console.log('Reviw Submitted:', rate1, rate3, feedback);
+      console.log('Reviw Submitted:', feedback);
       setOpenAlert(true);
     } catch (error) {
       console.error('Error while saving data:', error);
