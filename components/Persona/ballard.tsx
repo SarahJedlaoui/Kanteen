@@ -159,7 +159,7 @@ const Restaurant = () => {
           \n video7:rate ${rate7}, decision: ${lastClicked7}, feedback:  ${feedback7}
           \nvideo8:rate ${rate8}, decision: ${lastClicked8}, feedback:  ${feedback8}
           \n video9:rate ${rate9}, decision: ${lastClicked9}, feedback:  ${feedback9}
-        
+          \n video10:rate ${rate10}, decision: ${lastClicked10}, feedback:  ${feedback10}\n 
           Feedback: ${feedback}\n
           `,
         }
@@ -904,6 +904,83 @@ const Restaurant = () => {
                           onClick={() => {
                             const link = document.createElement("a");
                             link.href = "https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard9.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
+                          className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
+                        >
+                          Download
+                        </button>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+
+                  <div className="w-1/2 sm:w-1/4 px-1 py-1 flex items-center justify-center ">
+                    <div
+                      className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md items-center justify-center "
+                      data-wow-delay=".15s">
+                      <div className="mb-5 relative  items-center justify-center h-[400px]">
+                        <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard10.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+
+
+                      <Rating name="unique-rating"
+                        defaultValue={rate10}
+                        onChange={(event, newValue) => {
+                          console.log("New Rating Value:", newValue);
+                          setRate10(newValue ?? 5);
+                        }}
+                        onChangeActive={(event, newValue) => {
+                          setRate10(newValue ?? 5);
+                        }}
+                        size="large"
+                        sx={{
+                          '& .MuiRating-iconFilled': {
+                            color: 'gold',
+                          }
+                        }}
+                      />
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick10('post')}
+                          >
+                            Post
+                          </Button>
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick10('edit')}
+                          >
+                            Edit
+                          </Button>
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick10('discard')}
+                          >
+                            Discard
+                          </Button>
+                        </ButtonGroup>
+                        {/* Optionally, display the last clicked action */}
+
+                      </div>
+                      {lastClicked5 && <p style={{ color: 'red' }}> {lastClicked5}</p>}
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <TextField onChange={(e) => setFeedback10(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                      </div>
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard10.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
