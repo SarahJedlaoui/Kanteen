@@ -88,14 +88,14 @@ const Restaurant = () => {
 
   const videoData = [
     {
-      src: "https://d205gdf6tf9tly.cloudfront.net/24.mp4",
+      src: "https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/24.mp4",
       title: "Presentation of L'Mida",
       ratingState: [rate1, setRate1],
       feedbackState: [feedback1, setFeedback1],
       lastClickedState: [lastClicked1, setLastClicked1]
     },
     {
-      src: "https://d205gdf6tf9tly.cloudfront.net/21.mp4",
+      src: "https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/21.mp4",
       title: "L'Mida cocktails 0.1",
       ratingState: [rate2, setRate2],
       feedbackState: [feedback2, setFeedback2],
@@ -146,11 +146,11 @@ const Restaurant = () => {
       axios.post('https://api.elasticemail.com/v2/email/send', null, {
         params: {
           apikey: '0946D26959F1CF59C2908E27F6AACF5A69FE5F455050A26ED257A9190B4E7976BAC71E82D69850995B1977C5070E579F',
-          subject: "L'Mida Feedback",
+          subject: "The Ballard Cut Feedback",
           from: "sarajedlaoui99@gmail.com",
           to: "pukajedla@gmail.com",
-          bodyText: `L Mida feedback:\n video rating:\n video1: 
-          rate :${rate1} , decision: ${lastClicked1}, feedback:  ${feedback1}
+          bodyText: `The Ballard Cut Feedback feedback:\n video rating:\n 
+          video1: rate :${rate1} , decision: ${lastClicked1}, feedback:  ${feedback1}
           \n video2:rate ${rate2}, decision: ${lastClicked2}, feedback:  ${feedback2}
           \n video3:rate ${rate3}, decision: ${lastClicked3}, feedback:  ${feedback3}
           \n video4:rate ${rate4}, decision: ${lastClicked4}, feedback:  ${feedback4}
@@ -159,9 +159,7 @@ const Restaurant = () => {
           \n video7:rate ${rate7}, decision: ${lastClicked7}, feedback:  ${feedback7}
           \nvideo8:rate ${rate8}, decision: ${lastClicked8}, feedback:  ${feedback8}
           \n video9:rate ${rate9}, decision: ${lastClicked9}, feedback:  ${feedback9}
-          \n video10:rate ${rate10}, decision: ${lastClicked10}, feedback:  ${feedback10}
-          \n video11:rate ${rate11}, decision: ${lastClicked11}, feedback:  ${feedback11}
-          \n video12:rate ${rate12} , decision: ${lastClicked12}, feedback:  ${feedback12} \n 
+        
           Feedback: ${feedback}\n
           `,
         }
@@ -223,7 +221,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida1.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard1.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -275,7 +273,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida1.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard1.mp4";
                             link.setAttribute('download', 'download.mp4'); // Ensures compatibility
                             document.body.appendChild(link); // Append to body temporarily
                             link.click(); // Trigger download
@@ -301,7 +299,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida2.mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard2.mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -355,7 +353,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida2.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard2.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -379,7 +377,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida3.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard3.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -433,7 +431,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida3.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard3.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -458,7 +456,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida4.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard4.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -512,7 +510,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida4.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard4.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -539,7 +537,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida5.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard5.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -593,7 +591,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida5.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard5.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -617,7 +615,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida6.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard6.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -671,7 +669,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida6.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard6.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -694,7 +692,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida7.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard7.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -748,7 +746,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida7.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard7.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -771,7 +769,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida8.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard8.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -825,7 +823,7 @@ const Restaurant = () => {
                         <button
                           onClick={() => {
                             const link = document.createElement("a");
-                            link.href = "https://d205gdf6tf9tly.cloudfront.net/lmida8.mp4";
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard8.mp4";
                             link.download = "download.mp4"; // You can specify the default filename for the download here
                             document.body.appendChild(link); // Append to page
                             link.click(); // Programmatically click the link to trigger the download
@@ -839,6 +837,88 @@ const Restaurant = () => {
 
                     </div>
                   </div>
+
+                </div>
+
+                <div className="-mx-3 flex flex-wrap items-center justify-center mb-8" >
+
+
+                  <div className="w-1/2 sm:w-1/4 px-1 py-1 flex items-center justify-center ">
+                    <div
+                      className="wow fadeInUp mx-auto max-w-[770px] overflow-hidden rounded-md items-center justify-center "
+                      data-wow-delay=".15s">
+                      <div className="mb-5 relative  items-center justify-center h-[400px]">
+                        <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard9.mp4" type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                      </div>
+
+
+                      <Rating name="unique-rating"
+                        defaultValue={rate9}
+                        onChange={(event, newValue) => {
+                          console.log("New Rating Value:", newValue);
+                          setRate9(newValue ?? 5);
+                        }}
+                        onChangeActive={(event, newValue) => {
+                          setRate9(newValue ?? 5);
+                        }}
+                        size="large"
+                        sx={{
+                          '& .MuiRating-iconFilled': {
+                            color: 'gold',
+                          }
+                        }}
+                      />
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <ButtonGroup variant="outlined" color="success" size="small" aria-label="Small button group">
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick9('post')}
+                          >
+                            Post
+                          </Button>
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick9('edit')}
+                          >
+                            Edit
+                          </Button>
+                          <Button
+                            sx={{ color: '#083c2f', backgroundColor: '#c9f269', '&:hover': { backgroundColor: '#c9f269' } }}
+                            onClick={() => handleButtonClick9('discard')}
+                          >
+                            Discard
+                          </Button>
+                        </ButtonGroup>
+                        {/* Optionally, display the last clicked action */}
+
+                      </div>
+                      {lastClicked5 && <p style={{ color: 'red' }}> {lastClicked5}</p>}
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <TextField onChange={(e) => setFeedback9(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                      </div>
+                      <div className="flex flex-col pt-5 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+                        <button
+                          onClick={() => {
+                            const link = document.createElement("a");
+                            link.href = "https://d205gdf6tf9tly.cloudfront.net/the-ballard-cut/ballard9.mp4";
+                            link.download = "download.mp4"; // You can specify the default filename for the download here
+                            document.body.appendChild(link); // Append to page
+                            link.click(); // Programmatically click the link to trigger the download
+                            document.body.removeChild(link); // Clean up and remove the link
+                          }}
+                          className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
+                        >
+                          Download
+                        </button>
+                      </div>
+
+                    </div>
+
+                  </div>
+
 
                 </div>
 
