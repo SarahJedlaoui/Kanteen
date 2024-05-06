@@ -145,18 +145,15 @@ const Restaurant = () => {
           subject: "Buvette Pacey Feedback",
           from: "sarajedlaoui99@gmail.com",
           to: "pukajedla@gmail.com",
-          bodyText: `Buvette Pacey feedback:\n video rating:\n video1: rate :${rate1} , decision: ${lastClicked1}, feedback:  ${feedback1}
+          bodyText: `Buvette Pacey feedback:\n video rating:\n 
+          video1: rate :${rate1} , decision: ${lastClicked1}, feedback:  ${feedback1}
           \n video2:rate ${rate2}, decision: ${lastClicked2}, feedback:  ${feedback2}
           \n video3:rate ${rate3}, decision: ${lastClicked3}, feedback:  ${feedback3}
           \n video4:rate ${rate4}, decision: ${lastClicked4}, feedback:  ${feedback4}
           \n video5:rate ${rate5}, decision: ${lastClicked5}, feedback:  ${feedback5}
           \n video6:rate ${rate6}, decision: ${lastClicked6}, feedback:  ${feedback6}
           \n video7:rate ${rate7}, decision: ${lastClicked7}, feedback:  ${feedback7}
-          \nvideo8:rate ${rate8}, decision: ${lastClicked8}, feedback:  ${feedback8}
-          \n video9:rate ${rate9}, decision: ${lastClicked9}, feedback:  ${feedback9}
-          \n video10:rate ${rate10}, decision: ${lastClicked10}, feedback:  ${feedback10}
-          \n video11:rate ${rate11}, decision: ${lastClicked11}, feedback:  ${feedback11}
-          \n video12:rate ${rate12} , decision: ${lastClicked12}, feedback:  ${feedback12} \n 
+  
           Feedback: ${feedback}\n
           `,
         }
@@ -306,9 +303,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate2(newValue ?? 5);
                         }}
-                        onChangeActive={(event, newValue) => {
-                          setRate2(newValue ?? 5);
-                        }}
+                       
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
@@ -384,9 +379,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate3(newValue ?? 5);
                         }}
-                        onChangeActive={(event, newValue) => {
-                          setRate3(newValue ?? 5);
-                        }}
+
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
@@ -463,9 +456,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate4(newValue ?? 5);
                         }}
-                        onChangeActive={(event, newValue) => {
-                          setRate4(newValue ?? 5);
-                        }}
+                       
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
@@ -544,9 +535,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate5(newValue ?? 5);
                         }}
-                        onChangeActive={(event, newValue) => {
-                          setRate5(newValue ?? 5);
-                        }}
+                       
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
@@ -622,9 +611,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate6(newValue ?? 5);
                         }}
-                        onChangeActive={(event, newValue) => {
-                          setRate6(newValue ?? 5);
-                        }}
+                       
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
@@ -699,9 +686,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate7(newValue ?? 5);
                         }}
-                        onChangeActive={(event, newValue) => {
-                          setRate7(newValue ?? 5);
-                        }}
+                       
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
