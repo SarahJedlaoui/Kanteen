@@ -21,17 +21,17 @@ const Blog = () => {
 
       <section className="pb-[120px] pt-[10px]">
         <div className="container">
-        <h1 className="mb-5 text-2xl font-bold text-black dark:text-white sm:text-3xl">
-        Why Collaborate with Us?
-                </h1>
-        <p className="text-base font-medium leading-relaxed text-body-color">
-                      {'1-Free Meals: Enjoy exclusive dining experiences with complimentary meals at our client restaurants while sharing your journey with your followers.\n2-Inspiration & Creativity: Discover new video and photo ideas that highlight the best of each restaurant, from signature cocktails to unique decor.\n3-Support Your Favorite Spots: Help your favorite restaurants reach new audiences and create an impact with your authentic recommendations.\n'.split('\n').map((line, index) => (
-                        <React.Fragment key={index}>
-                          {line}
-                          <br />
-                        </React.Fragment>
-                      ))}
-                    </p>
+          <h1 className="mb-5 text-2xl font-bold text-black dark:text-white sm:text-3xl">
+            Why Collaborate with Us?
+          </h1>
+          <p className="text-base font-medium leading-relaxed text-body-color">
+            {'1-Free Meals: Enjoy exclusive dining experiences with complimentary meals at our client restaurants while sharing your journey with your followers.\n2-Inspiration & Creativity: Discover new video and photo ideas that highlight the best of each restaurant, from signature cocktails to unique decor.\n3-Support Your Favorite Spots: Help your favorite restaurants reach new audiences and create an impact with your authentic recommendations.\n'.split('\n').map((line, index) => (
+              <React.Fragment key={index}>
+                {line}
+                <br />
+              </React.Fragment>
+            ))}
+          </p>
           <div className="-mx-4 flex flex-wrap justify-center">
             {blogData.map((blog) => (
               <div
