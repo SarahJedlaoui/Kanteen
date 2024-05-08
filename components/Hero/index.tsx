@@ -26,11 +26,11 @@ const Hero = () => {
                 data-wow-delay=".2s"
               >
                 <h1 className="mb-5 mt-10 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                  AI-Powered Video Creator for your Restaurant
+                Introducing Kanteen, an AI-Powered video creator for your restaurant
                 </h1>
 
                 <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
-                  Our Al Content Creator Transforms Your Phone Videos into Captivating Stories for Your Restaurant&apos;s Social Media.
+                Our AI content creator transforms videos from your camera roll into captivating stories for your restaurant&apos;s Social Media.
                 </p>
 
 

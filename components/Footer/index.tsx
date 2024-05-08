@@ -37,7 +37,8 @@ const Footer = () => {
                 </span>*/}
                 </Link>
                 <p className="dark:text-body-color-dark mb-9 text-base leading-relaxed text-body-color">
-                Elevate your restaurant&apos;s social media with our AI-powered video creator. We expertly transform your phone videos into engaging stories that capture your unique culinary experiences and the essence of your restaurant.
+                Elevate your restaurant&apos;s social media with our AI-powered video creator. We expertly transform photos and videos from your camera roll into engaging stories that capture the essence of your restaurant and the unique culinary experiences it offers. 
+
                 </p>
                
               </div>

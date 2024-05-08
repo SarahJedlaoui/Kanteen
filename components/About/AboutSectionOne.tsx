@@ -28,11 +28,11 @@ const AboutSectionOne = () => {
           style={{ maxWidth: 600, marginBottom: '80px' }}
         >
           <h2 className="mb-4 text-3xl font-bold !leading-tight text-black dark:text-white sm:text-4xl md:text-[45px]">
-            How Kanteen works?
+          How does Kanteen work?
           </h2>
 
           <p className="text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-          Transform your restaurant&apos;s social media presence with our AI-powered video creator, turning phone videos into captivating stories. Showcase dishes, highlight customer experiences, or share your unique story effortlessly.
+          Transform your restaurant&apos;s social media presence with our AI-powered video creator, turning videos from your phone into captivating stories.
           </p>
         </div>
 
@@ -43,7 +43,7 @@ const AboutSectionOne = () => {
               <SectionTitle
                 title="1- Upload your videos"
                 number=""
-                paragraph="Select and upload high-quality visuals (videos and photos) of your venue, showcasing ambiance, products, services, and special features, to engage potential customers on social media."
+                paragraph="Select and upload high-quality visuals (videos and photos) of your venue showcasing ambiance, products, services, and special features to engage potential customers on social media."
                 mb="44px"
               />
             </div>

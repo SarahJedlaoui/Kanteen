@@ -71,10 +71,10 @@ const NewsLatterBox = () => {
                             className="wow fadeInUp shadow-three dark:bg-gray-dark relative z-10 rounded-sm bg-white p-8 sm:p-11 lg:p-8 xl:p-11"
                             data-wow-delay=".2s"  >
                             <h3 className="mb-4 text-2xl font-bold leading-tight text-black dark:text-white">
-                                Add your Restaurant to the Waitlist
+                            Interested in adding your restaurant to our waitlist?
                             </h3>
                             <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
-                                Let us manage your restaurant for you so that you can get back to doing what you do best and we look in the future with certainty for life.
+                            Let us take the stress of content creation off your plate!
                             </p>
                             <div>
 
@@ -104,7 +104,7 @@ const NewsLatterBox = () => {
                                 />
 
                                 <p className="mb-0  pb-0 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
-                                    Would you like of social media team to contact you?
+                                Would you like a member of our social media team to contact you?
                                 </p>
 
                                 <FormControl>
@@ -124,11 +124,7 @@ const NewsLatterBox = () => {
                                             value="no"
                                             control={<Radio />}
                                             label="No" />
-                                        <FormControlLabel className="mb-0  pb-0 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25"
-                                            value="maybe"
-                                            control={<Radio />}
-                                            label="Maybe" 
-                                          />
+                                       
                                     </RadioGroup>
                                 </FormControl>
                                 <input

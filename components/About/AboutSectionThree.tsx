@@ -26,12 +26,10 @@ const AboutSectionThree = () => {
 
               <SectionTitle
                number="3"
-                title="3- Download your content"
-                paragraph="Download the videos crafted for you through our AI technology, overseen by our expert team. We value your feedback and would appreciate any suggestions for improvements for future creations."
+                title="3- Download and post your content"
+                paragraph="Download the videos crafted for you through our AI technology, overseen by our expert team. Your videos are now ready to post on your social media platforms. We value your feedback and would appreciate any suggestions for improvements for future creations."
                 mb="44px"
               />
-
-              
 
             </div>
 
