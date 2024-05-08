@@ -47,7 +47,7 @@ const BlogDetailsPage = () => {
                     Content for DIGESTIBLE reels 
                   </h3>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                  Stand out as one of our top influencers and get featured on Kanteen's social media.
+                  Stand out as one of our top influencers and get featured on Kanteen&apos;s social media.
                   </p>
                   <div className="w-1/2 sm:w-1/4 px-1 py-1 flex items-center justify-center ">
                     <div

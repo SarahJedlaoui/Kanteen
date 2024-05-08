@@ -36,24 +36,24 @@ const BlogDetailsPage = () => {
                   <strong className="text-green underline dark:text-white">
                     Description:
                   </strong> L&apos;Mida San Francisco is excited to announce a special Happy Hour event this weekend, and we&apos;re inviting 10 talented influencers to join us for an evening of fun, flavor, and creativity.
-                  As one of our exclusive guests, you'll have the opportunity to:
+                  As one of our exclusive guests, you&apos;ll have the opportunity to:
 
                 </p>
                 <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                  As one of our exclusive guests, you'll have the opportunity to:
+                  As one of our exclusive guests, you&apos;ll have the opportunity to:
                 </p>
                 <p className="ml-10 mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                   <strong className="text-green dark:text-white">
                     Attend the Event:
                   </strong>
 
-                  Enjoy a vibrant and lively atmosphere at L'Mida SF, capturing the essence of our Happy Hour.
+                  Enjoy a vibrant and lively atmosphere at L&apos;Mida SF, capturing the essence of our Happy Hour.
                 </p>
                 <p className="ml-10 mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                   <strong className="text-green dark:text-white">
                     Take Photos and Reels:
                   </strong>
-                  Showcase your creative skills by taking engaging photos and reels that highlight the event's unique ambiance, delicious drinks, and delectable appetizers.
+                  Showcase your creative skills by taking engaging photos and reels that highlight the event&apos;s unique ambiance, delicious drinks, and delectable appetizers.
                 </p>
                 <p className="ml-10 mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                   <strong className="text-green dark:text-white">
@@ -62,7 +62,7 @@ const BlogDetailsPage = () => {
                   Indulge in a $50 meal or drinks for two as a token of our appreciation for your contribution.
                 </p>
                 <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                  Join us in sharing the L'Mida SF Happy Hour experience with your followers while enjoying an evening of networking, creativity, and delightful cuisine.                </p>
+                  Join us in sharing the L&apos;Mida SF Happy Hour experience with your followers while enjoying an evening of networking, creativity, and delightful cuisine.                </p>
                 <div>
                   <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     <strong className="text-green underline dark:text-white">
@@ -77,7 +77,7 @@ const BlogDetailsPage = () => {
 
                   </p>
                   <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Location: L'Mida SF, 2359 Chestnut Street San Francisco, CA 94123
+                    Location: L&apos;Mida SF, 2359 Chestnut Street San Francisco, CA 94123
                   </p>
 
                   <div className="mb-10 w-full overflow-hidden rounded">
