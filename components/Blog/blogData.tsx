@@ -29,7 +29,7 @@ const blogData: Blog[] = [
     },
     tags: ["computer"],
     publishDate: "2025",
-    path: '/accommodations',
+    path: '/tokyoReels',
   },
   {
     id: 3,

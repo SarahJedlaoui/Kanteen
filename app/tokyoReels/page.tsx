@@ -38,16 +38,18 @@ const BlogDetailsPage = () => {
   const handleinstaChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setinsta(event.target.value);
   };
+
+
   const handleSubmit = async () => {
     const data = { email, name, insta, value };
     try {
       axios.post('https://api.elasticemail.com/v2/email/send', null, {
         params: {
           apikey: 'BC4C0088210F0049D2AB1093AB13032B4EBB49989F8B67CD2C0BDD065B09F3127CAB259734A59EA316A4BF49CFDA9C99',
-          subject: "L'Mida Collaboration",
+          subject: "Tokyo Hot Fried Chicken Collaboration",
           from: "sarajedlaoui99@gmail.com",
           to: "pukajedla@gmail.com",
-          bodyText: `L'Mida Collaboration:\n video rating:\n Name: ${name} \n Email: ${email}\n Instagram Account: ${insta}
+          bodyText: `Tokyo Hot Fried Chicken Collaboration:\n video rating:\n Name: ${name} \n Email: ${email}\n Instagram Account: ${insta}
           `,
         }
       })
@@ -58,6 +60,7 @@ const BlogDetailsPage = () => {
       console.error('Error while saving data:', error);
     }
   };
+  
 
   return (
     <>
@@ -67,7 +70,7 @@ const BlogDetailsPage = () => {
             <div className="w-full px-4 lg:w-8/12">
               <div>
                 <h2 className="mt-10 mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
-                  Content for  L&apos;Mida restaurant
+                  Content for  Tokyo Hot Fried Chicken
                 </h2>
 
                 <div>
@@ -81,7 +84,8 @@ const BlogDetailsPage = () => {
                   </p>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.5787769537715!2d-122.44218980000001!3d37.7999102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580d43e9a4ccd%3A0x61185dda0d7e4a0d!2s2359%20Chestnut%20St%2C%20San%20Francisco%2C%20CA%2094123%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2stn!4v1715180520333!5m2!1sfr!2stn"
+
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.6509701733307!2d-79.42126014436609!3d43.6554295780121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b35aa704168ad%3A0x1750dbbe0264a861!2sTokyo%20Hot%20Fried%20Chicken!5e0!3m2!1sfr!2stn!4v1715261985159!5m2!1sfr!2stn"
                         width="100%"
                         height="400"
                         allowFullScreen
@@ -97,7 +101,7 @@ const BlogDetailsPage = () => {
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     Stand out as one of our top influencers and get featured on Kanteen&apos;s social media.
                   </p>
-                  
+
                   <div className="-mx-3 flex flex-wrap items-center justify-center mb-5" >
 
 
@@ -172,9 +176,6 @@ const BlogDetailsPage = () => {
                     </div>
 
                   </div>
-
-
-
 
                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                     <div
@@ -609,19 +610,19 @@ const BlogDetailsPage = () => {
                       </svg>
                     </span>
                   </div>
-                 
+
                   <div className="items-center justify-between sm:flex">
                     <div className="mb-5">
                       <h4 className="mb-3 text-sm font-medium text-body-color">
                         Popular Tags :
                       </h4>
                       <div className="flex items-center">
-                        <TagButton text="Design" />
-                        <TagButton text="Development" />
-                        <TagButton text="Info" />
+                        <TagButton text="Instagram" />
+                        <TagButton text="HappyHour" />
+                        <TagButton text="Tokyo" />
                       </div>
                     </div>
-                   
+
                   </div>
                 </div>
               </div>
