@@ -17,7 +17,7 @@ const Hero = () => {
     <>
       <section
         id="home"
-        className="bg-[#e7edec] dark:bg-gray-dark relative z-10 overflow-hidden pb-16 pt-[120px] md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]">
+        className="bg-[#e7edec] dark:bg-gray-dark relative z-10 overflow-hidden pb-16 pt-[120px] md:pb-[100px] md:pt-[150px] xl:pb-[100px] xl:pt-[180px] 2xl:pb-[100px] 2xl:pt-[210px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
@@ -112,15 +112,6 @@ const Hero = () => {
 
 
               </div>
-
-              <ModalVideo
-                channel="vimeo"
-                autoplay={true}
-                start={true}
-                isOpen={isOpen}
-                videoId="915599655"
-                onClose={() => setOpen(false)}
-              />
 
               <div className="flex flex-col pt-10 items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                 <Link
