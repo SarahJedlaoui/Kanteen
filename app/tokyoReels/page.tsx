@@ -12,7 +12,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import { Alert } from '@mui/material';
 import axios from 'axios';
-
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const BlogDetailsPage = () => {
   const { theme } = useTheme();
@@ -69,6 +69,7 @@ const BlogDetailsPage = () => {
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
               <div>
+              <div className="mt-10 mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight" > <a href="/influencers"><ArrowBackIcon></ArrowBackIcon></a></div>
                 <h2 className="mt-10 mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
                   Content for  Tokyo Hot Fried Chicken
                 </h2>
@@ -96,7 +97,7 @@ const BlogDetailsPage = () => {
                   </div>
 
                   <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
-                    Content for DIGESTIBLE reels
+                  Inspirations
                   </h3>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     Stand out as one of our top influencers and get featured on Kanteen&apos;s social media.

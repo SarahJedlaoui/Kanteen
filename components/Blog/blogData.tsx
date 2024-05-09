@@ -44,7 +44,7 @@ const blogData: Blog[] = [
     },
     tags: ["design"],
     publishDate: "2025",
-    path: '/accommodations',
+    path: '/buvetteReels',
   },
 ];
 export default blogData;

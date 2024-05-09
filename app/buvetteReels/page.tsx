@@ -38,16 +38,18 @@ const BlogDetailsPage = () => {
   const handleinstaChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setinsta(event.target.value);
   };
+
+
   const handleSubmit = async () => {
     const data = { email, name, insta, value };
     try {
       axios.post('https://api.elasticemail.com/v2/email/send', null, {
         params: {
           apikey: 'BC4C0088210F0049D2AB1093AB13032B4EBB49989F8B67CD2C0BDD065B09F3127CAB259734A59EA316A4BF49CFDA9C99',
-          subject: "L'Mida Collaboration",
+          subject: "Buvette Pacey Collaboration",
           from: "sarajedlaoui99@gmail.com",
           to: "pukajedla@gmail.com",
-          bodyText: `L'Mida Collaboration:\n video rating:\n Name: ${name} \n Email: ${email}\n Instagram Account: ${insta}
+          bodyText: `Buvette Pacey Collaboration:\n video rating:\n Name: ${name} \n Email: ${email}\n Instagram Account: ${insta}
           `,
         }
       })
@@ -59,6 +61,7 @@ const BlogDetailsPage = () => {
     }
   };
 
+
   return (
     <>
       <section className="pb-[120px] pt-[150px]">
@@ -67,71 +70,22 @@ const BlogDetailsPage = () => {
             <div className="w-full px-4 lg:w-8/12">
               <div>
                 <div className="mt-10 mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight" > <a href="/influencers"><ArrowBackIcon></ArrowBackIcon></a></div>
-              
                 <h2 className="mt-10 mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
-                  L&apos;Mida Happy Hour
+                  Content for Buvette Pacey
                 </h2>
-                <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                  <strong className="text-green underline dark:text-white">
-                    Restaurant:
-                  </strong> L&apos;Mida San Francisco
-                </p>
-                <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                  <strong className="text-green underline dark:text-white">
-                    Instagram:
-                  </strong> <a href="https://www.instagram.com/lmidasf?igsh=MXFwazB5MzN3OWN1dw==">lmidasf </a>
-                </p>
-                <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                  <strong className="text-green underline dark:text-white">
-                    Description:
-                  </strong> L&apos;Mida San Francisco is excited to announce a special Happy Hour event this weekend, and we&apos;re inviting 10 talented influencers to join us for an evening of fun, flavor, and creativity.
-                  As one of our exclusive guests, you&apos;ll have the opportunity to:
 
-                </p>
-                <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                  As one of our exclusive guests, you&apos;ll have the opportunity to:
-                </p>
-                <p className="ml-10 mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                  <strong className="text-green dark:text-white">
-                    Attend the Event:
-                  </strong>
-
-                  Enjoy a vibrant and lively atmosphere at L&apos;Mida SF, capturing the essence of our Happy Hour.
-                </p>
-                <p className="ml-10 mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                  <strong className="text-green dark:text-white">
-                    Take Photos and Reels:
-                  </strong>
-                  Showcase your creative skills by taking engaging photos and reels that highlight the event&apos;s unique ambiance, delicious drinks, and delectable appetizers.
-                </p>
-                <p className="ml-10 mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                  <strong className="text-green dark:text-white">
-                    Receive Complimentary Meals or Drinks:
-                  </strong>
-                  Indulge in a $50 meal or drinks for two as a token of our appreciation for your contribution.
-                </p>
-                <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                  Join us in sharing the L&apos;Mida SF Happy Hour experience with your followers while enjoying an evening of networking, creativity, and delightful cuisine.                </p>
                 <div>
-                  <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    <strong className="text-green underline dark:text-white">
-                      Event Details:
-                    </strong>
+                  <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                    {"How It Works:\n1-Capture Content: Take photos and videos that showcase the restaurant's unique vibe, food, and drink offerings.\n2-Share & Tag: Post the content on your social media channels, tagging the restaurant and using the dedicated hashtag.\n3-Get Featured: Stand out as one of our top influencers and get featured on Kanteen's social media.".split('\n').map((line, index) => (
+                      <React.Fragment key={index}>
+                        {line}
+                        <br />
+                      </React.Fragment>
+                    ))}
                   </p>
-                  <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Date: [Event Date]
-                  </p>
-                  <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Time: [Event Time]
-
-                  </p>
-                  <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Location: L&apos;Mida SF, 2359 Chestnut Street San Francisco, CA 94123
-                  </p>
-
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
-                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3152.5787769537715!2d-122.44218980000001!3d37.7999102!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808580d43e9a4ccd%3A0x61185dda0d7e4a0d!2s2359%20Chestnut%20St%2C%20San%20Francisco%2C%20CA%2094123%2C%20%C3%89tats-Unis!5e0!3m2!1sfr!2stn!4v1715180520333!5m2!1sfr!2stn"
+                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.6720888063264!2d-79.3679543877595!3d43.65499025219378!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4cb6b80b5ad09%3A0x63795052fb94deb0!2sBuvette%20Pacey!5e0!3m2!1sfr!2stn!4v1715267602666!5m2!1sfr!2stn"
                         width="100%"
                         height="400"
                         allowFullScreen
@@ -147,7 +101,7 @@ const BlogDetailsPage = () => {
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     Stand out as one of our top influencers and get featured on Kanteen&apos;s social media.
                   </p>
-                  
+
                   <div className="-mx-3 flex flex-wrap items-center justify-center mb-5" >
 
 
@@ -222,9 +176,6 @@ const BlogDetailsPage = () => {
                     </div>
 
                   </div>
-
-
-
 
                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                     <div
@@ -659,19 +610,19 @@ const BlogDetailsPage = () => {
                       </svg>
                     </span>
                   </div>
-                 
+
                   <div className="items-center justify-between sm:flex">
                     <div className="mb-5">
                       <h4 className="mb-3 text-sm font-medium text-body-color">
                         Popular Tags :
                       </h4>
                       <div className="flex items-center">
-                        <TagButton text="Design" />
-                        <TagButton text="Development" />
-                        <TagButton text="Info" />
+                        <TagButton text="Instagram" />
+                        <TagButton text="HappyHour" />
+                        <TagButton text="Tokyo" />
                       </div>
                     </div>
-                   
+
                   </div>
                 </div>
               </div>
