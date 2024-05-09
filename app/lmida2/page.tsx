@@ -5,7 +5,7 @@ import ScrollUp from "@/components/Common/ScrollUp";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Restaurant Page",
+  title: "Lmida2 Page",
   description: "This is Restaurant Page ",
   // other metadata
 };

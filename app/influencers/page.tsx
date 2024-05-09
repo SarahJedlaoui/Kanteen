@@ -6,8 +6,8 @@ import { Metadata } from "next";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "Blog Page ",
-  description: "This is Blog Page.",
+  title: "Influencers Page",
+  description: "This is Influencers Page.",
   // other metadata
 };
 

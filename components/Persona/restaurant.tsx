@@ -143,7 +143,7 @@ const Restaurant = () => {
       axios.post('https://api.elasticemail.com/v2/email/send', null, {
         params: {
           apikey: '0946D26959F1CF59C2908E27F6AACF5A69FE5F455050A26ED257A9190B4E7976BAC71E82D69850995B1977C5070E579F',
-          subject: "L'Mida Feedback Dev",
+          subject: "L'Mida Feedback",
           from: "sarajedlaoui99@gmail.com",
           to: "pukajedla@gmail.com",
           bodyText: `L Mida feedback:\n video rating:\n 
