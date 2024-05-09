@@ -48,7 +48,7 @@ const Contact = () => {
 
 
   return (
-    <section id="contact" className="overflow-hidden py-16 md:py-20 lg:py-28">
+    <section id="contact" className="overflow-hidden -mt-20 py-16 md:py-20 lg:py-28">
       <div className="container">
         <div className="flex items-center justify-center">
           <div className="-mx-4 flex flex-wrap mx-auto ">
