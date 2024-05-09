@@ -123,7 +123,7 @@ const BlogDetailsPage = () => {
                       >
                         <div className="mb-5 relative items-center justify-center h-[400px] ">
                           <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                            <source src="https://d205gdf6tf9tly.cloudfront.net/21.mp4" type="video/mp4" />
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/ideas/idea1.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
                         </div>
@@ -139,7 +139,7 @@ const BlogDetailsPage = () => {
                       >
                         <div className="mb-5 relative items-center justify-center h-[400px] ">
                           <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                            <source src="https://d205gdf6tf9tly.cloudfront.net/21.mp4" type="video/mp4" />
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/ideas/idea2.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
                         </div>
@@ -156,7 +156,7 @@ const BlogDetailsPage = () => {
                       >
                         <div className="mb-5 relative  items-center justify-center h-[400px]">
                           <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                            <source src="https://d205gdf6tf9tly.cloudfront.net/7.mp4" type="video/mp4" />
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/ideas/idea3.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
 
@@ -177,7 +177,7 @@ const BlogDetailsPage = () => {
                       >
                         <div className="mb-5 relative items-center justify-center h-[400px]">
                           <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                            <source src="https://d205gdf6tf9tly.cloudfront.net/15.mp4" type="video/mp4" />
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/ideas/idea4.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
 
