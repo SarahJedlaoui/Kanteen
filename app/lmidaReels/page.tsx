@@ -666,9 +666,9 @@ const BlogDetailsPage = () => {
                         Popular Tags :
                       </h4>
                       <div className="flex items-center">
-                        <TagButton text="Design" />
-                        <TagButton text="Development" />
-                        <TagButton text="Info" />
+                        <TagButton text="Drink" />
+                        <TagButton text="HappyHour" />
+                        <TagButton text="LmidaSF" />
                       </div>
                     </div>
                    
