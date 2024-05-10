@@ -70,10 +70,10 @@ const BlogDetailsPage = () => {
                     </strong>
                   </p>
                   <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Date: [Event Date]
+                    Date: Every Saturday
                   </p>
                   <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Time: [Event Time]
+                    Time: 5pm-6.30pm 
 
                   </p>
                   <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
