@@ -396,16 +396,16 @@ const Restaurant = () => {
                       <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                         <div className="text-lg font-bold mb-2">Hook </div>
                         <div className="text-gray-700 text-sm mb-2">
-                          <p>&ldquo; What makes Karaage chicken so irresistibly crispy?&ldquo;</p>
+                          <p>&ldquo; How do we cook Karaage chicken to perfection every time?&ldquo;</p>
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Unlock the secrets to our perfect crunch and juicy flavor!&ldquo;</p>
+                        <p> &ldquo;Step into our kitchen and see the magic happen!&ldquo;</p>
                         </div>
                         
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Taste the crunch! Visit Tokyo Hot Fried Chicken today!&ldquo;</p>
+                        <p> &ldquo;Crave the crunch? Visit us in Toronto!&ldquo;</p>
                         </div>
                        
                       </div>
@@ -421,8 +421,8 @@ const Restaurant = () => {
                       <div className="flex flex-col space-y-3">
                         <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                           <div className="text-gray-700 text-sm">
-                            <p><strong>Caption: </strong>&ldquo;Crunch into perfection with our Karaage chicken! 🍗💥 #TokyoHotFriedChicken&ldquo;</p>
-                            <p><strong>Hashtags: </strong>#KaraageCrunch #TokyoHot #TorontoFoodie #CrispyChicken #JapaneseCuisine</p>
+                            <p><strong>Caption: </strong>&ldquo;Experience the sizzle of our Karaage chicken! 🔥🍗 #TokyoHotFriedChicken&ldquo;</p>
+                            <p><strong>Hashtags: </strong>#BehindTheScenes #CookingSecrets #KaraageChicken #TorontoFood #TokyoHot</p>
                           </div>
                         </div>
 
@@ -486,16 +486,16 @@ const Restaurant = () => {
                       <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                         <div className="text-lg font-bold mb-2">Hook </div>
                         <div className="text-gray-700 text-sm mb-2">
-                          <p>&ldquo;Ever wonder what goes into our famous Karaage chicken?&ldquo;</p>
+                          <p>&ldquo;Wondering what to pair with our Karaage chicken?&ldquo;</p>
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Discover the fresh ingredients that make our Karaage stand out!&ldquo;</p>
+                        <p> &ldquo;Learn the best sides and drinks to complement your Karaage meal!&ldquo;</p>
                         </div>
                         
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Ready for a taste? Come on down!&ldquo;</p>
+                        <p> &ldquo;Pick your favorite combo today at Tokyo Hot!&ldquo;</p>
                         </div>
                        
                       </div>
@@ -511,8 +511,8 @@ const Restaurant = () => {
                       <div className="flex flex-col space-y-3">
                         <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                           <div className="text-gray-700 text-sm">
-                            <p><strong>Caption:</strong> &ldquo;Fresh and flavorful! That&apos;s our Karaage promise. 🌿🍗 #TokyoHotFriedChicken&ldquo;</p>
-                            <p><strong>Hashtags: </strong>#FreshEats #KaraageSecrets #TokyoHot #EatLocal #TorontoEats</p>
+                            <p><strong>Caption:</strong> &ldquo;Pair it like a pro! 🍻🍚 Which combo will you try first? #TokyoHotFriedChicken&ldquo;</p>
+                            <p><strong>Hashtags: </strong>#FoodPairing #KaraageChicken #DrinkAndDine #TokyoHot #TorontoDining</p>
                           </div>
                         </div>
 
