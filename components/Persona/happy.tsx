@@ -128,10 +128,10 @@ const Restaurant = () => {
       axios.post('https://api.elasticemail.com/v2/email/send', null, {
         params: {
           apikey: '0946D26959F1CF59C2908E27F6AACF5A69FE5F455050A26ED257A9190B4E7976BAC71E82D69850995B1977C5070E579F',
-          subject: "L'Mida Feedback Dev",
+          subject: "L'Mida Happy Hour Feedback ",
           from: "sarajedlaoui99@gmail.com",
           to: "pukajedla@gmail.com",
-          bodyText: `L Mida feedback:\n video rating:\n 
+          bodyText: `L Mida Happy Hour feedback:\n video rating:\n 
           video1: rate :${rate1} , decision: ${lastClicked1}, feedback:  ${feedback1}
           \n video2:rate ${rate2}, decision: ${lastClicked2}, feedback:  ${feedback2}
           \n video3:rate ${rate3}, decision: ${lastClicked3}, feedback:  ${feedback3}
@@ -192,16 +192,16 @@ const Restaurant = () => {
                       <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                         <div className="text-lg font-bold mb-2">Hook </div>
                         <div className="text-gray-700 text-sm mb-2">
-                          <p>&ldquo;What makes Karaage chicken so irresistibly crispy?&ldquo;</p>
+                          <p>&ldquo;What makes you happy?&ldquo;</p>
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p>&ldquo;Unlock the secrets to our perfect crunch and juicy flavor!&ldquo;</p>
+                        <p>&ldquo;Dive into the world of mixology: discover the art and science behind your favorite cocktails.&ldquo;</p>
                         </div>
                         
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Taste the crunch! Visit Tokyo Hot Fried Chicken today!&ldquo;</p>
+                        <p> &ldquo;Life is too short for bad drinks! Visit l&apos;Mida today!&ldquo;</p>
                         </div>
                        
                       </div>
@@ -214,8 +214,8 @@ const Restaurant = () => {
                       <div className="flex flex-col space-y-3">
                         <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                           <div className="text-gray-700 text-sm">
-                            <p><strong>Caption: </strong>&ldquo;Crunch into perfection with our Karaage chicken! 🍗💥 #TokyoHotFriedChicken&ldquo;</p>
-                            <p><strong>Hashtags: </strong>#KaraageCrunch #TokyoHot #TorontoFoodie #CrispyChicken #JapaneseCuisine</p>
+                            <p><strong>Caption: </strong>&ldquo;🍹 Happy Hour just got happier! Join us for your favorite cocktails. #HappyHour #CocktailTime&ldquo;</p>
+                            <p><strong>Hashtags: </strong>#HappyHour #CocktailTime</p>
                           </div>
                         </div>
 
@@ -281,16 +281,16 @@ const Restaurant = () => {
                       <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                         <div className="text-lg font-bold mb-2">Hook </div>
                         <div className="text-gray-700 text-sm mb-2">
-                          <p>&ldquo;Ever wonder what goes into our famous Karaage chicken?&ldquo;</p>
+                          <p>&ldquo;Raise a Glass and Unwind Happy Hour is Here!&ldquo;</p>
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p>&ldquo;Discover the fresh ingredients that make our Karaage stand out!&ldquo;</p>
+                        <p>&ldquo;Dive into the world of mixology: discover the art and science behind your favorite cocktails.&ldquo;</p>
                         </div>
                         
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Ready for a taste? Come on down!&ldquo;</p>
+                        <p> &ldquo;Keep calm and cocktail on.&ldquo;</p>
                         </div>
                        
                       </div>
@@ -303,8 +303,8 @@ const Restaurant = () => {
                       <div className="flex flex-col space-y-3">
                         <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                           <div className="text-gray-700 text-sm">
-                            <p><strong>Caption:</strong> &ldquo;Fresh and flavorful! That&apos;s our Karaage promise. 🌿🍗 #TokyoHotFriedChicken&ldquo;</p>
-                            <p><strong>Hashtags: </strong>#FreshEats #KaraageSecrets #TokyoHot #EatLocal #TorontoEats</p>
+                            <p><strong>Caption:</strong> &ldquo;Cocktails🍸: because no great story ever started with someone eating a salad.&ldquo;</p>
+                            <p><strong>Hashtags: </strong> #HappyHour #CocktailTime</p>
                           </div>
                         </div>
 
@@ -376,16 +376,16 @@ const Restaurant = () => {
                       <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                         <div className="text-lg font-bold mb-2">Hook </div>
                         <div className="text-gray-700 text-sm mb-2">
-                          <p>&ldquo; How do we cook Karaage chicken to perfection every time?&ldquo;</p>
+                          <p>&ldquo; Mix, Mingle and Enjoy! Happy Hour Awaits! &ldquo;</p>
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Step into our kitchen and see the magic happen!&ldquo;</p>
+                        <p> &ldquo;Savor the sip: how to truly appreciate a well-crafted cocktail.&ldquo;</p>
                         </div>
                         
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Crave the crunch? Visit us in Toronto!&ldquo;</p>
+                        <p> &ldquo;Keep calm and cocktail on.&ldquo;</p>
                         </div>
                        
                       </div>
@@ -401,8 +401,8 @@ const Restaurant = () => {
                       <div className="flex flex-col space-y-3">
                         <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                           <div className="text-gray-700 text-sm">
-                            <p><strong>Caption: </strong>&ldquo;Experience the sizzle of our Karaage chicken! 🔥🍗 #TokyoHotFriedChicken&ldquo;</p>
-                            <p><strong>Hashtags: </strong>#BehindTheScenes #CookingSecrets #KaraageChicken #TorontoFood #TokyoHot</p>
+                            <p><strong>Caption: </strong>&ldquo;Sip sip hooray! Happy hour is here. Time to indulge in your favorite drinks. 🥂 #Cheers #HappyHourVibes&ldquo;</p>
+                            <p><strong>Hashtags: </strong>#Cheers #HappyHourVibes</p>
                           </div>
                         </div>
 
@@ -466,16 +466,16 @@ const Restaurant = () => {
                       <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                         <div className="text-lg font-bold mb-2">Hook </div>
                         <div className="text-gray-700 text-sm mb-2">
-                          <p>&ldquo;Wondering what to pair with our Karaage chicken?&ldquo;</p>
+                          <p>&ldquo;Don't Miss the Chance! Happy Hour!&ldquo;</p>
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Learn the best sides and drinks to complement your Karaage meal!&ldquo;</p>
+                        <p> &ldquo;Enjoy exclusive discounts on our cocktails and handpicked wines in a vibrant atmosphere perfect for unwinding after work!&ldquo;</p>
                         </div>
                         
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Pick your favorite combo today at Tokyo Hot!&ldquo;</p>
+                        <p> &ldquo;Stop by and grab your cocktail from 5-6.30 PM.&ldquo;</p>
                         </div>
                        
                       </div>
@@ -491,8 +491,8 @@ const Restaurant = () => {
                       <div className="flex flex-col space-y-3">
                         <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                           <div className="text-gray-700 text-sm">
-                            <p><strong>Caption:</strong> &ldquo;Pair it like a pro! 🍻🍚 Which combo will you try first? #TokyoHotFriedChicken&ldquo;</p>
-                            <p><strong>Hashtags: </strong>#FoodPairing #KaraageChicken #DrinkAndDine #TokyoHot #TorontoDining</p>
+                            <p><strong>Caption:</strong> &ldquo;🥂 Every hour spent here is happy, but these hours are the happiest. Come see why! #HappyHour #BarVibes&ldquo;</p>
+                            <p><strong>Hashtags: </strong>#HappyHour #BarVibes</p>
                           </div>
                         </div>
 
@@ -563,16 +563,16 @@ const Restaurant = () => {
                       <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                         <div className="text-lg font-bold mb-2">Hook </div>
                         <div className="text-gray-700 text-sm mb-2">
-                          <p>&ldquo;What makes Karaage chicken so irresistibly crispy?&ldquo;</p>
+                          <p>&ldquo;Don't miss the happy hour!&ldquo;</p>
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Discover the fresh ingredients that make our Karaage stand out!&ldquo;</p>
+                        <p> &ldquo;Savor the sip: how to truly appreciate a well-crafted cocktail.&ldquo;</p>
                         </div>
                         
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Ready for a taste? Come on down!&ldquo;</p>
+                        <p> &ldquo;Trust me, you can dance. — Vodka&ldquo;</p>
                         </div>
                        
                       </div>
@@ -586,8 +586,8 @@ const Restaurant = () => {
                       <div className="flex flex-col space-y-3">
                         <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                           <div className="text-gray-700 text-sm">
-                            <p><strong>Caption: </strong>&ldquo;Crunch into perfection with our Karaage chicken! 🍗💥 #TokyoHotFriedChicken&ldquo;</p>
-                            <p><strong>Hashtags: </strong>#KaraageCrunch #TokyoHot #TorontoFoodie #CrispyChicken #JapaneseCuisine</p>
+                            <p><strong>Caption: </strong>&ldquo;Sip sip hooray! Happy hour is here. Time to indulge in your favorite drinks. 🥂 #Cheers #HappyHourVibes&ldquo;</p>
+                            <p><strong>Hashtags: </strong>#Cheers #HappyHourVibes</p>
                           </div>
                         </div>
 
@@ -649,11 +649,11 @@ const Restaurant = () => {
                       <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                         <div className="text-lg font-bold mb-2">Hook </div>
                         <div className="text-gray-700 text-sm mb-2">
-                          <p>&ldquo;What makes Karaage chicken so irresistibly crispy?&ldquo;</p>
+                          <p>&ldquo;Tell me you are in Morocco without telling me you are in Morocco!&ldquo;</p>
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Discover the fresh ingredients that make our Karaage stand out!&ldquo;</p>
+                        <p> &ldquo;Mixing drinks and culture!&ldquo;</p>
                         </div>
                         
                         <div className="text-lg font-bold mb-2">Reward</div>
@@ -671,8 +671,8 @@ const Restaurant = () => {
                       <div className="flex flex-col space-y-3">
                         <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                           <div className="text-gray-700 text-sm">
-                            <p><strong>Caption:</strong> &ldquo;Fresh and flavorful! That&apos;s our Karaage promise. 🌿🍗 #TokyoHotFriedChicken&ldquo;</p>
-                            <p><strong>Hashtags: </strong>#FreshEats #KaraageSecrets #TokyoHot #EatLocal #TorontoEats</p>
+                            <p><strong>Caption:</strong> &ldquo;Beat the clock ⏰, not your wallet. Happy hour specials starting now! #HappyHour #DrinkUp&ldquo;</p>
+                            <p><strong>Hashtags: </strong>#HappyHour #DrinkUp</p>
                           </div>
                         </div>
 
