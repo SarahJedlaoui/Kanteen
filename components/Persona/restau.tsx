@@ -154,7 +154,7 @@ const Restaurant = () => {
           \n video5:rate ${rate5}, decision: ${lastClicked5}, feedback:  ${feedback5}
           \n video6:rate ${rate6}, decision: ${lastClicked6}, feedback:  ${feedback6}
           \n video7:rate ${rate7}, decision: ${lastClicked7}, feedback:  ${feedback7}
-          \nvideo8:rate ${rate8}, decision: ${lastClicked8}, feedback:  ${feedback8}
+          \nvideo8:rate ${rate8}, decision: ${lastClicked8}, feedback:   ${feedback8}
           \n video9:rate ${rate9}, decision: ${lastClicked9}, feedback:  ${feedback9}
           \n video10:rate ${rate10}, decision: ${lastClicked10}, feedback:  ${feedback10}
           \n video11:rate ${rate11}, decision: ${lastClicked11}, feedback:  ${feedback11}
