@@ -243,7 +243,7 @@ const Restaurant = () => {
                                 </div>
                               </div>
                               <div className="border border-gray-300 rounded-lg p-2">
-                                <TextField onChange={(e) => setFeedback1(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                                <TextField onChange={(e) => setFeedback1(e.target.value)} id="standard-basic" label="Feedback" variant="standard" fullWidth maxRows={4} multiline />
                               </div>
                             </div>
                           </div>
@@ -333,7 +333,7 @@ const Restaurant = () => {
                                 </div>
                               </div>
                               <div className="border border-gray-300 rounded-lg p-2">
-                                <TextField onChange={(e) => setFeedback2(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                                <TextField onChange={(e) => setFeedback2(e.target.value)} id="standard-basic" label="Feedback" variant="standard" fullWidth maxRows={4} multiline />
                               </div>
                             </div>
                           </div>
@@ -430,7 +430,7 @@ const Restaurant = () => {
                                 </div>
                               </div>
                               <div className="border border-gray-300 rounded-lg p-2">
-                                <TextField onChange={(e) => setFeedback3(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                                <TextField onChange={(e) => setFeedback3(e.target.value)} id="standard-basic" label="Feedback" variant="standard" fullWidth maxRows={4} multiline />
                               </div>
                             </div>
                           </div>
@@ -521,7 +521,7 @@ const Restaurant = () => {
                                 </div>
                               </div>
                               <div className="border border-gray-300 rounded-lg p-2">
-                                <TextField onChange={(e) => setFeedback4(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                                <TextField onChange={(e) => setFeedback4(e.target.value)} id="standard-basic" label="Feedback" variant="standard" fullWidth maxRows={4} multiline />
                               </div>
                             </div>
                           </div>
@@ -615,7 +615,7 @@ const Restaurant = () => {
                                 </div>
                               </div>
                               <div className="border border-gray-300 rounded-lg p-2">
-                                <TextField onChange={(e) => setFeedback5(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                                <TextField onChange={(e) => setFeedback5(e.target.value)} id="standard-basic" label="Feedback" variant="standard" fullWidth maxRows={4} multiline />
                               </div>
                             </div>
                           </div>
@@ -701,7 +701,7 @@ const Restaurant = () => {
                                 </div>
                               </div>
                               <div className="border border-gray-300 rounded-lg p-2">
-                                <TextField onChange={(e) => setFeedback6(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                                <TextField onChange={(e) => setFeedback6(e.target.value)} id="standard-basic" label="Feedback" variant="standard" fullWidth maxRows={4} multiline />
                               </div>
                             </div>
                           </div>
