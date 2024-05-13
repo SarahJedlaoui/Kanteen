@@ -466,7 +466,7 @@ const Restaurant = () => {
                       <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                         <div className="text-lg font-bold mb-2">Hook </div>
                         <div className="text-gray-700 text-sm mb-2">
-                          <p>&ldquo;Don't Miss the Chance! Happy Hour!&ldquo;</p>
+                          <p>&ldquo;Don&apos;t Miss the Chance! Happy Hour!&ldquo;</p>
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
@@ -563,7 +563,7 @@ const Restaurant = () => {
                       <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                         <div className="text-lg font-bold mb-2">Hook </div>
                         <div className="text-gray-700 text-sm mb-2">
-                          <p>&ldquo;Don't miss the happy hour!&ldquo;</p>
+                          <p>&ldquo;Don&apos;t miss the happy hour!&ldquo;</p>
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
