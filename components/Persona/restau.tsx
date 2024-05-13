@@ -138,12 +138,12 @@ const Restaurant = () => {
           \nvideo8:rate ${rate8}, decision: ${lastClicked8}, feedback:   ${feedback8}
           \n video9:rate ${rate9}, decision: ${lastClicked9}, feedback:  ${feedback9}
           \n video10:rate ${rate10}, decision: ${lastClicked10}, feedback:  ${feedback10}
-         
+          \n video11:rate ${rate11}, decision: ${lastClicked11}, feedback:  ${feedback11}
           Feedback: ${feedback}\n
           `,
         }
       })
-      console.log('Reviw Submitted:',  feedback);
+      console.log('Reviw Submitted:', feedback);
       setOpenAlert(true);
     } catch (error) {
       console.error('Error while saving data:', error);
@@ -195,14 +195,14 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p>&ldquo;Unlock the secrets to our perfect crunch and juicy flavor!&ldquo;</p>
+                          <p>&ldquo;Unlock the secrets to our perfect crunch and juicy flavor!&ldquo;</p>
                         </div>
-                        
+
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Taste the crunch! Visit Tokyo Hot Fried Chicken today!&ldquo;</p>
+                          <p> &ldquo;Taste the crunch! Visit Tokyo Hot Fried Chicken today!&ldquo;</p>
                         </div>
-                       
+
                       </div>
                     </div>
 
@@ -283,18 +283,18 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Learn the best sides and drinks to complement your Karaage meal!&ldquo;</p>
+                          <p> &ldquo;Learn the best sides and drinks to complement your Karaage meal!&ldquo;</p>
                         </div>
-                        
+
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Pick your favorite combo today at Tokyo Hot!&ldquo;</p>
+                          <p> &ldquo;Pick your favorite combo today at Tokyo Hot!&ldquo;</p>
                         </div>
-                       
+
                       </div>
 
 
-                      
+
                     </div>
 
                     {/* Bottom section with feedback and buttons */}
@@ -379,16 +379,16 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Here&apos;s the secret to our perfect Karaage Chicken!&ldquo;</p>
+                          <p> &ldquo;Here&apos;s the secret to our perfect Karaage Chicken!&ldquo;</p>
                         </div>
-                        
+
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Craving some? Visit us or order online now!&ldquo;</p>
+                          <p> &ldquo;Craving some? Visit us or order online now!&ldquo;</p>
                         </div>
-                       
+
                       </div>
-                      
+
                     </div>
 
                     {/* Bottom section with feedback and buttons */}
@@ -465,14 +465,14 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Experience the crunch that launched a thousand cravings!&ldquo;</p>
+                          <p> &ldquo;Experience the crunch that launched a thousand cravings!&ldquo;</p>
                         </div>
-                        
+
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Ready for a taste? Come on down!&ldquo;</p>
+                          <p> &ldquo;Ready for a taste? Come on down!&ldquo;</p>
                         </div>
-                       
+
                       </div>
                     </div>
 
@@ -536,7 +536,7 @@ const Restaurant = () => {
                 </div>
 
 
-                
+
 
                 <div className="-mx-5  flex flex-wrap items-center justify-center mb-5" >
 
@@ -559,14 +559,14 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p>&ldquo;Unlock the secrets to our perfect crunch and juicy flavor!&ldquo;</p>
+                          <p>&ldquo;Unlock the secrets to our perfect crunch and juicy flavor!&ldquo;</p>
                         </div>
-                        
+
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Taste the crunch! Visit Tokyo Hot Fried Chicken today!&ldquo;</p>
+                          <p> &ldquo;Taste the crunch! Visit Tokyo Hot Fried Chicken today!&ldquo;</p>
                         </div>
-                       
+
                       </div>
                     </div>
 
@@ -648,14 +648,14 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p>&ldquo;Discover the fresh ingredients that make our Karaage stand out!&ldquo;</p>
+                          <p>&ldquo;Discover the fresh ingredients that make our Karaage stand out!&ldquo;</p>
                         </div>
-                        
+
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Ready for a taste? Come on down!&ldquo;</p>
+                          <p> &ldquo;Ready for a taste? Come on down!&ldquo;</p>
                         </div>
-                       
+
                       </div>
                     </div>
 
@@ -742,18 +742,18 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Step into our kitchen and see the magic happen!&ldquo;</p>
+                          <p> &ldquo;Step into our kitchen and see the magic happen!&ldquo;</p>
                         </div>
-                        
+
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Crave the crunch? Visit us in Toronto!&ldquo;</p>
+                          <p> &ldquo;Crave the crunch? Visit us in Toronto!&ldquo;</p>
                         </div>
-                       
+
                       </div>
 
 
-                      
+
                     </div>
 
                     {/* Bottom section with feedback and buttons */}
@@ -832,18 +832,18 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Learn the best sides and drinks to complement your Karaage meal!&ldquo;</p>
+                          <p> &ldquo;Learn the best sides and drinks to complement your Karaage meal!&ldquo;</p>
                         </div>
-                        
+
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Pick your favorite combo today at Tokyo Hot!&ldquo;</p>
+                          <p> &ldquo;Pick your favorite combo today at Tokyo Hot!&ldquo;</p>
                         </div>
-                       
+
                       </div>
 
 
-                      
+
                     </div>
 
                     {/* Bottom section with feedback and buttons */}
@@ -929,16 +929,16 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Discover the fresh ingredients that make our Karaage stand out!&ldquo;</p>
+                          <p> &ldquo;Discover the fresh ingredients that make our Karaage stand out!&ldquo;</p>
                         </div>
-                        
+
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Ready for a taste? Come on down!&ldquo;</p>
+                          <p> &ldquo;Ready for a taste? Come on down!&ldquo;</p>
                         </div>
-                       
+
                       </div>
-                      
+
                     </div>
 
                     {/* Bottom section with feedback and buttons */}
@@ -1015,14 +1015,14 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Discover the fresh ingredients that make our Karaage stand out!&ldquo;</p>
+                          <p> &ldquo;Discover the fresh ingredients that make our Karaage stand out!&ldquo;</p>
                         </div>
-                        
+
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Ready for a taste? Come on down!&ldquo;</p>
+                          <p> &ldquo;Ready for a taste? Come on down!&ldquo;</p>
                         </div>
-                       
+
                       </div>
                     </div>
 
@@ -1081,6 +1081,106 @@ const Restaurant = () => {
 
 
                   </div>
+
+
+                </div>
+
+
+                <div className="-mx-5 flex flex-wrap items-center justify-center mb-5" >
+
+
+                <div className="fullwidth sm:w-1/2 px-0 py-1 flex flex-col max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden">
+                    {/* Top section with video and text side by side */}
+                    <div className="flex overflow-hidden rounded-md items-center justify-center ">
+                      <div className="w-1/2">
+                        <div className="mb-5 relative  items-center  rounded-lg justify-center h-[400px]">
+                          <video autoPlay muted loop controls className="absolute  rounded-lg inset-0 w-full h-full object-cover">
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/idea3.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                      </div>
+
+
+                      <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
+                        <div className="text-lg font-bold mb-2">Hook </div>
+                        <div className="text-gray-700 text-sm mb-2">
+                          <p>&ldquo; How do we cook Karaage chicken to perfection every time?&ldquo;</p>
+                        </div>
+                        <div className="text-lg font-bold mb-2">Core</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                          <p> &ldquo;Step into our kitchen and see the magic happen!&ldquo;</p>
+                        </div>
+
+                        <div className="text-lg font-bold mb-2">Reward</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                          <p> &ldquo;Crave the crunch? Visit us in Toronto!&ldquo;</p>
+                        </div>
+
+                      </div>
+
+
+
+                    </div>
+
+                    {/* Bottom section with feedback and buttons */}
+                    <div className="px-2 pt-4 pb-2">
+
+
+                      <div className="flex flex-col space-y-3">
+                        <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
+                          <div className="text-gray-700 text-sm">
+                            <p><strong>Caption: </strong>&ldquo;Experience the sizzle of our Karaage chicken! 🔥🍗 #TokyoHotFriedChicken&ldquo;</p>
+                            <p><strong>Hashtags: </strong>#BehindTheScenes #CookingSecrets #KaraageChicken #TorontoFood #TokyoHot</p>
+                          </div>
+                        </div>
+
+                        {/* Feedback and rating inside a box */}
+                        <div className="flex gap-4">
+                          <div className="flex-1 p-4 bg-white rounded-lg shadow-lg">
+                            <div className="flex flex-col space-y-4">
+                              {/* Rating component needs to be implemented using your chosen library, here's a placeholder */}
+                              <div className="flex justify-center">
+                                <div className="flex text-yellow-400 text-3xl">
+                                  <Rating name="unique-rating"
+                                    defaultValue={rate11}
+                                    onChange={(event, newValue) => {
+                                      console.log("New Rating Value:", newValue);
+                                      setRate11(newValue ?? 5);
+                                    }}
+
+                                    size="large"
+                                    sx={{
+                                      '& .MuiRating-iconFilled': {
+                                        color: 'gold',
+                                      }
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                              <div className="border border-gray-300 rounded-lg p-2">
+                                <TextField onChange={(e) => setFeedback11(e.target.value)} id="standard-basic" label="Feedback" variant="standard" fullWidth maxRows={4} multiline />
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Buttons */}
+                          <div className="flex flex-col space-y-2">
+
+                            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick11('post')} >Discard</button>
+                            <button className="bg-yellow hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded" onClick={() => handleButtonClick11('edit')} >Edit</button>
+                            <button className="bg-green hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick11('queue')} >Add to queue</button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                  </div>
+
+
+                 
 
 
                 </div>
