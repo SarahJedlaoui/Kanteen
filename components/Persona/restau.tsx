@@ -183,25 +183,9 @@ const Restaurant = () => {
                 data-wow-delay=".2s"
               >
                 <h1 className="mb-5 mt-10 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
-                Tokyo Hot Fried Chicken
+                  Tokyo Hot Fried Chicken
                 </h1>
-                <div className="-mx-4 flex flex-wrap px-4">
-                  <div className="flex-1">
-                    <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
-                      Social Media Strategy
-                    </h3>
 
-                    <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
-                      {'We are dedicated to maintaining a consistent social media posting schedule, with four posts per week, as detailed below:\n\nTuesday: 12 am, 1 am, or 6 am\nThursday: 6 am or 4 pm\nFriday: 2 am, 11 am, or 1 pm\n\nOur advertising strategy involves selecting one video for a 7-day campaign, with the goal of achieving 50 conversions before the video gains viral momentum. Each post will include a captivating caption and relevant hashtags.\n\nOn TikTok, our posting frequency will align with other platforms, with varied timings for optimal engagement:\n\nMonday: 12 PM or 4 PM\nTuesday: 4 AM, 8 AM, 10 AM, or 3 PM\nThursday: 5 AM, 3 PM, or 6 PM\nSunday: 1 AM, 2 AM, 1 PM, 2 PM, or 10 PM. '.split('\n').map((line, index) => (
-                        <React.Fragment key={index}>
-                          {line}
-                          <br />
-                        </React.Fragment>
-                      ))}
-                    </p>
-
-                  </div>
-                </div>
                 <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
                   Video Ideas
                 </h3>
@@ -211,27 +195,35 @@ const Restaurant = () => {
 
 
 
-                <div className="-mx-3 flex flex-wrap items-center justify-center mb-5" >
+                <div className="-mx-5  flex flex-wrap items-center justify-center mb-5" >
 
 
-                  <div className="fullwidth sm:w-1/2 px-1 py-1 flex flex-col max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden">
+                  <div className="fullwidth sm:w-1/2 px-0 py-1 flex flex-col max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden">
                     {/* Top section with video and text side by side */}
                     <div className="flex overflow-hidden rounded-md items-center justify-center ">
                       <div className="w-1/2">
                         <div className="mb-5 relative  items-center  rounded-lg justify-center h-[400px]">
                           <video autoPlay muted loop controls className="absolute  rounded-lg inset-0 w-full h-full object-cover">
-                            <source src="https://d205gdf6tf9tly.cloudfront.net/24.mp4" type="video/mp4" />
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
                         </div>
                       </div>
                       <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
-                        <div className="text-lg font-bold mb-2">Video Title</div>
-                        <div className="text-gray-700 text-sm">
-                          <p><strong>Hook:</strong> Lorem ipsumis simply dummy text of the printing and typesetting industry</p>
-                          <p><strong>Core:</strong>  Lorem ipsumis simply dummy text of the printing and typesetting industry. </p>
-                          <p><strong>Reward:</strong>  Lorem ipsumis simply dummy text of the printing and typesetting industry.</p>
+                        <div className="text-lg font-bold mb-2">Hook </div>
+                        <div className="text-gray-700 text-sm mb-2">
+                          <p>"What makes Karaage chicken so irresistibly crispy?"</p>
                         </div>
+                        <div className="text-lg font-bold mb-2">Core</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                        <p>"Unlock the secrets to our perfect crunch and juicy flavor!"</p>
+                        </div>
+                        
+                        <div className="text-lg font-bold mb-2">Reward</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                        <p> "Taste the crunch! Visit Tokyo Hot Fried Chicken today!"</p>
+                        </div>
+                       
                       </div>
                     </div>
 
@@ -241,9 +233,381 @@ const Restaurant = () => {
 
                       <div className="flex flex-col space-y-3">
                         <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
-                          <div className="text-lg font-bold mb-2">Video Title</div>
                           <div className="text-gray-700 text-sm">
-                            <p><strong>caption and Hashtag</strong> Lorem ipsumis simply dummy text of the printing and typesetting industry</p>
+                            <p><strong>Caption: </strong>"Crunch into perfection with our Karaage chicken! 🍗💥 #TokyoHotFriedChicken"</p>
+                            <p><strong>Hashtags: </strong>#KaraageCrunch #TokyoHot #TorontoFoodie #CrispyChicken #JapaneseCuisine</p>
+                          </div>
+                        </div>
+
+                        {/* Feedback and rating inside a box */}
+                        <div className="flex gap-4">
+                          <div className="flex-1 p-4 bg-white rounded-lg shadow-lg">
+                            <div className="flex flex-col space-y-4">
+                              {/* Rating component needs to be implemented using your chosen library, here's a placeholder */}
+                              <div className="flex justify-center">
+                                <div className="flex text-yellow-400 text-3xl">
+                                  <Rating name="unique-rating"
+                                    defaultValue={rate1}
+                                    onChange={(event, newValue) => {
+                                      console.log("New Rating Value:", newValue);
+                                      setRate1(newValue ?? 5);
+                                    }}
+
+                                    size="large"
+                                    sx={{
+                                      '& .MuiRating-iconFilled': {
+                                        color: 'gold',
+                                      }
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                              <div className="border border-gray-300 rounded-lg p-2">
+                                <TextField onChange={(e) => setFeedback1(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Buttons */}
+                          <div className="flex flex-col space-y-2">
+
+                            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick1('post')} >Discard</button>
+                            <button className="bg-yellow hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded" onClick={() => handleButtonClick1('edit')} >Edit</button>
+                            <button className="bg-green hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick1('queue')} >Add to queue</button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                  </div>
+
+
+
+                  <div className="fullwidth sm:w-1/2 px-0 py-1 flex flex-col max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden">
+                    {/* Top section with video and text side by side */}
+                    <div className="flex overflow-hidden rounded-md items-center justify-center ">
+                      <div className="w-1/2">
+                        <div className="mb-5 relative  items-center  rounded-lg justify-center h-[400px]">
+                          <video autoPlay muted loop controls className="absolute  rounded-lg inset-0 w-full h-full object-cover">
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo2.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                      </div>
+
+
+                      <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
+                        <div className="text-lg font-bold mb-2">Hook </div>
+                        <div className="text-gray-700 text-sm mb-2">
+                          <p>"Ever wonder what goes into our famous Karaage chicken?"</p>
+                        </div>
+                        <div className="text-lg font-bold mb-2">Core</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                        <p>"Discover the fresh ingredients that make our Karaage stand out!"</p>
+                        </div>
+                        
+                        <div className="text-lg font-bold mb-2">Reward</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                        <p> "Ready for a taste? Come on down!"</p>
+                        </div>
+                       
+                      </div>
+                    </div>
+
+                    {/* Bottom section with feedback and buttons */}
+                    <div className="px-2 pt-4 pb-2">
+
+
+                      <div className="flex flex-col space-y-3">
+                        <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
+                          <div className="text-gray-700 text-sm">
+                            <p><strong>Caption:</strong> "Fresh and flavorful! That's our Karaage promise. 🌿🍗 #TokyoHotFriedChicken"</p>
+                            <p><strong>Hashtags: </strong>#FreshEats #KaraageSecrets #TokyoHot #EatLocal #TorontoEats</p>
+                          </div>
+                        </div>
+
+                        {/* Feedback and rating inside a box */}
+                        <div className="flex gap-4">
+                          <div className="flex-1 p-4 bg-white rounded-lg shadow-lg">
+                            <div className="flex flex-col space-y-4">
+                              {/* Rating component needs to be implemented using your chosen library, here's a placeholder */}
+                              <div className="flex justify-center">
+                                <div className="flex text-yellow-400 text-3xl">
+                                  {/* Simulate a star rating */}
+                                  <Rating name="unique-rating"
+                                    defaultValue={rate2}
+                                    onChange={(event, newValue) => {
+                                      console.log("New Rating Value:", newValue);
+                                      setRate2(newValue ?? 5);
+                                    }}
+
+                                    size="large"
+                                    sx={{
+                                      '& .MuiRating-iconFilled': {
+                                        color: 'gold',
+                                      }
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                              <div className="border border-gray-300 rounded-lg p-2">
+                                <TextField onChange={(e) => setFeedback2(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Buttons */}
+                          <div className="flex flex-col space-y-2">
+                            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick2('post')} >Discard</button>
+                            <button className="bg-yellow hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded" onClick={() => handleButtonClick2('edit')} >Edit</button>
+                            <button className="bg-green hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick2('queue')} >Add to queue</button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+
+
+                <div className="-mx-5 flex flex-wrap items-center justify-center mb-5" >
+
+
+                  <div className="fullwidth sm:w-1/2 px-0 py-1 flex flex-col max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden">
+                    {/* Top section with video and text side by side */}
+                    <div className="flex overflow-hidden rounded-md items-center justify-center ">
+                      <div className="w-1/2">
+                        <div className="mb-5 relative  items-center  rounded-lg justify-center h-[400px]">
+                          <video autoPlay muted loop controls className="absolute  rounded-lg inset-0 w-full h-full object-cover">
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo3.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                      </div>
+
+
+                      <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
+                        <div className="text-lg font-bold mb-2">Hook </div>
+                        <div className="text-gray-700 text-sm mb-2">
+                          <p>What makes Karaage chicken so irresistibly crispy?"</p>
+                        </div>
+                        <div className="text-lg font-bold mb-2">Core</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                        <p> "Unlock the secrets to our perfect crunch and juicy flavor!"</p>
+                        </div>
+                        
+                        <div className="text-lg font-bold mb-2">Reward</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                        <p> "Taste the crunch! Visit Tokyo Hot Fried Chicken today!"</p>
+                        </div>
+                       
+                      </div>
+
+
+                      
+                    </div>
+
+                    {/* Bottom section with feedback and buttons */}
+                    <div className="px-2 pt-4 pb-2">
+
+
+                      <div className="flex flex-col space-y-3">
+                        <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
+                          <div className="text-gray-700 text-sm">
+                            <p><strong>Caption: </strong>"Crunch into perfection with our Karaage chicken! 🍗💥 #TokyoHotFriedChicken"</p>
+                            <p><strong>Hashtags: </strong>#KaraageCrunch #TokyoHot #TorontoFoodie #CrispyChicken #JapaneseCuisine</p>
+                          </div>
+                        </div>
+
+                        {/* Feedback and rating inside a box */}
+                        <div className="flex gap-4">
+                          <div className="flex-1 p-4 bg-white rounded-lg shadow-lg">
+                            <div className="flex flex-col space-y-4">
+                              {/* Rating component needs to be implemented using your chosen library, here's a placeholder */}
+                              <div className="flex justify-center">
+                                <div className="flex text-yellow-400 text-3xl">
+                                  <Rating name="unique-rating"
+                                    defaultValue={rate3}
+                                    onChange={(event, newValue) => {
+                                      console.log("New Rating Value:", newValue);
+                                      setRate3(newValue ?? 5);
+                                    }}
+
+                                    size="large"
+                                    sx={{
+                                      '& .MuiRating-iconFilled': {
+                                        color: 'gold',
+                                      }
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                              <div className="border border-gray-300 rounded-lg p-2">
+                                <TextField onChange={(e) => setFeedback3(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Buttons */}
+                          <div className="flex flex-col space-y-2">
+
+                            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick3('post')} >Discard</button>
+                            <button className="bg-yellow hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded" onClick={() => handleButtonClick3('edit')} >Edit</button>
+                            <button className="bg-green hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick3('queue')} >Add to queue</button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                  </div>
+
+
+                  <div className="fullwidth sm:w-1/2 px-0 py-1 flex flex-col max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden">
+                    {/* Top section with video and text side by side */}
+                    <div className="flex overflow-hidden rounded-md items-center justify-center ">
+                      <div className="w-1/2">
+                        <div className="mb-5 relative  items-center  rounded-lg justify-center h-[400px]">
+                          <video autoPlay muted loop controls className="absolute  rounded-lg inset-0 w-full h-full object-cover">
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo4.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                      </div>
+
+                      <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
+                        <div className="text-lg font-bold mb-2">Hook </div>
+                        <div className="text-gray-700 text-sm mb-2">
+                          <p>"Ever wonder what goes into our famous Karaage chicken?"</p>
+                        </div>
+                        <div className="text-lg font-bold mb-2">Core</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                        <p> "Discover the fresh ingredients that make our Karaage stand out!"</p>
+                        </div>
+                        
+                        <div className="text-lg font-bold mb-2">Reward</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                        <p> "Ready for a taste? Come on down!"</p>
+                        </div>
+                       
+                      </div>
+
+
+                      
+                    </div>
+
+                    {/* Bottom section with feedback and buttons */}
+                    <div className="px-2 pt-4 pb-2">
+
+
+                      <div className="flex flex-col space-y-3">
+                        <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
+                          <div className="text-gray-700 text-sm">
+                            <p><strong>Caption:</strong> "Fresh and flavorful! That's our Karaage promise. 🌿🍗 #TokyoHotFriedChicken"</p>
+                            <p><strong>Hashtags: </strong>#FreshEats #KaraageSecrets #TokyoHot #EatLocal #TorontoEats</p>
+                          </div>
+                        </div>
+
+                        {/* Feedback and rating inside a box */}
+                        <div className="flex gap-4">
+                          <div className="flex-1 p-4 bg-white rounded-lg shadow-lg">
+                            <div className="flex flex-col space-y-4">
+                              {/* Rating component needs to be implemented using your chosen library, here's a placeholder */}
+                              <div className="flex justify-center">
+                                <div className="flex text-yellow-400 text-3xl">
+                                  {/* Simulate a star rating */}
+                                  <Rating name="unique-rating"
+                                    defaultValue={rate4}
+                                    onChange={(event, newValue) => {
+                                      console.log("New Rating Value:", newValue);
+                                      setRate4(newValue ?? 5);
+                                    }}
+
+                                    size="large"
+                                    sx={{
+                                      '& .MuiRating-iconFilled': {
+                                        color: 'gold',
+                                      }
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                              <div className="border border-gray-300 rounded-lg p-2">
+                                <TextField onChange={(e) => setFeedback4(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Buttons */}
+                          <div className="flex flex-col space-y-2">
+                            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick4('post')} >Discard</button>
+                            <button className="bg-yellow hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded" onClick={() => handleButtonClick4('edit')} >Edit</button>
+                            <button className="bg-green hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick4('queue')} >Add to queue</button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+
+
+                <div className="-mx-5 flex flex-wrap items-center justify-center mb-5" >
+
+
+                  <div className="fullwidth sm:w-1/2 px-0 py-1 flex flex-col max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden">
+                    {/* Top section with video and text side by side */}
+                    <div className="flex overflow-hidden rounded-md items-center justify-center ">
+                      <div className="w-1/2">
+                        <div className="mb-5 relative  items-center  rounded-lg justify-center h-[400px]">
+                          <video autoPlay muted loop controls className="absolute  rounded-lg inset-0 w-full h-full object-cover">
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo5.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                      </div>
+
+                      <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
+                        <div className="text-lg font-bold mb-2">Hook </div>
+                        <div className="text-gray-700 text-sm mb-2">
+                          <p>"What makes Karaage chicken so irresistibly crispy?"</p>
+                        </div>
+                        <div className="text-lg font-bold mb-2">Core</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                        <p> "Discover the fresh ingredients that make our Karaage stand out!"</p>
+                        </div>
+                        
+                        <div className="text-lg font-bold mb-2">Reward</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                        <p> "Ready for a taste? Come on down!"</p>
+                        </div>
+                       
+                      </div>
+                      
+                    </div>
+
+                    {/* Bottom section with feedback and buttons */}
+                    <div className="px-2 pt-4 pb-2">
+
+
+                      <div className="flex flex-col space-y-3">
+                        <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
+                          <div className="text-gray-700 text-sm">
+                            <p><strong>Caption: </strong>"Crunch into perfection with our Karaage chicken! 🍗💥 #TokyoHotFriedChicken"</p>
+                            <p><strong>Hashtags: </strong>#KaraageCrunch #TokyoHot #TorontoFoodie #CrispyChicken #JapaneseCuisine</p>
                           </div>
                         </div>
 
@@ -280,8 +644,8 @@ const Restaurant = () => {
                           <div className="flex flex-col space-y-2">
 
                             <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick5('post')} >Discard</button>
-                            <button className="bg-yellow hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded">Edit</button>
-                            <button className="bg-green hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded">Add to queue</button>
+                            <button className="bg-yellow hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded" onClick={() => handleButtonClick5('edit')} >Edit</button>
+                            <button className="bg-green hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick5('queue')} >Add to queue</button>
                           </div>
                         </div>
                       </div>
@@ -291,29 +655,32 @@ const Restaurant = () => {
 
                   </div>
 
-
-
-
-
-
-                  <div className="fullwidth sm:w-1/2 px-1 py-1 flex flex-col max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden">
+                  <div className="fullwidth sm:w-1/2 px-0 py-1 flex flex-col max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden">
                     {/* Top section with video and text side by side */}
                     <div className="flex overflow-hidden rounded-md items-center justify-center ">
                       <div className="w-1/2">
                         <div className="mb-5 relative  items-center  rounded-lg justify-center h-[400px]">
                           <video autoPlay muted loop controls className="absolute  rounded-lg inset-0 w-full h-full object-cover">
-                            <source src="https://d205gdf6tf9tly.cloudfront.net/24.mp4" type="video/mp4" />
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo6.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
                         </div>
                       </div>
                       <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
-                        <div className="text-lg font-bold mb-2">Video Title</div>
-                        <div className="text-gray-700 text-sm">
-                          <p><strong>Hook:</strong> Lorem ipsumis simply dummy text of the printing and typesetting industry</p>
-                          <p><strong>Core:</strong>  Lorem ipsumis simply dummy text of the printing and typesetting industry. </p>
-                          <p><strong>Reward:</strong>  Lorem ipsumis simply dummy text of the printing and typesetting industry.</p>
+                        <div className="text-lg font-bold mb-2">Hook </div>
+                        <div className="text-gray-700 text-sm mb-2">
+                          <p>"What makes Karaage chicken so irresistibly crispy?"</p>
                         </div>
+                        <div className="text-lg font-bold mb-2">Core</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                        <p> "Discover the fresh ingredients that make our Karaage stand out!"</p>
+                        </div>
+                        
+                        <div className="text-lg font-bold mb-2">Reward</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                        <p> "Ready for a taste? Come on down!"</p>
+                        </div>
+                       
                       </div>
                     </div>
 
@@ -323,9 +690,9 @@ const Restaurant = () => {
 
                       <div className="flex flex-col space-y-3">
                         <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
-                          <div className="text-lg font-bold mb-2">Video Title</div>
                           <div className="text-gray-700 text-sm">
-                            <p><strong>caption and Hashtag</strong> Lorem ipsumis simply dummy text of the printing and typesetting industry</p>
+                            <p><strong>Caption:</strong> "Fresh and flavorful! That's our Karaage promise. 🌿🍗 #TokyoHotFriedChicken"</p>
+                            <p><strong>Hashtags: </strong>#FreshEats #KaraageSecrets #TokyoHot #EatLocal #TorontoEats</p>
                           </div>
                         </div>
 
@@ -338,10 +705,10 @@ const Restaurant = () => {
                                 <div className="flex text-yellow-400 text-3xl">
                                   {/* Simulate a star rating */}
                                   <Rating name="unique-rating"
-                                    defaultValue={rate5}
+                                    defaultValue={rate6}
                                     onChange={(event, newValue) => {
                                       console.log("New Rating Value:", newValue);
-                                      setRate5(newValue ?? 5);
+                                      setRate6(newValue ?? 5);
                                     }}
 
                                     size="large"
@@ -354,16 +721,16 @@ const Restaurant = () => {
                                 </div>
                               </div>
                               <div className="border border-gray-300 rounded-lg p-2">
-                                <TextField onChange={(e) => setFeedback5(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
+                                <TextField onChange={(e) => setFeedback6(e.target.value)} id="standard-basic" label="feedback" variant="standard" fullWidth maxRows={4} multiline />
                               </div>
                             </div>
                           </div>
 
                           {/* Buttons */}
                           <div className="flex flex-col space-y-2">
-                            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">Discard</button>
-                            <button className="bg-yellow hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded">Edit</button>
-                            <button className="bg-green hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded">Add to queue</button>
+                            <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick6('post')} >Discard</button>
+                            <button className="bg-yellow hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded" onClick={() => handleButtonClick6('edit')} >Edit</button>
+                            <button className="bg-green hover:bg-cyan-600 text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick6('queue')} >Add to queue</button>
                           </div>
                         </div>
                       </div>
@@ -374,14 +741,7 @@ const Restaurant = () => {
                   </div>
 
 
-
-
-
-
                 </div>
-
-
-
 
 
 
