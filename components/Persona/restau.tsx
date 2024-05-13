@@ -143,7 +143,7 @@ const Restaurant = () => {
           `,
         }
       })
-      console.log('Reviw Submitted:', rate1, rate3, feedback);
+      console.log('Reviw Submitted:',  feedback);
       setOpenAlert(true);
     } catch (error) {
       console.error('Error while saving data:', error);
@@ -379,7 +379,7 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Here's the secret to our perfect Karaage Chicken!&ldquo;</p>
+                        <p> &ldquo;Here&apos;s the secret to our perfect Karaage Chicken!&ldquo;</p>
                         </div>
                         
                         <div className="text-lg font-bold mb-2">Reward</div>
@@ -483,7 +483,7 @@ const Restaurant = () => {
                       <div className="flex flex-col space-y-3">
                         <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                           <div className="text-gray-700 text-sm">
-                            <p><strong>Caption:</strong> &ldquo;Step into the sizzle of Toronto's best fried chicken 🍗✨ #BestFriedChickenInTown"&ldquo;</p>
+                            <p><strong>Caption:</strong> &ldquo;Step into the sizzle of Toronto&apos;s best fried chicken 🍗✨ #BestFriedChickenInTown&ldquo;</p>
                             <p><strong>Hashtags: </strong>#FriedChicken #TorontoEats #FoodieDelight #TasteToronto #CrispyChicken</p>
                           </div>
                         </div>
