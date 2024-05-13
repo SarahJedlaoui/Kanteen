@@ -143,11 +143,11 @@ const Restaurant = () => {
       axios.post('https://api.elasticemail.com/v2/email/send', null, {
         params: {
           apikey: '0946D26959F1CF59C2908E27F6AACF5A69FE5F455050A26ED257A9190B4E7976BAC71E82D69850995B1977C5070E579F',
-          subject: "L'Mida Feedback",
+          subject: "Tokyo ot Fried Chicken Feedback",
           from: "sarajedlaoui99@gmail.com",
           to: "pukajedla@gmail.com",
-          bodyText: `L Mida feedback:\n video rating:\n 
-          video1: rate :${rate1} , decision: ${lastClicked1}, feedback:  ${feedback1}
+          bodyText: `Tokyo ot Fried Chicken feedback:\n video rating: 
+          \nvideo1: rate :${rate1} , decision: ${lastClicked1}, feedback:  ${feedback1}
           \n video2:rate ${rate2}, decision: ${lastClicked2}, feedback:  ${feedback2}
           \n video3:rate ${rate3}, decision: ${lastClicked3}, feedback:  ${feedback3}
           \n video4:rate ${rate4}, decision: ${lastClicked4}, feedback:  ${feedback4}
