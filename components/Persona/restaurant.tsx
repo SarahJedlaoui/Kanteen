@@ -301,7 +301,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/21.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida/video2.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -381,7 +381,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/7.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida/video3.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -541,7 +541,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/6.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida/video5.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -619,7 +619,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/22.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida/video6.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -696,7 +696,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/20.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida/video7.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -856,7 +856,7 @@ const Restaurant = () => {
                       data-wow-delay=".15s">
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover"  >
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/19.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida/video9.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
                       </div>
@@ -934,7 +934,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px] ">
                         <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/10.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida/video10.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -1011,7 +1011,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative  items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/23.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida/video11.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
@@ -1088,7 +1088,7 @@ const Restaurant = () => {
                     >
                       <div className="mb-5 relative items-center justify-center h-[400px]">
                         <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                          <source src="https://d205gdf6tf9tly.cloudfront.net/11.mp4" type="video/mp4" />
+                          <source src="https://d205gdf6tf9tly.cloudfront.net/lmida/vide12.mp4" type="video/mp4" />
                           Your browser does not support the video tag.
                         </video>
 
