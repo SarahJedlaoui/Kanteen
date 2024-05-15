@@ -462,9 +462,9 @@ const Restaurant = () => {
                           <p>&ldquo;Where every moment tastes as good as it looks.&ldquo;</p>
                         </div>
                         
-                        <div className="text-lg font-bold mb-2">Reward</div>
+                        <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                          <p> &ldquo;Ready for a taste? Come on down!&ldquo;</p>
+                          <p> &ldquo;Experience the crunch that launched a thousand cravings!&ldquo;</p>
                         </div>
 
                       </div>
