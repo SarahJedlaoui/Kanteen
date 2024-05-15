@@ -541,7 +541,7 @@ const Restaurant = () => {
                       <div className="w-1/2">
                         <div className="mb-5 relative  items-center  rounded-lg justify-center h-[400px]">
                           <video autoPlay muted loop controls className="absolute  rounded-lg inset-0 w-full h-full object-cover">
-                            <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo/idea7.mp4" type="video/mp4" />
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/tokyo/idea7.mov" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
                         </div>
