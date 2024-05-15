@@ -186,7 +186,7 @@ const Restaurant = () => {
                       <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
                         <div className="text-lg font-bold mb-2">Hook </div>
                         <div className="text-gray-700 text-sm mb-2">
-                          <p>&ldquo;What makes Karaage chicken so irresistibly crispy?&ldquo;</p>
+                          <p>&ldquo;What makes our fried chicken so crispy?&ldquo;</p>
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
