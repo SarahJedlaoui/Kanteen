@@ -3399,7 +3399,7 @@ const Lmida = () => {
             )}
             <section
 
-                className="-mt-40 bg-[#e7edec] dark:bg-gray-dark overflow-hidden ">
+                className=" bg-[#e7edec] dark:bg-gray-dark overflow-hidden ">
                 <div className="bg-[#e7edec] dark:bg-gray-dark relative z-10 -mx-3 flex flex-wrap items-center justify-center mb-8"
                 >
                     <Pagination
