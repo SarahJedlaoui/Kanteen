@@ -7,8 +7,8 @@ import { useState } from "react";
 import * as React from "react";
 import "@/components/Persona/styles.css"
 import axios from "axios";
-import Button from "@mui/material/Button";
-import ButtonGroup from "@mui/material/ButtonGroup";
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+
 
 interface Video {
   url: string;
@@ -83,7 +83,7 @@ const Restaurant = () => {
 
 
 
- 
+
 
   const handleButtonClick1 = (action: any) => {
     setLastClicked1(action);
@@ -128,7 +128,7 @@ const Restaurant = () => {
       axios.post('https://api.elasticemail.com/v2/email/send', null, {
         params: {
           apikey: '0946D26959F1CF59C2908E27F6AACF5A69FE5F455050A26ED257A9190B4E7976BAC71E82D69850995B1977C5070E579F',
-          subject: "L'Mida Happy Hour Feedback ",
+          subject: "L'Mida Feedback ",
           from: "sarajedlaoui99@gmail.com",
           to: "pukajedla@gmail.com",
           bodyText: `L Mida Happy Hour feedback:\n video rating:\n 
@@ -138,7 +138,9 @@ const Restaurant = () => {
           \n video4:rate ${rate4}, decision: ${lastClicked4}, feedback:  ${feedback4}
           \n video5:rate ${rate5}, decision: ${lastClicked5}, feedback:  ${feedback5}
           \n video6:rate ${rate6}, decision: ${lastClicked6}, feedback:  ${feedback6}
-         
+          \n video7:rate ${rate7}, decision: ${lastClicked7}, feedback:  ${feedback7}
+          \nvideo8:rate ${rate8}, decision: ${lastClicked8}, feedback:  ${feedback8}
+          \n video9:rate ${rate9}, decision: ${lastClicked9}, feedback:  ${feedback9}
           Feedback: ${feedback}\n
           `,
         }
@@ -165,17 +167,17 @@ const Restaurant = () => {
                 <h1 className="mb-5 mt-10 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                   L&apos;Mida San Francisco
                 </h1>
-                
+
                 <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
-                 Happy Hour Video Ideas
+                  Happy Hour Video Ideas
                 </h3>
                 <p className="dark:text-body-color-dark mb-5 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
-                Themes, parties, happy hours
+                  Themes, parties, happy hours
                 </p>
 
 
 
-                <div className="-mx-5  flex flex-wrap items-center justify-center mb-5" >
+                <div className="-mx-5  flex flex-wrap items-center justify-center mb-5 " >
 
 
                   <div className="fullwidth sm:w-1/2 px-0 py-1 flex flex-col max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden">
@@ -196,14 +198,14 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p>&ldquo;Dive into the world of mixology: discover the art and science behind your favorite cocktails.&ldquo;</p>
+                          <p>&ldquo;Dive into the world of mixology: discover the art and science behind your favorite cocktails.&ldquo;</p>
                         </div>
-                        
+
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Life is too short for bad drinks! Visit l&apos;Mida today!&ldquo;</p>
+                          <p> &ldquo;Life is too short for bad drinks! Visit l&apos;Mida today!&ldquo;</p>
                         </div>
-                       
+
                       </div>
                     </div>
 
@@ -285,14 +287,14 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p>&ldquo;Dive into the world of mixology: discover the art and science behind your favorite cocktails.&ldquo;</p>
+                          <p>&ldquo;Dive into the world of mixology: discover the art and science behind your favorite cocktails.&ldquo;</p>
                         </div>
-                        
+
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Keep calm and cocktail on.&ldquo;</p>
+                          <p> &ldquo;Keep calm and cocktail on.&ldquo;</p>
                         </div>
-                       
+
                       </div>
                     </div>
 
@@ -380,18 +382,18 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Savor the sip: how to truly appreciate a well-crafted cocktail.&ldquo;</p>
+                          <p> &ldquo;Savor the sip: how to truly appreciate a well-crafted cocktail.&ldquo;</p>
                         </div>
-                        
+
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Keep calm and cocktail on.&ldquo;</p>
+                          <p> &ldquo;Keep calm and cocktail on.&ldquo;</p>
                         </div>
-                       
+
                       </div>
 
 
-                      
+
                     </div>
 
                     {/* Bottom section with feedback and buttons */}
@@ -470,18 +472,18 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Enjoy exclusive discounts on our cocktails and handpicked wines in a vibrant atmosphere perfect for unwinding after work!&ldquo;</p>
+                          <p> &ldquo;Enjoy exclusive discounts on our cocktails and handpicked wines in a vibrant atmosphere perfect for unwinding after work!&ldquo;</p>
                         </div>
-                        
+
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Stop by and grab your cocktail from 5-6.30 PM.&ldquo;</p>
+                          <p> &ldquo;Stop by and grab your cocktail from 5-6.30 PM.&ldquo;</p>
                         </div>
-                       
+
                       </div>
 
 
-                      
+
                     </div>
 
                     {/* Bottom section with feedback and buttons */}
@@ -567,16 +569,16 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Savor the sip: how to truly appreciate a well-crafted cocktail.&ldquo;</p>
+                          <p> &ldquo;Savor the sip: how to truly appreciate a well-crafted cocktail.&ldquo;</p>
                         </div>
-                        
+
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Trust me, you can dance. — Vodka&ldquo;</p>
+                          <p> &ldquo;Trust me, you can dance. — Vodka&ldquo;</p>
                         </div>
-                       
+
                       </div>
-                      
+
                     </div>
 
                     {/* Bottom section with feedback and buttons */}
@@ -653,14 +655,14 @@ const Restaurant = () => {
                         </div>
                         <div className="text-lg font-bold mb-2">Core</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Mixing drinks and culture!&ldquo;</p>
+                          <p> &ldquo;Mixing drinks and culture!&ldquo;</p>
                         </div>
-                        
+
                         <div className="text-lg font-bold mb-2">Reward</div>
                         <div className="text-gray-700 text-sm mb-2">
-                        <p> &ldquo;Ready for a taste? Come on down!&ldquo;</p>
+                          <p> &ldquo;Ready for a taste? Come on down!&ldquo;</p>
                         </div>
-                       
+
                       </div>
                     </div>
 
@@ -725,6 +727,274 @@ const Restaurant = () => {
 
 
 
+                <div className="-mx-5 flex flex-wrap items-center justify-center mb-5" >
+
+
+                  <div className="fullwidth sm:w-1/2 px-0 py-1 flex flex-col max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden">
+                    {/* Top section with video and text side by side */}
+                    <div className="flex overflow-hidden rounded-md items-center justify-center ">
+                      <div className="w-1/2">
+                        <div className="mb-5 relative  items-center  rounded-lg justify-center h-[400px]">
+                          <video autoPlay muted loop controls className="absolute  rounded-lg inset-0 w-full h-full object-cover">
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/lmida/new1.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                      </div>
+
+                      <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
+                        <div className="text-lg font-bold mb-2">Hook </div>
+                        <div className="text-gray-700 text-sm mb-2">
+                          <p>&ldquo;A night at our Moroccan lounge!&ldquo;</p>
+                        </div>
+
+                        <div className="text-lg font-bold mb-2">Reward</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                          <p> &ldquo;Book your magical evening!&ldquo;</p>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    {/* Bottom section with feedback and buttons */}
+                    <div className="px-2 pt-4 pb-2">
+
+
+                      <div className="flex flex-col space-y-3">
+                        <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
+                          <div className="text-gray-700 text-sm">
+                            <p><strong>Caption: </strong>&ldquo;Immerse yourself in the enchanting atmosphere of our Moroccan lounge. 🌙 &ldquo;</p>
+                            <p><strong>Hashtags: </strong>#NightOut #MoroccanVibes #SanFranciscoNights</p>
+                          </div>
+                        </div>
+
+                        {/* Feedback and rating inside a box */}
+                        <div className="flex gap-4">
+                          <div className="flex-1 p-4 bg-white rounded-lg shadow-lg">
+                            <div className="flex flex-col space-y-4">
+                              {/* Rating component needs to be implemented using your chosen library, here's a placeholder */}
+                              <div className="flex justify-center">
+                                <div className="flex text-yellow-400 text-3xl">
+                                  <Rating name="unique-rating"
+                                    defaultValue={rate7}
+                                    onChange={(event, newValue) => {
+                                      console.log("New Rating Value:", newValue);
+                                      setRate7(newValue ?? 5);
+                                    }}
+
+                                    size="large"
+                                    sx={{
+                                      '& .MuiRating-iconFilled': {
+                                        color: 'gold',
+                                      }
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                              <div className="border border-gray-300 rounded-lg p-2">
+                                <TextField onChange={(e) => setFeedback7(e.target.value)} id="standard-basic" label="Feedback" variant="standard" fullWidth maxRows={4} multiline />
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Buttons */}
+                          <div className="flex flex-col space-y-2">
+
+                            <button className="bg-red-500 hover:bg-primary text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick7('post')} >Discard</button>
+                            <button className="bg-yellow hover:bg-primary text-black font-bold py-2 px-4 rounded" onClick={() => handleButtonClick7('edit')} >Edit</button>
+                            <button className="bg-green hover:bg-primary text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick7('queue')} >Add to queue</button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                  </div>
+
+                  <div className="fullwidth sm:w-1/2 px-0 py-1 flex flex-col max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden">
+                    {/* Top section with video and text side by side */}
+                    <div className="flex overflow-hidden rounded-md items-center justify-center ">
+                      <div className="w-1/2">
+                        <div className="mb-5 relative  items-center  rounded-lg justify-center h-[400px]">
+                          <video autoPlay muted loop controls className="absolute  rounded-lg inset-0 w-full h-full object-cover">
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/lmida/new2.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                      </div>
+                      <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
+                        <div className="text-lg font-bold mb-2">Hook </div>
+                        <div className="text-gray-700 text-sm mb-2">
+                          <p>&ldquo;Top 3 Must-Try Dishes at LMIDA!&ldquo;</p>
+                        </div>
+                        <div className="text-lg font-bold mb-2">Core</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                          <p> &ldquo;Craving a taste of Morocco? We reveal our top 3 must-try dishes that will change your taste!&ldquo;</p>
+                        </div>
+
+                        <div className="text-lg font-bold mb-2">Reward</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                          <p> &ldquo;Visit us and savor the flavors of North Africa!&ldquo;</p>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    {/* Bottom section with feedback and buttons */}
+                    <div className="px-2 pt-4 pb-2">
+
+
+                      <div className="flex flex-col space-y-3">
+                        <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
+                          <div className="text-gray-700 text-sm">
+                            <p><strong>Caption:</strong> &ldquo;Let your taste  take a trip to Morocco! #MoroccanCuisine&ldquo;</p>
+                            <p><strong>Hashtags: </strong>#SanFranciscoRestaurants #FoodieGuide #SFMustEats #EatLocal</p>
+                          </div>
+                        </div>
+
+                        {/* Feedback and rating inside a box */}
+                        <div className="flex gap-4">
+                          <div className="flex-1 p-4 bg-white rounded-lg shadow-lg">
+                            <div className="flex flex-col space-y-4">
+                              {/* Rating component needs to be implemented using your chosen library, here's a placeholder */}
+                              <div className="flex justify-center">
+                                <div className="flex text-yellow-400 text-3xl">
+                                  {/* Simulate a star rating */}
+                                  <Rating name="unique-rating"
+                                    defaultValue={rate8}
+                                    onChange={(event, newValue) => {
+                                      console.log("New Rating Value:", newValue);
+                                      setRate8(newValue ?? 5);
+                                    }}
+
+                                    size="large"
+                                    sx={{
+                                      '& .MuiRating-iconFilled': {
+                                        color: 'gold',
+                                      }
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                              <div className="border border-gray-300 rounded-lg p-2">
+                                <TextField onChange={(e) => setFeedback8(e.target.value)} id="standard-basic" label="Feedback" variant="standard" fullWidth maxRows={4} multiline />
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Buttons */}
+                          <div className="flex flex-col space-y-2">
+                            <button className="bg-red-500 hover:bg-primary text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick8('post')} >Discard</button>
+                            <button className="bg-yellow hover:bg-primary text-black font-bold py-2 px-4 rounded" onClick={() => handleButtonClick8('edit')} >Edit</button>
+                            <button className="bg-green hover:bg-primary text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick8('queue')} >Add to queue</button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                  </div>
+
+
+                </div>
+
+
+
+                <div className="-mx-5 flex flex-wrap items-center justify-center mb-5" >
+
+
+                  <div className="fullwidth sm:w-1/2 px-0 py-1 flex flex-col max-w-4xl mx-auto rounded-lg shadow-lg overflow-hidden">
+                    {/* Top section with video and text side by side */}
+                    <div className="flex overflow-hidden rounded-md items-center justify-center ">
+                      <div className="w-1/2">
+                        <div className="mb-5 relative  items-center  rounded-lg justify-center h-[400px]">
+                          <video autoPlay muted loop controls className="absolute  rounded-lg inset-0 w-full h-full object-cover">
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/lmida/new3.mp4" type="video/mp4" />
+                            Your browser does not support the video tag.
+                          </video>
+                        </div>
+                      </div>
+
+                      <div className="w-1/2 ml-2 mb-5 h-[400px] p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
+                        <div className="text-lg font-bold mb-2">Hook </div>
+                        <div className="text-gray-700 text-sm mb-2">
+                          <p>&ldquo;From Morocco to Your Plate!&ldquo;</p>
+                        </div>
+
+                        <div className="text-lg font-bold mb-2">Reward</div>
+                        <div className="text-gray-700 text-sm mb-2">
+                          <p> &ldquo;Discover more by dining with us!&ldquo;</p>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                    {/* Bottom section with feedback and buttons */}
+                    <div className="px-2 pt-4 pb-2">
+
+
+                      <div className="flex flex-col space-y-3">
+                        <div className="p-4 bg-white  rounded-lg shadow-lg overflow-hidden">
+                          <div className="text-gray-700 text-sm">
+                            <p><strong>Caption: </strong>&ldquo;Embark on a culinary journey from the heart of Morocco to your plate. 🍽️&ldquo;</p>
+                            <p><strong>Hashtags: </strong>#MoroccanFood #CulinaryJourney #AuthenticEats</p>
+                          </div>
+                        </div>
+
+                        {/* Feedback and rating inside a box */}
+                        <div className="flex gap-4">
+                          <div className="flex-1 p-4 bg-white rounded-lg shadow-lg">
+                            <div className="flex flex-col space-y-4">
+                              {/* Rating component needs to be implemented using your chosen library, here's a placeholder */}
+                              <div className="flex justify-center">
+                                <div className="flex text-yellow-400 text-3xl">
+                                  <Rating name="unique-rating"
+                                    defaultValue={rate9}
+                                    onChange={(event, newValue) => {
+                                      console.log("New Rating Value:", newValue);
+                                      setRate9(newValue ?? 5);
+                                    }}
+
+                                    size="large"
+                                    sx={{
+                                      '& .MuiRating-iconFilled': {
+                                        color: 'gold',
+                                      }
+                                    }}
+                                  />
+                                </div>
+                              </div>
+                              <div className="border border-gray-300 rounded-lg p-2">
+                                <TextField onChange={(e) => setFeedback9(e.target.value)} id="standard-basic" label="Feedback" variant="standard" fullWidth maxRows={4} multiline />
+                              </div>
+                            </div>
+                          </div>
+
+                          {/* Buttons */}
+                          <div className="flex flex-col space-y-2">
+
+                            <button className="bg-red-500 hover:bg-primary text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick9('post')} >Discard</button>
+                            <button className="bg-yellow hover:bg-primary text-black font-bold py-2 px-4 rounded" onClick={() => handleButtonClick9('edit')} >Edit</button>
+                            <button className="bg-green hover:bg-primary text-white font-bold py-2 px-4 rounded" onClick={() => handleButtonClick9('queue')} >Add to queue</button>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+
+
+                  </div>
+
+
+
+
+                </div>
+
+
                 <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
                   Feedback
                 </h3>
@@ -748,7 +1018,7 @@ const Restaurant = () => {
                   Review submitted
                 </Alert>
               )}
-
+              <div className="mt-10 mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight" > <a href="/lmida"><ArrowBackIcon></ArrowBackIcon> Old videos</a></div>
 
             </div>
           </div>

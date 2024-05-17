@@ -9,6 +9,10 @@ import "@/components/Persona/styles.css"
 import axios from "axios";
 import Button from "@mui/material/Button";
 import ButtonGroup from "@mui/material/ButtonGroup";
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+import { useRouter } from 'next/router';
+import Pagination from '@mui/material/Pagination';
+
 
 interface Video {
   url: string;
@@ -30,17 +34,10 @@ interface Persona {
   rate: number;
   feedbacks: Feedback[];
 }
+
+
 const Restaurant = () => {
 
-
-
-
-
-
-
-  const [persona, setPersona] = useState<Persona | null>(null);
-  const [isOpen, setOpen] = useState(false);
-  const { id } = useParams<{ id: string }>();
   const [feedback, setFeedback] = useState('');
   const [openAlert, setOpenAlert] = useState(false);
   const [rate1, setRate1] = React.useState<number | null>(3);
@@ -83,22 +80,7 @@ const Restaurant = () => {
 
 
 
-  const videoData = [
-    {
-      src: "https://d205gdf6tf9tly.cloudfront.net/24.mp4",
-      title: "Presentation of L'Mida",
-      ratingState: [rate1, setRate1],
-      feedbackState: [feedback1, setFeedback1],
-      lastClickedState: [lastClicked1, setLastClicked1]
-    },
-    {
-      src: "https://d205gdf6tf9tly.cloudfront.net/21.mp4",
-      title: "L'Mida cocktails 0.1",
-      ratingState: [rate2, setRate2],
-      feedbackState: [feedback2, setFeedback2],
-      lastClickedState: [lastClicked2, setLastClicked2]
-    }
-  ];
+ 
 
   const handleButtonClick1 = (action: any) => {
     setLastClicked1(action);
@@ -185,23 +167,7 @@ const Restaurant = () => {
                 <h1 className="mb-5 mt-10 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
                   L&apos;Mida San Francisco
                 </h1>
-                <div className="-mx-4 flex flex-wrap px-4">
-                  <div className="flex-1">
-                    <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
-                     Social Media Strategy 
-                    </h3>
 
-                    <p className="dark:text-body-color-dark mb-12 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl">
-                      {'We are dedicated to maintaining a consistent social media posting schedule, with four posts per week, as detailed below:\n\nTuesday: 12 am, 1 am, or 6 am\nThursday: 6 am or 4 pm\nFriday: 2 am, 11 am, or 1 pm\n\nOur advertising strategy involves selecting one video for a 7-day campaign, with the goal of achieving 50 conversions before the video gains viral momentum. Each post will include a captivating caption and relevant hashtags.\n\nOn TikTok, our posting frequency will align with other platforms, with varied timings for optimal engagement:\n\nMonday: 12 PM or 4 PM\nTuesday: 4 AM, 8 AM, 10 AM, or 3 PM\nThursday: 5 AM, 3 PM, or 6 PM\nSunday: 1 AM, 2 AM, 1 PM, 2 PM, or 10 PM. '.split('\n').map((line, index) => (
-                        <React.Fragment key={index}>
-                          {line}
-                          <br />
-                        </React.Fragment>
-                      ))}
-                    </p>
-
-                  </div>
-                </div>
                 <h3 className="mb-5 text-xl font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight md:text-3xl md:leading-tight">
                   Video Ideas
                 </h3>
@@ -282,7 +248,7 @@ const Restaurant = () => {
                           }}
                           className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                         >
-                          
+
                           <a href="https://d205gdf6tf9tly.cloudfront.net/24.mp4" download>Download</a>
 
                         </button>
@@ -309,7 +275,7 @@ const Restaurant = () => {
                       <p className="dark:text-body-color-dark mb-2 text-base !leading-relaxed text-body-color sm:text-lg md:text-xl Christmas themed videos with Xmas themed drinks">
                         2- L&apos;Mida cocktails 0.1!
                       </p>
-                    
+
 
                       <Rating name="unique-rating"
                         defaultValue={rate2}
@@ -317,7 +283,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate2(newValue ?? 5);
                         }}
-                       
+
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
@@ -365,7 +331,7 @@ const Restaurant = () => {
                           }}
                           className="rounded-xl bg-primary px-8 py-4 text-base font-semibold text-black dark:text-white duration-300 ease-in-out hover:bg-primary/80"
                         >
-                       <a href="https://d205gdf6tf9tly.cloudfront.net/21.mp4" download>Download</a>
+                          <a href="https://d205gdf6tf9tly.cloudfront.net/21.mp4" download>Download</a>
                         </button>
                       </div>
 
@@ -395,7 +361,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate3(newValue ?? 5);
                         }}
-                       
+
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
@@ -474,7 +440,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate4(newValue ?? 5);
                         }}
-                       
+
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
@@ -555,7 +521,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate5(newValue ?? 5);
                         }}
-                       
+
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
@@ -633,7 +599,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate6(newValue ?? 5);
                         }}
-                       
+
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
@@ -712,7 +678,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate7(newValue ?? 5);
                         }}
-                      
+
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
@@ -789,7 +755,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate8(newValue ?? 5);
                         }}
-                       
+
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
@@ -870,7 +836,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate9(newValue ?? 5);
                         }}
-                        
+
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
@@ -948,7 +914,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate10(newValue ?? 5);
                         }}
-                       
+
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
@@ -1025,7 +991,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate11(newValue ?? 5);
                         }}
-                        
+
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
@@ -1102,7 +1068,7 @@ const Restaurant = () => {
                           console.log("New Rating Value:", newValue);
                           setRate12(newValue ?? 5);
                         }}
-                        
+
                         size="large"
                         sx={{
                           '& .MuiRating-iconFilled': {
@@ -1184,8 +1150,8 @@ const Restaurant = () => {
                   Review submitted
                 </Alert>
               )}
-
-
+              <div className="mt-10 mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight" > <a href="/lmida">New videos <ArrowForwardIcon></ArrowForwardIcon> </a></div>
+              
             </div>
           </div>
         </div>
