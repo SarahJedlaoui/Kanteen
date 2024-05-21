@@ -5,8 +5,10 @@ import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+import { useSession, signOut } from 'next-auth/react';
 
 const Header = () => {
+  const { data: session, status } = useSession();
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
@@ -41,11 +43,10 @@ const Header = () => {
   return (
     <>
       <header
-        className={`header left-0 top-0 z-40 flex w-full items-center ${
-          sticky
-            ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-green !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
-            : "absolute bg-green shadow-sticky-dark"
-        }`}
+        className={`header left-0 top-0 z-40 flex w-full items-center ${sticky
+          ? "dark:bg-gray-dark dark:shadow-sticky-dark fixed z-[9999] bg-green !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
+          : "absolute bg-green shadow-sticky-dark"
+          }`}
       >
         <div className="container">
           <div className="relative -mx-4 flex items-center justify-between">
@@ -121,7 +122,7 @@ const Header = () => {
                           >
                             {menuItem.title}
                           </Link>
-                          
+
                         ) : (
                           <>
                             <p
@@ -144,15 +145,6 @@ const Header = () => {
                               className={`submenu relative left-0 top-full rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${openIndex === index ? "block" : "hidden"
                                 }`}
                             >
-                              {menuItem.submenu.map((submenuItem, index) => (
-                                <Link
-                                  href={submenuItem.path}
-                                  key={index}
-                                  className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
-                                >
-                                  {submenuItem.title}
-                                </Link>
-                              ))}
                             </div>
                           </>
                         )}
@@ -161,7 +153,23 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
+              <div className="flex items-center justify-end pr-16 lg:pr-0 gap-2">
+                {!session && (
+                  <Link
+                    href="/auth/signin"
+                    className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-md bg-primary px-8 py-3 text-base font-medium text-black dark:text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
+                  >
+                    Sign In
+                  </Link>
+                )}
+                {session && (
+                  <button
+                    onClick={() => signOut({ callbackUrl: '/' })}
+                    className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-md bg-primary px-8 py-3 text-base font-medium text-black dark:text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
+                  >
+                    Sign Out
+                  </button>
+                )}
                 <Link
                   href="https://calendly.com/kanteenteam"
                   className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-md bg-primary px-8 py-3 text-base font-medium text-black dark:text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
@@ -174,7 +182,7 @@ const Header = () => {
                 >
                   Add Restaurant
                 </Link> */}
-               
+
               </div>
             </div>
           </div>

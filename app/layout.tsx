@@ -9,6 +9,7 @@ import Script from 'next/script';
 import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 import Head from 'next/head';
+import { SessionProvider } from 'next-auth/react';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,9 +19,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <>
+    <html lang="en">
       <Head>
-      <title>Kanteen</title>
+        <title>Kanteen</title>
       </Head>
 
       {/* Next.js Script component for Google Analytics */}
@@ -41,14 +42,14 @@ export default function RootLayout({
       </Script>
 
       <body className={` ${inter.className}`}>
-        <Providers>
+      <SessionProvider >
           <Header />
           {children}
           <Footer />
           <ScrollToTop />
-        </Providers>
+        </SessionProvider>
       </body>
-    </>
+    </html>
   );
 }
 

@@ -1,23 +1,31 @@
-"use client"
+"use client";
+
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import axios from 'axios';
 import { signIn } from 'next-auth/react';
 import Link from 'next/link';
+import React from 'react';
 
-const SigninPage = () => {
+const SignupPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [name, setName] = useState('');
   const [error, setError] = useState('');
+  const router = useRouter();
 
-  const handleSignIn = async (e) => {
+  const handleSignUp = async (e) => {
     e.preventDefault();
-    const result = await signIn('credentials', {
-      redirect: false,
-      email,
-      password,
-    });
-
-    if (result.error) {
-      setError(result.error);
+    try {
+      const response = await axios.post('/api/auth/signup', { email, password, name });
+      if (response.status === 201) {
+        // Sign in the user after successful sign-up
+        await signIn('credentials', { redirect: false, email, password });
+        // Redirect to welcome page
+        router.push('/auth/welcome');
+      }
+    } catch (err) {
+      setError(err.response.data.message);
     }
   };
 
@@ -29,10 +37,10 @@ const SigninPage = () => {
             <div className="w-full px-4">
               <div className="shadow-three mx-auto max-w-[500px] rounded bg-white px-6 py-10 dark:bg-dark sm:p-[60px]">
                 <h3 className="mb-3 text-center text-2xl font-bold text-black dark:text-white sm:text-3xl">
-                  Sign in to your kanteen account
+                  Sign up to your kanteen account
                 </h3>
                 <p className="mb-11 text-center text-base font-medium text-body-color">
-                  Login to your account.
+                  Create an account.
                 </p>
                 <button
                   onClick={() => signIn('google')}
@@ -71,17 +79,17 @@ const SigninPage = () => {
                       </defs>
                     </svg>
                   </span>
-                  Sign in with Google
+                  Sign up with Google
                 </button>
 
                 <div className="mb-8 flex items-center justify-center">
                   <span className="hidden h-[1px] w-full max-w-[70px] bg-body-color/50 sm:block"></span>
                   <p className="w-full px-5 text-center text-base font-medium text-body-color">
-                    Or, sign in with your email
+                    Or, sign up with your email
                   </p>
                   <span className="hidden h-[1px] w-full max-w-[70px] bg-body-color/50 sm:block"></span>
                 </div>
-                <form onSubmit={handleSignIn}>
+                <form onSubmit={handleSignUp}>
                   <div className="mb-8">
                     <label
                       htmlFor="email"
@@ -95,6 +103,22 @@ const SigninPage = () => {
                       placeholder="Enter your Email"
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
+                      className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
+                    />
+                  </div>
+                  <div className="mb-8">
+                    <label
+                      htmlFor="name"
+                      className="mb-3 block text-sm text-dark dark:text-white"
+                    >
+                      Restaurant Name
+                    </label>
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Enter your Restaurant name"
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                     />
                   </div>
@@ -116,81 +140,24 @@ const SigninPage = () => {
                   </div>
                   <div className="mb-6">
                     <button type="submit" className="shadow-submit dark:shadow-submit-dark flex w-full items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90">
-                      Sign in
+                      Sign up
                     </button>
                   </div>
                 </form>
                 {error && <p className="text-center text-base font-medium text-red-600">{error}</p>}
                 <p className="text-center text-base font-medium text-body-color">
-                  Don’t have an account?{" "}
-                  <Link href="/auth/signup" className="text-primary hover:underline">
-                    Sign up
+                  You have an account?{" "}
+                  <Link href="/auth/signin" className="text-primary hover:underline">
+                    Sign in
                   </Link>
                 </p>
               </div>
             </div>
           </div>
         </div>
-        <div className="absolute left-0 top-0 z-[-1]">
-          <svg
-            width="1440"
-            height="969"
-            viewBox="0 0 1440 969"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <mask
-              id="mask0_95:1005"
-              style={{ maskType: "alpha" }}
-              maskUnits="userSpaceOnUse"
-              x="0"
-              y="0"
-              width="1440"
-              height="969"
-            >
-              <rect width="1440" height="969" fill="#090E34" />
-            </mask>
-            <g mask="url(#mask0_95:1005)">
-              <path
-                opacity="0.1"
-                d="M1086.96 297.978L632.959 554.978L935.625 535.926L1086.96 297.978Z"
-                fill="url(#paint0_linear_95:1005)"
-              />
-              <path
-                opacity="0.1"
-                d="M1324.5 755.5L1450 687V886.5L1324.5 967.5L-10 288L1324.5 755.5Z"
-                fill="url(#paint1_linear_95:1005)"
-              />
-            </g>
-            <defs>
-              <linearGradient
-                id="paint0_linear_95:1005"
-                x1="1178.4"
-                y1="151.853"
-                x2="780.959"
-                y2="453.581"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#c9f269" />
-                <stop offset="1" stopColor="#c9f269" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_95:1005"
-                x1="160.5"
-                y1="220"
-                x2="1099.45"
-                y2="1192.04"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#c9f269" />
-                <stop offset="1" stopColor="#c9f269" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-          </svg>
-        </div>
       </section>
     </>
   );
 };
 
-export default SigninPage;
+export default SignupPage;
