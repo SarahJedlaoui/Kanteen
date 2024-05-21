@@ -5,8 +5,7 @@ export { default } from 'next-auth/middleware';
 export const config = {
   matcher: [
     '/addRestaurant',
-    '/lmida',
-    '/tokyohotfriedchicken',
+    
     '/dashboard', // Add more routes as needed
   ],
 };
