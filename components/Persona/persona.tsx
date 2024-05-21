@@ -37,7 +37,7 @@ export default function Restaurant({ id }) {
     const [isOpen, setOpen] = useState(false);
     const [feedback, setFeedback] = useState('');
     const [openAlert, setOpenAlert] = useState(false);
-    const [rate1, setRate1] = React.useState<number | null>(2);
+    const [rate1, setRate1] = React.useState<number | undefined>(2);
     const [rate2, setRate2] = useState(4);
     const [rate3, setRate3] = useState(4);
     const [rate4, setRate4] = useState(4);
@@ -95,7 +95,7 @@ export default function Restaurant({ id }) {
         fetchPersona();
     }, [id]); // This effect depends on `id` and runs whenever `id` changes
 
-    if (error) return <div>Error: {error.message}</div>;
+   
 
     return (
         <>
