@@ -122,7 +122,6 @@ const Header = () => {
                           >
                             {menuItem.title}
                           </Link>
-
                         ) : (
                           <>
                             <p
@@ -145,6 +144,28 @@ const Header = () => {
                               className={`submenu relative left-0 top-full rounded-sm bg-white transition-[top] duration-300 group-hover:opacity-100 dark:bg-dark lg:invisible lg:absolute lg:top-[110%] lg:block lg:w-[250px] lg:p-4 lg:opacity-0 lg:shadow-lg lg:group-hover:visible lg:group-hover:top-full ${openIndex === index ? "block" : "hidden"
                                 }`}
                             >
+                              <ul>
+                                <li>
+                                  <Link
+                                    href="/auth/signin"
+                                    className="ease-in-up shadow-btn hover:shadow-btn-hover block rounded-md bg-primary px-4 py-2 text-base font-medium text-black dark:text-white transition duration-300 hover:bg-opacity-90"
+                                  >
+                                    Sign In
+                                  </Link>
+                                  <button
+                                    onClick={() => signOut({ callbackUrl: '/' })}
+                                    className="ease-in-up shadow-btn hover:shadow-btn-hover block rounded-md bg-primary px-4 py-2 text-base font-medium text-black dark:text-white transition duration-300 hover:bg-opacity-90"
+                                  >
+                                    Sign Out
+                                  </button>
+                                  <Link
+                                    href="https://calendly.com/kanteenteam"
+                                    className="ease-in-up shadow-btn hover:shadow-btn-hover block rounded-md bg-primary px-4 py-2 text-base font-medium text-black dark:text-white transition duration-300 hover:bg-opacity-90"
+                                  >
+                                    Book a free session
+                                  </Link>
+                                </li>
+                              </ul>
                             </div>
                           </>
                         )}
@@ -154,7 +175,7 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0 gap-2">
-               {/**   {!session && (
+                 {!session && (
                   <Link
                     href="/auth/signin"
                     className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-md bg-primary px-8 py-3 text-base font-medium text-black dark:text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
@@ -169,20 +190,14 @@ const Header = () => {
                   >
                     Sign Out
                   </button>
-                )} */}
+                )} 
                 <Link
                   href="https://calendly.com/kanteenteam"
                   className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-md bg-primary px-8 py-3 text-base font-medium text-black dark:text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
                 >
                   Book a free session
                 </Link>
-                {/**  <Link
-                  href="/addRestaurant"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-                >
-                  Add Restaurant
-                </Link> */}
-
+                
               </div>
             </div>
           </div>

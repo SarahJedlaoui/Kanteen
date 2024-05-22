@@ -1,11 +1,13 @@
 "use client";
 import Link from "next/link";
 import { useState } from 'react';
+import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import axios from 'axios';
 import MuiAlert from '@mui/material/Alert';
-
+import React from "react";
+import CircularProgress from '@mui/material/CircularProgress';
 const AddRestaurant = () => {
   const { data: session, status } = useSession();
   const router = useRouter();
@@ -21,7 +23,7 @@ const AddRestaurant = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = {
-      email: session?.user?.email ,
+      email: session?.user?.email,
       name,
       about,
       customerLove,
@@ -36,7 +38,7 @@ const AddRestaurant = () => {
       if (response.status === 201) {
         setIsSubmittedSuccessfully(true);
         setOpenSnackbar(true);
-       
+
       } else {
         console.error('Failed to add restaurant information:', response);
       }
@@ -52,16 +54,21 @@ const AddRestaurant = () => {
     }
     setOpenSnackbar(false);
   };
+  useEffect(() => {
+    if (status === 'authenticated' && session?.user?.link) {
+      router.push(session.user.link);
+    }
+  }, [status, session, router]);
 
   if (!session) {
     return (
-      <section className="relative z-10 overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
+      <section className="mt-10 relative z-10 overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
-              <div className="shadow-three mx-auto max-w-[500px] rounded bg-white px-6 py-10 dark:bg-dark sm:p-[60px]">
+              <div className="mx-auto max-w-[500px] rounded bg-transparent px-6 py-10 dark:bg-dark sm:p-[60px]">
                 <h3 className="mb-3 text-center text-2xl font-bold text-black dark:text-white sm:text-3xl">
-                  Not authenticated
+                <CircularProgress color="success" />
                 </h3>
               </div>
             </div>
@@ -70,7 +77,7 @@ const AddRestaurant = () => {
       </section>
     );
   }
-
+  else if (session && (!session.user.link || session.user.link === '')) {
   return (
     <>
       <section className="relative mt-10 z-10 overflow-hidden pb-20 pt-48 md:pb-24 lg:pb-32 lg:pt-[180px]">
@@ -79,7 +86,7 @@ const AddRestaurant = () => {
             <div className="w-full px-4">
               <div className="shadow-three mx-auto max-w-[800px] rounded bg-white px-6 py-10 dark:bg-dark sm:p-[60px]">
                 <h2 className="mb-3 text-center text-3xl font-bold text-black dark:text-white sm:text-4xl">
-                  Welcome, {session.user.name}
+                  Welcome, {session?.user?.name}
                 </h2>
                 <h3 className="mb-3 text-center text-2xl font-bold text-black dark:text-white sm:text-3xl">
                   Do you want to request a personalized page for your restaurant?
@@ -182,7 +189,7 @@ const AddRestaurant = () => {
 
                 {isSubmittedSuccessfully && (
                   <MuiAlert onClose={handleCloseSnackbar} severity="success" sx={{ width: '100%' }}>
-                    Form submitted successfully!
+                    Your request has been submitted successfully! We'll contact you ASAP! 
                   </MuiAlert>
                 )}
               </div>
@@ -193,5 +200,5 @@ const AddRestaurant = () => {
     </>
   );
 };
-
+}
 export default AddRestaurant;
