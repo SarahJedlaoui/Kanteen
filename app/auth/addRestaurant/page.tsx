@@ -92,7 +92,7 @@ const AddRestaurant = () => {
                   Do you want to request a personalized page for your restaurant?
                 </h3>
                 <p className="mb-11 text-center text-base font-medium text-body-color">
-                  Please fill this form! It’s totally free and super easy
+                  Please fill this form! It&apos;s totally free and super easy
                 </p>
 
                 <form onSubmit={handleSubmit}>
@@ -189,7 +189,7 @@ const AddRestaurant = () => {
 
                 {isSubmittedSuccessfully && (
                   <MuiAlert onClose={handleCloseSnackbar} severity="success" sx={{ width: '100%' }}>
-                    Your request has been submitted successfully! We'll contact you ASAP! 
+                    Your request has been submitted successfully! We&apos;ll contact you ASAP! 
                   </MuiAlert>
                 )}
               </div>
