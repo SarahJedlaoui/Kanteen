@@ -20,9 +20,13 @@ const SignupPage = () => {
       const response = await axios.post('/api/auth/signup', { email, password, name });
       if (response.status === 201) {
         // Sign in the user after successful sign-up
-        await signIn('credentials', { redirect: false, email, password });
-        // Redirect to welcome page
-        router.push('/auth/welcome');
+        const signInResponse = await signIn('credentials', { redirect: false, email, password });
+        if (signInResponse?.ok) {
+          // Redirect to welcome page
+          router.push('/auth/welcome');
+        } else {
+          setError('Sign-in failed');
+        }
       }
     } catch (err) {
       setError(err.response.data.message);
@@ -31,7 +35,7 @@ const SignupPage = () => {
 
   return (
     <>
-      <section className="relative z-10 overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
+      <section className=" mt-10 relative z-10 overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">

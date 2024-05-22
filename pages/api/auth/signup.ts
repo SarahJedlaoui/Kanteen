@@ -1,17 +1,16 @@
-// pages/api/auth/signup.ts
 import { NextApiRequest, NextApiResponse } from 'next';
 import bcrypt from 'bcryptjs';
 import clientPromise from '../../../lib/mongodb';
 
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== 'POST') {
-    return res.status(405).end();
+    return res.status(405).json({ message: 'Method not allowed' });
   }
 
   const { email, password, name } = req.body;
 
   if (!email || !password || !name) {
-    return res.status(400).json({ message: 'Email, password, and restaurant name are required' });
+    return res.status(400).json({ message: 'Email, password, and name are required' });
   }
 
   try {
@@ -29,7 +28,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       email,
       password: hashedPassword,
       name,
-      link: "",
+      link: "",  // Set the link attribute to an empty string
     });
 
     res.status(201).json({ message: 'User created' });

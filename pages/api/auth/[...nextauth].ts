@@ -30,7 +30,7 @@ export default NextAuth({
             id: user._id.toString(),
             email: user.email,
             name: user.name,
-            link: user.link || "", // Ensure link is included
+            link: user.link || "", 
           };
         } else {
           return null;
@@ -49,7 +49,7 @@ export default NextAuth({
         token.id = user.id;
         token.email = user.email;
         token.name = user.name;
-        token.link = user.link; // Include the link field in the token
+        token.link = user.link; 
       }
       return token;
     },
@@ -58,7 +58,7 @@ export default NextAuth({
         session.user.id = token.id as string;
         session.user.email = token.email as string;
         session.user.name = token.name as string;
-        session.user.link = token.link as string; // Include the link field in the session
+        session.user.link = token.link as string; 
       }
       return session;
     },

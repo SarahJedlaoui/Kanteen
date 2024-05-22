@@ -1,20 +1,15 @@
 "use client";
 import Link from "next/link";
-import { useState, FormEvent } from 'react';
-import { Metadata } from "next";
+import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+import { useSession } from 'next-auth/react';
 import axios from 'axios';
-import Typography from '@mui/material/Typography';
-import { Snackbar } from '@mui/material';
 import MuiAlert from '@mui/material/Alert';
 
-
-const SignupPage = () => {
-
-  const [formData, setFormData] = useState({ name:'',about:'' });
-  const [showAlert, setShowAlert] = useState(false);
-
+const AddRestaurant = () => {
+  const { data: session, status } = useSession();
+  const router = useRouter();
   const [isSubmittedSuccessfully, setIsSubmittedSuccessfully] = useState(false);
-
   const [name, setName] = useState('');
   const [about, setAbout] = useState('');
   const [customerLove, setCustomerLove] = useState('');
@@ -26,71 +21,77 @@ const SignupPage = () => {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = {
+      email: session?.user?.email ,
       name,
       about,
       customerLove,
       opportunities,
       videoParagraph,
       videos,
-    }
 
-    console.log(data)
+    };
+
     try {
-      const response = await fetch('https://leapback-d796b66e0016.herokuapp.com/api/restaurant/', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-      console.log(response);
-      setIsSubmittedSuccessfully(true);
-      setShowAlert(true);
-    } catch (error) {
-      if (axios.isAxiosError(error) && error.response) {
-        // Here you can log more detailed information about the error
-        console.error('Error response:', error.response);
+      const response = await axios.post('/api/restaurants/add', data);
+      if (response.status === 201) {
+        setIsSubmittedSuccessfully(true);
+        setOpenSnackbar(true);
+       
       } else {
-        console.error('An unexpected error occurred:', error);
+        console.error('Failed to add restaurant information:', response);
       }
+    } catch (error) {
+      console.error('Error submitting form:', error);
       setIsSubmittedSuccessfully(false);
     }
   };
 
-  const handleCloseSnackbar = (
-    event: React.SyntheticEvent | Event,
-    reason?: string
-  ) => {
+  const handleCloseSnackbar = (event: React.SyntheticEvent | Event, reason?: string) => {
     if (reason === 'clickaway') {
       return;
     }
     setOpenSnackbar(false);
   };
 
-  return (
-    <>
-      <section className="relative z-10 overflow-hidden pb-20 pt-48 md:pb-24 lg:pb-32 lg:pt-[180px]">
-      <div className="container">
+  if (!session) {
+    return (
+      <section className="relative z-10 overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
+        <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="shadow-three mx-auto max-w-[500px] rounded bg-white px-6 py-10 dark:bg-dark sm:p-[60px]">
                 <h3 className="mb-3 text-center text-2xl font-bold text-black dark:text-white sm:text-3xl">
-                  Add new Restaurant
+                  Not authenticated
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  return (
+    <>
+      <section className="relative mt-10 z-10 overflow-hidden pb-20 pt-48 md:pb-24 lg:pb-32 lg:pt-[180px]">
+        <div className="container">
+          <div className="-mx-4 flex flex-wrap">
+            <div className="w-full px-4">
+              <div className="shadow-three mx-auto max-w-[800px] rounded bg-white px-6 py-10 dark:bg-dark sm:p-[60px]">
+                <h2 className="mb-3 text-center text-3xl font-bold text-black dark:text-white sm:text-4xl">
+                  Welcome, {session.user.name}
+                </h2>
+                <h3 className="mb-3 text-center text-2xl font-bold text-black dark:text-white sm:text-3xl">
+                  Do you want to request a personalized page for your restaurant?
                 </h3>
                 <p className="mb-11 text-center text-base font-medium text-body-color">
-                  It’s totally free and super easy
+                  Please fill this form! It’s totally free and super easy
                 </p>
-
-
 
                 <form onSubmit={handleSubmit}>
                   <div className="mb-8">
-                    <label
-                      htmlFor="name"
-                      className="mb-3 block text-sm text-dark dark:text-white"
-                    >
-                      {" "}
-                      Restaurant Name{" "}
+                    <label htmlFor="name" className="mb-3 block text-sm text-dark dark:text-white">
+                      Restaurant Name
                     </label>
                     <input
                       type="text"
@@ -100,16 +101,11 @@ const SignupPage = () => {
                       placeholder="e.g. Tavolata"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                     />
-
                   </div>
 
                   <div className="mb-8">
-                    <label
-                      htmlFor="about"
-                      className="mb-3 block text-sm text-dark dark:text-white"
-                    >
-                      {" "}
-                      About{" "}
+                    <label htmlFor="about" className="mb-3 block text-sm text-dark dark:text-white">
+                      About
                     </label>
                     <input
                       type="text"
@@ -119,15 +115,11 @@ const SignupPage = () => {
                       placeholder="About Restaurant"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                     />
-
                   </div>
+
                   <div className="mb-8">
-                    <label
-                      htmlFor="customerLove"
-                      className="mb-3 block text-sm text-dark dark:text-white"
-                    >
-                      {" "}
-                      What Customers Love{" "}
+                    <label htmlFor="customerLove" className="mb-3 block text-sm text-dark dark:text-white">
+                      What Customers Love
                     </label>
                     <input
                       type="text"
@@ -137,61 +129,48 @@ const SignupPage = () => {
                       placeholder="What Customers Love"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                     />
-
                   </div>
+
                   <div className="mb-8">
-                    <label
-                      htmlFor="opportunities"
-                      className="mb-3 block text-sm text-dark dark:text-white"
-                    >
-                      {" "}
-                      Opportunities for improvement{" "}
+                    <label htmlFor="opportunities" className="mb-3 block text-sm text-dark dark:text-white">
+                      Opportunities for Improvement
                     </label>
                     <input
                       type="text"
                       name="opportunities"
                       value={opportunities}
                       onChange={(event) => setOpportunities(event.target.value)}
-                      placeholder="Opportunities for imporvement"
+                      placeholder="Opportunities for Improvement"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                     />
-
                   </div>
+
                   <div className="mb-8">
-                    <label
-                      htmlFor="videoParagraph"
-                      className="mb-3 block text-sm text-dark dark:text-white"
-                    >
-                      {" "}
-                      Video strategy{" "}
+                    <label htmlFor="videoParagraph" className="mb-3 block text-sm text-dark dark:text-white">
+                      Video Strategy
                     </label>
                     <input
                       type="text"
                       name="videoParagraph"
                       value={videoParagraph}
                       onChange={(event) => setVideoParagraph(event.target.value)}
-                      placeholder="What to focus on ?"
+                      placeholder="What to focus on?"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                     />
-
                   </div>
+
                   <div className="mb-8">
-                    <label
-                      htmlFor="videos"
-                      className="mb-3 block text-sm text-dark dark:text-white"
-                    >
-                      {" "}
-                      Upload videos{" "}
+                    <label htmlFor="videos" className="mb-3 block text-sm text-dark dark:text-white">
+                      Upload Videos
                     </label>
                     <input
                       type="text"
                       name="videos"
                       value={videos}
                       onChange={(event) => setVideos(event.target.value)}
-                      placeholder="Add Shared link to videos "
+                      placeholder="Add Shared Link to Videos/Photos"
                       className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                     />
-
                   </div>
 
                   <div className="mb-6">
@@ -199,79 +178,20 @@ const SignupPage = () => {
                       Submit
                     </button>
                   </div>
-                 
                 </form>
+
                 {isSubmittedSuccessfully && (
-                   
-                      <MuiAlert onClose={handleCloseSnackbar} severity="success" sx={{ width: '100%' }}>
-                        Form submitted successfully!
-                      </MuiAlert>
-                   
-                  )}
+                  <MuiAlert onClose={handleCloseSnackbar} severity="success" sx={{ width: '100%' }}>
+                    Form submitted successfully!
+                  </MuiAlert>
+                )}
               </div>
             </div>
           </div>
-        </div>
-        <div className="absolute left-0 top-0 z-[-1]">
-          <svg
-            width="1440"
-            height="969"
-            viewBox="0 0 1440 969"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <mask
-              id="mask0_95:1005"
-              style={{ maskType: "alpha" }}
-              maskUnits="userSpaceOnUse"
-              x="0"
-              y="0"
-              width="1440"
-              height="969"
-            >
-              <rect width="1440" height="969" fill="#090E34" />
-            </mask>
-            <g mask="url(#mask0_95:1005)">
-              <path
-                opacity="0.1"
-                d="M1086.96 297.978L632.959 554.978L935.625 535.926L1086.96 297.978Z"
-                fill="url(#paint0_linear_95:1005)"
-              />
-              <path
-                opacity="0.1"
-                d="M1324.5 755.5L1450 687V886.5L1324.5 967.5L-10 288L1324.5 755.5Z"
-                fill="url(#paint1_linear_95:1005)"
-              />
-            </g>
-            <defs>
-              <linearGradient
-                id="paint0_linear_95:1005"
-                x1="1178.4"
-                y1="151.853"
-                x2="780.959"
-                y2="453.581"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#c9f269" />
-                <stop offset="1" stopColor="#c9f269" stopOpacity="0" />
-              </linearGradient>
-              <linearGradient
-                id="paint1_linear_95:1005"
-                x1="160.5"
-                y1="220"
-                x2="1099.45"
-                y2="1192.04"
-                gradientUnits="userSpaceOnUse"
-              >
-                <stop stopColor="#c9f269" />
-                <stop offset="1" stopColor="#c9f269" stopOpacity="0" />
-              </linearGradient>
-            </defs>
-          </svg>
         </div>
       </section>
     </>
   );
 };
 
-export default SignupPage;
+export default AddRestaurant;

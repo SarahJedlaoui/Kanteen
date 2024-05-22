@@ -26,8 +26,10 @@ const SigninPage = () => {
     } else if (result) {
       const session = await getSession();
       if (session?.user?.link) {
+        console.log('session', session.user)
         router.push(session.user.link);
       } else {
+        console.log('session', session?.user)
         router.push('/auth/welcome');
       }
     } else {
