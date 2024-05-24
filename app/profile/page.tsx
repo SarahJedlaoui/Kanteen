@@ -15,6 +15,7 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import Link from 'next/link';
+import Image from "next/image";
 
 interface SessionInfo {
   name: string;
@@ -96,7 +97,7 @@ const ProfilePage = () => {
                       {/* Left Section */}
                       <div className="flex-1/3 flex flex-col items-center">
                         <div className="w-32 h-32 mb-4">
-                          <img
+                          <Image
                             src={session?.user?.image || "/images/logo/default.png"} // Path to your default image
                             alt={sessionInfo?.name}
                             className="rounded-full object-cover w-full h-full"
@@ -302,7 +303,7 @@ const ProfilePage = () => {
                     We create a unique, customized page for your restaurant that showcases your story, ambiance, and culinary delights. The personalized page
                     is exclusively accessible to your restaurant. Here, you can review the videos we create for you, provide feedback,
                     and select which ones you want us to post on your social media. This ensures that the content
-                    we produce aligns perfectly with your vision and brand, allowing you to maintain control over your restaurant's online presence.
+                    we produce aligns perfectly with your vision and brand, allowing you to maintain control over your restaurant&apos;s online presence.
                   </p>
 
                   <strong className="text-green underline dark:text-white">AI-Powered Content:</strong>
@@ -425,8 +426,8 @@ const ProfilePage = () => {
                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
 
                     <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                      By partnering with Kanteen, you're not just getting a service provider
-                      - you're gaining a dedicated partner committed to helping your restaurant thrive.
+                      By partnering with Kanteen, you&apos;re not just getting a service provider
+                      - you&apos;re gaining a dedicated partner committed to helping your restaurant thrive.
                       Let us help you tell your story, attract more customers, and achieve your business goals.
                     </p>
 
