@@ -50,7 +50,7 @@ const ProfilePage = () => {
   const router = useRouter();
   const [sessionInfo, setSessionInfo] = useState<SessionInfo>(defaultSessionInfo);
   const [restaurantInfo, setRestaurantInfo] = useState<RestaurantInfo | null>(null);
-
+  const [imgSrc, setImgSrc] = useState(session?.user?.image || "/images/logo/default.png");
   useEffect(() => {
     if (session?.user?.email) {
       axios.get(`/api/user/${session?.user?.email}`)
@@ -76,9 +76,19 @@ const ProfilePage = () => {
         });
     }
   }, [status, session]);
+  
+  useEffect(() => {
+    console.log('Session data:', session);
+    if (session?.user?.image) {
+      console.log('User image URL:', session.user.image);
+      setImgSrc(session.user.image);
+    }
+  }, [session]);
 
-
-
+  const handleError = () => {
+    console.log('Image failed to load, setting default image');
+    setImgSrc("/images/logo/default.png");
+  };
   return (
     <>
       <section className="pb-[120px] pt-[150px]">
@@ -97,10 +107,11 @@ const ProfilePage = () => {
                       {/* Left Section */}
                       <div className="flex-1/3 flex flex-col items-center">
                         <div className="w-32 h-32 mb-4">
-                          <Image
-                            src={session?.user?.image || "/images/logo/default.png"} // Path to your default image
+                          <img
+                            src={imgSrc} // Path to your default image
                             alt={sessionInfo?.name}
                             className="rounded-full object-cover w-full h-full"
+                            onError={handleError}
                           />
                         </div>
                         <h2 className="text-xl font-bold leading-tight text-black dark:text-white">
