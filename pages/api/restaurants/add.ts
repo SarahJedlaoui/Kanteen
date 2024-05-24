@@ -9,9 +9,9 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   
 
-  const { name, about, customerLove, opportunities, videoParagraph, videos, email } = req.body;
+  const { name, about, customerLove, opportunities, videoParagraph, email } = req.body;
 
-  if (!name || !about || !customerLove || !opportunities || !videoParagraph || !videos|| !email) {
+  if (!name || !about || !customerLove || !opportunities || !videoParagraph || !email) {
     return res.status(400).json({ message: 'All fields are required' });
   }
 
@@ -26,7 +26,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       customerLove,
       opportunities,
       videoParagraph,
-      videos,
     });
 
     res.status(201).json({ message: 'Restaurant information added successfully' });

@@ -18,7 +18,7 @@ const AboutSectionThree = () => {
   );
 
   return (
-    <section id="about" className="pt-0 md:pt-10 lg:pt-18">
+    <section id="about" className="mb-10 pt-0 md:pt-10 lg:pt-18">
       <div className="container">
         
           <div className="-mx-4 flex flex-wrap items-center">

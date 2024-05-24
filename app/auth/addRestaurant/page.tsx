@@ -8,6 +8,7 @@ import axios from 'axios';
 import MuiAlert from '@mui/material/Alert';
 import React from "react";
 import CircularProgress from '@mui/material/CircularProgress';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 const AddRestaurant = () => {
   const { data: session, status } = useSession();
   const router = useRouter();
@@ -29,7 +30,7 @@ const AddRestaurant = () => {
       customerLove,
       opportunities,
       videoParagraph,
-      videos,
+     
 
     };
 
@@ -166,19 +167,7 @@ const AddRestaurant = () => {
                     />
                   </div>
 
-                  <div className="mb-8">
-                    <label htmlFor="videos" className="mb-3 block text-sm text-dark dark:text-white">
-                      Upload Videos
-                    </label>
-                    <input
-                      type="text"
-                      name="videos"
-                      value={videos}
-                      onChange={(event) => setVideos(event.target.value)}
-                      placeholder="Add Shared Link to Videos/Photos"
-                      className="border-stroke dark:text-body-color-dark dark:shadow-two w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
-                    />
-                  </div>
+                 
 
                   <div className="mb-6">
                     <button type="submit" className="shadow-submit dark:shadow-submit-dark flex w-full items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-white duration-300 hover:bg-primary/90">
@@ -192,7 +181,12 @@ const AddRestaurant = () => {
                     Your request has been submitted successfully! We&apos;ll contact you ASAP! 
                   </MuiAlert>
                 )}
+                 <h2 className="mt-5 text-right text-xl font-bold text-black dark:text-white sm:text-xl">
+              <a href="/profile">skip <ArrowForwardIcon/></a>
+                </h2>
               </div>
+             
+             
             </div>
           </div>
         </div>
