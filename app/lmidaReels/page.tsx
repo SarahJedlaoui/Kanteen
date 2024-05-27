@@ -153,7 +153,7 @@ const BlogDetailsPage = () => {
                   <strong className="text-green underline dark:text-white">  Guest Interactions: </strong>Clips of influencers interacting with guests, enjoying the food and drinks, and participating in activities.
                   </p>
                   <p className="mb-5 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                  <strong className="text-green underline dark:text-white">  Venue Shots:</strong> Videos and photos highlighting the restaurant's ambiance, decor, and overall setting.
+                  <strong className="text-green underline dark:text-white">  Venue Shots:</strong> Videos and photos highlighting the restaurant&apos;s ambiance, decor, and overall setting.
                   </p>
                   <p className="mb-5 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                   <strong className="text-green underline dark:text-white">  Behind-the-Scenes:</strong> Clips showing the preparation and behind-the-scenes action to give followers an insider look.
