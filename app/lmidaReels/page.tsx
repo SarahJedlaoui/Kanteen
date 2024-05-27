@@ -88,9 +88,7 @@ const BlogDetailsPage = () => {
                   As one of our exclusive guests, you&apos;ll have the opportunity to:
 
                 </p>
-                <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                  As one of our exclusive guests, you&apos;ll have the opportunity to:
-                </p>
+               
                 <p className="ml-10 mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                   <strong className="text-green dark:text-white">
                     Attend the Event:
