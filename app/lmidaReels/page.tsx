@@ -140,13 +140,37 @@ const BlogDetailsPage = () => {
                         className="object-cover object-center"></iframe>
                     </div>
                   </div>
-
+                  <h3 className="font-xl mb-5 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
+                    Deliverables
+                  </h3>
+                  <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <strong className="text-green underline dark:text-white">Event Highlights Videos: </strong>Short video clips (10-30 seconds) capturing the key moments and atmosphere of the event.
+                  </p>
+                  <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <strong className="text-green underline dark:text-white"> Food and Drink Footage:</strong> High-quality videos and photos of the food and drinks being served, showcasing their presentation and appeal.
+                  </p>
+                  <p className="mb-5 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <strong className="text-green underline dark:text-white">  Guest Interactions: </strong>Clips of influencers interacting with guests, enjoying the food and drinks, and participating in activities.
+                  </p>
+                  <p className="mb-5 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <strong className="text-green underline dark:text-white">  Venue Shots:</strong> Videos and photos highlighting the restaurant's ambiance, decor, and overall setting.
+                  </p>
+                  <p className="mb-5 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <strong className="text-green underline dark:text-white">  Behind-the-Scenes:</strong> Clips showing the preparation and behind-the-scenes action to give followers an insider look.
+                  </p>
+                  <p className="mb-5 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <strong className="text-green underline dark:text-white">   Influencer Personal Content:</strong> Content created by influencers themselves, such as their thoughts and experiences shared on their social media stories or posts.
+                  </p>
+                  <p className="mb-5 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
+                  <strong className="text-green underline dark:text-white">   B-Roll Footage:</strong> Additional footage that can be used to fill in gaps, such as crowd shots, close-ups of dishes being prepared, etc.
+                  </p>
                   <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                     Inspirations
                   </h3>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                     Stand out as one of our top influencers and get featured on Kanteen&apos;s social media.
                   </p>
+                  
                   
                   <div className="-mx-3 flex flex-wrap items-center justify-center mb-5" >
 
@@ -158,7 +182,7 @@ const BlogDetailsPage = () => {
                       >
                         <div className="mb-5 relative items-center justify-center h-[400px] ">
                           <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                            <source src="https://d205gdf6tf9tly.cloudfront.net/21.mp4" type="video/mp4" />
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/ideas/idea1.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
                         </div>
@@ -174,7 +198,7 @@ const BlogDetailsPage = () => {
                       >
                         <div className="mb-5 relative items-center justify-center h-[400px] ">
                           <video controls autoPlay muted loop className="absolute inset-0 w-full h-full object-cover">
-                            <source src="https://d205gdf6tf9tly.cloudfront.net/21.mp4" type="video/mp4" />
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/ideas/idea2.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
                         </div>
@@ -191,7 +215,7 @@ const BlogDetailsPage = () => {
                       >
                         <div className="mb-5 relative  items-center justify-center h-[400px]">
                           <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                            <source src="https://d205gdf6tf9tly.cloudfront.net/7.mp4" type="video/mp4" />
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/ideas/idea3.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
 
@@ -212,7 +236,7 @@ const BlogDetailsPage = () => {
                       >
                         <div className="mb-5 relative items-center justify-center h-[400px]">
                           <video autoPlay muted loop controls className="absolute inset-0 w-full h-full object-cover">
-                            <source src="https://d205gdf6tf9tly.cloudfront.net/15.mp4" type="video/mp4" />
+                            <source src="https://d205gdf6tf9tly.cloudfront.net/ideas/idea4.mp4" type="video/mp4" />
                             Your browser does not support the video tag.
                           </video>
 
@@ -263,30 +287,9 @@ const BlogDetailsPage = () => {
                           className="border-stroke dark:text-body-color-dark dark:shadow-two mb-4 w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary dark:border-transparent dark:bg-[#2C303B] dark:focus:border-primary dark:focus:shadow-none"
                         />
 
-                        <p className="mb-0  pb-0 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
-                          Will you bring someone with you?
-                        </p>
+                        
 
-                        <FormControl>
-
-                          <RadioGroup
-                            row
-                            aria-labelledby="demo-controlled-radio-buttons-group"
-                            name="controlled-radio-buttons-group"
-                            value={value}
-                            onChange={handleChange}
-                          >
-                            <FormControlLabel className="mb-0  pb-0 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25"
-                              value="yes"
-                              control={<Radio />}
-                              label="Yes" />
-                            <FormControlLabel className="mb-0  pb-0 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25"
-                              value="no"
-                              control={<Radio />}
-                              label="No" />
-
-                          </RadioGroup>
-                        </FormControl>
+                       
                         <input
                           onClick={handleSubmit}
                           type="submit"
@@ -659,14 +662,162 @@ const BlogDetailsPage = () => {
                       </svg>
                     </span>
                   </div>
-                 
+                  <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
+                    <p className="text-center text-base font-medium italic text-body-color">
+                    If you are going to participate in this event, please upload the content you took 
+
+                    <strong className="text-green underline dark:text-white">
+                   <a href="https://drive.google.com/drive/u/1/folders/1TJRkuuDXNzuR3vmkRchF0uQS55xrYiCw"> here. </a>
+                  </strong>
+                    </p>
+                    <span className="absolute left-0 top-0 z-[-1]">
+                      <svg
+                        width="132"
+                        height="109"
+                        viewBox="0 0 132 109"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          opacity="0.5"
+                          d="M33.0354 90.11C19.9851 102.723 -3.75916 101.834 -14 99.8125V-15H132C131.456 -12.4396 127.759 -2.95278 117.318 14.5117C104.268 36.3422 78.7114 31.8952 63.2141 41.1934C47.7169 50.4916 49.3482 74.3435 33.0354 90.11Z"
+                          fill="url(#paint0_linear_111:606)"
+                        />
+                        <path
+                          opacity="0.5"
+                          d="M33.3654 85.0768C24.1476 98.7862 1.19876 106.079 -9.12343 108.011L-38.876 22.9988L100.816 -25.8905C100.959 -23.8126 99.8798 -15.5499 94.4164 0.87754C87.5871 21.4119 61.9822 26.677 49.5641 38.7512C37.146 50.8253 44.8877 67.9401 33.3654 85.0768Z"
+                          fill="url(#paint1_linear_111:606)"
+                        />
+                        <defs>
+                          <linearGradient
+                            id="paint0_linear_111:606"
+                            x1="94.7523"
+                            y1="82.0246"
+                            x2="8.40951"
+                            y2="52.0609"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stopColor="white" stopOpacity="0.06" />
+                            <stop
+                              offset="1"
+                              stopColor="white"
+                              stopOpacity="0"
+                            />
+                          </linearGradient>
+                          <linearGradient
+                            id="paint1_linear_111:606"
+                            x1="90.3206"
+                            y1="58.4236"
+                            x2="1.16149"
+                            y2="50.8365"
+                            gradientUnits="userSpaceOnUse"
+                          >
+                            <stop stopColor="white" stopOpacity="0.06" />
+                            <stop
+                              offset="1"
+                              stopColor="white"
+                              stopOpacity="0"
+                            />
+                          </linearGradient>
+                        </defs>
+                      </svg>
+                    </span>
+                    <span className="absolute bottom-0 right-0 z-[-1]">
+                      <svg
+                        width="53"
+                        height="30"
+                        viewBox="0 0 53 30"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <circle
+                          opacity="0.8"
+                          cx="37.5"
+                          cy="37.5"
+                          r="37.5"
+                          fill="#c9f269"
+                        />
+                        <mask
+                          id="mask0_111:596"
+                          style={{ maskType: "alpha" }}
+                          maskUnits="userSpaceOnUse"
+                          x="0"
+                          y="0"
+                          width="75"
+                          height="75"
+                        >
+                          <circle
+                            opacity="0.8"
+                            cx="37.5"
+                            cy="37.5"
+                            r="37.5"
+                            fill="#c9f269"
+                          />
+                        </mask>
+                        <g mask="url(#mask0_111:596)">
+                          <circle
+                            opacity="0.8"
+                            cx="37.5"
+                            cy="37.5"
+                            r="37.5"
+                            fill="url(#paint0_radial_111:596)"
+                          />
+                          <g opacity="0.8" filter="url(#filter0_f_111:596)">
+                            <circle
+                              cx="40.8089"
+                              cy="19.853"
+                              r="15.4412"
+                              fill="white"
+                            />
+                          </g>
+                        </g>
+                        <defs>
+                          <filter
+                            id="filter0_f_111:596"
+                            x="4.36768"
+                            y="-16.5881"
+                            width="72.8823"
+                            height="72.8823"
+                            filterUnits="userSpaceOnUse"
+                            colorInterpolationFilters="sRGB"
+                          >
+                            <feFlood
+                              floodOpacity="0"
+                              result="BackgroundImageFix"
+                            />
+                            <feBlend
+                              mode="normal"
+                              in="SourceGraphic"
+                              in2="BackgroundImageFix"
+                              result="shape"
+                            />
+                            <feGaussianBlur
+                              stdDeviation="10.5"
+                              result="effect1_foregroundBlur_111:596"
+                            />
+                          </filter>
+                          <radialGradient
+                            id="paint0_radial_111:596"
+                            cx="0"
+                            cy="0"
+                            r="1"
+                            gradientUnits="userSpaceOnUse"
+                            gradientTransform="translate(37.5 37.5) rotate(90) scale(40.2574)"
+                          >
+                            <stop stopOpacity="0.47" />
+                            <stop offset="1" stopOpacity="0" />
+                          </radialGradient>
+                        </defs>
+                      </svg>
+                    </span>
+                  </div>
                   <div className="items-center justify-between sm:flex">
                     <div className="mb-5">
                       <h4 className="mb-3 text-sm font-medium text-body-color">
                         Popular Tags :
                       </h4>
                       <div className="flex items-center">
-                        <TagButton text="Drink" />
+                        <TagButton text="Drinks" />
                         <TagButton text="HappyHour" />
                         <TagButton text="LmidaSF" />
                       </div>

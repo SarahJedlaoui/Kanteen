@@ -1,19 +1,11 @@
 "use client";
-
-
-import TagButton from "@/components/Blog/TagButton";
-import { useTheme } from "next-themes";
 import React, { useState } from 'react';
-import Radio from '@mui/material/Radio';
-import RadioGroup from '@mui/material/RadioGroup';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import FormControl from '@mui/material/FormControl';
 import { Alert } from '@mui/material';
 import axios from 'axios';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import { useEffect } from 'react';
+import { useEffect,useRef  } from 'react';
 import Link from 'next/link';
 import Image from "next/image";
 
@@ -46,11 +38,14 @@ const defaultRestaurantInfo: RestaurantInfo = {
 };
 
 const ProfilePage = () => {
-  const { data: session, status } = useSession();
+  const { data: session, status, update  } = useSession();
   const router = useRouter();
   const [sessionInfo, setSessionInfo] = useState<SessionInfo>(defaultSessionInfo);
   const [restaurantInfo, setRestaurantInfo] = useState<RestaurantInfo | null>(null);
   const [imgSrc, setImgSrc] = useState(session?.user?.image || "/images/logo/default.png");
+  const [selectedImage, setSelectedImage] = useState(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
   useEffect(() => {
     if (session?.user?.email) {
       axios.get(`/api/user/${session?.user?.email}`)
@@ -89,6 +84,47 @@ const ProfilePage = () => {
     console.log('Image failed to load, setting default image');
     setImgSrc("/images/logo/default.png");
   };
+
+  const handleImageChange = (event:any) => {
+    const file = event.target.files[0];
+    if (file) {
+      setSelectedImage(file);
+      setImgSrc(URL.createObjectURL(file));
+      handleImageUpload(file); // Automatically upload the image after selection
+    }
+  };
+
+  const handleImageUpload = async (file) => {
+    const formData = new FormData();
+    formData.append('image', file);
+    formData.append('email', session?.user?.email || '');
+  
+    for (let pair of formData.entries()) {
+      console.log(pair[0] + ': ' + pair[1]);
+    }
+  
+    try {
+      const response = await axios.post('/api/user/upload', formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+        },
+      });
+  
+      if (response.status === 200) {
+        setImgSrc(response.data.imageUrl);
+        await update(); // Ensure the session is updated with the new image URL
+      }
+    } catch (error) {
+      console.error('Error uploading image:', error);
+    }
+  };
+  
+  
+
+  const triggerFileInput = () => {
+    fileInputRef?.current?.click();
+  };
+
   return (
     <>
       <section className="pb-[120px] pt-[150px]">
@@ -108,7 +144,7 @@ const ProfilePage = () => {
                       <div className="flex-1/3 flex flex-col items-center">
                         <div className="w-32 h-32 mb-4">
                           <img
-                            src={imgSrc} // Path to your default image
+                            src={imgSrc} 
                             alt={sessionInfo?.name}
                             className="rounded-full object-cover w-full h-full"
                             onError={handleError}
@@ -117,6 +153,19 @@ const ProfilePage = () => {
                         <h2 className="text-xl font-bold leading-tight text-black dark:text-white">
                           {sessionInfo.name}
                         </h2>
+                     {/**  <input 
+                          type="file" 
+                          accept="image/*" 
+                          ref={fileInputRef} 
+                          onChange={handleImageChange} 
+                          style={{ display: 'none' }} 
+                        />
+                        <button 
+                          onClick={triggerFileInput} 
+                          className="mt-2 shadow-submit dark:shadow-submit-dark flex w-full items-center justify-center 
+                          rounded-md bg-primary px-18 py-3 text-base font-medium text-white duration-300 hover:bg-primary/90">
+                          Change Image
+                        </button> */} 
                       </div>
 
                       {/* Right Section */}
@@ -150,7 +199,7 @@ const ProfilePage = () => {
                         ) : (
                           <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                             <strong className="text-green underline dark:text-white">Note:</strong>{" "}
-                            <a href="https://www.instagram.com/lmidasf?igsh=MXFwazB5MzN3OWN1dw==">Please fill the privous form to complete your profile </a>
+                            Please fill the privous form to complete your profile
                           </p>
 
                         )}
