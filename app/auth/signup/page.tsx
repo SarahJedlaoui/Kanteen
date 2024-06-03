@@ -23,7 +23,7 @@ const SignupPage = () => {
         const signInResponse = await signIn('credentials', { redirect: false, email, password });
         if (signInResponse?.ok) {
           // Redirect to welcome page
-          router.push('/auth/addRestaurant');
+          router.push('/profile');
         } else {
           setError('Sign-in failed');
         }

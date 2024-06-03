@@ -9,9 +9,31 @@ import MuiAlert from '@mui/material/Alert';
 import React from "react";
 import CircularProgress from '@mui/material/CircularProgress';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
+
+interface RestaurantInfo {
+  name: string;
+  about: string;
+  customerLove: string;
+  opportunities: string;
+  videoParagraph: string;
+  videos: string;
+}
+
+const defaultRestaurantInfo: RestaurantInfo = {
+  name: '',
+  about: '',
+  customerLove: '',
+  opportunities: '',
+  videoParagraph: '',
+  videos: ''
+};
+
+
 const AddRestaurant = () => {
   const { data: session, status } = useSession();
   const router = useRouter();
+  const [restaurantInfo, setRestaurantInfo] = useState<RestaurantInfo | null>(null);
   const [isSubmittedSuccessfully, setIsSubmittedSuccessfully] = useState(false);
   const [name, setName] = useState('');
   const [about, setAbout] = useState('');
@@ -20,6 +42,20 @@ const AddRestaurant = () => {
   const [videoParagraph, setVideoParagraph] = useState('');
   const [videos, setVideos] = useState('');
   const [openSnackbar, setOpenSnackbar] = useState(false);
+
+
+  useEffect(() => {
+    if (session?.user?.email) {
+      axios.get(`/api/restaurants/${session?.user?.email}`)
+        .then(response => {
+          setRestaurantInfo(response.data);
+        })
+        .catch(error => {
+          console.error('Error fetching restaurant info:', error);
+        });
+    }
+  }, [status, session]);
+
 
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
@@ -55,13 +91,9 @@ const AddRestaurant = () => {
     }
     setOpenSnackbar(false);
   };
-  useEffect(() => {
-    if (status === 'authenticated' && session?.user?.link) {
-      router.push(session.user.link);
-    }
-  }, [status, session, router]);
 
-  if (!session) {
+  
+   if (!session) {
     return (
       <section className="mt-10 relative z-10 overflow-hidden pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
         <div className="container">
@@ -78,7 +110,7 @@ const AddRestaurant = () => {
       </section>
     );
   }
-  else if (session && (!session.user.link || session.user.link === '')) {
+  else  {
   return (
     <>
       <section className="relative mt-10 z-10 overflow-hidden pb-20 pt-48 md:pb-24 lg:pb-32 lg:pt-[180px]">

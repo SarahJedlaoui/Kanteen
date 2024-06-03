@@ -5,15 +5,19 @@ import axios from 'axios';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/navigation';
-import { useEffect,useRef  } from 'react';
-import Link from 'next/link';
-import Image from "next/image";
+import { useEffect, useRef } from 'react';
+
 
 interface SessionInfo {
   name: string;
   email?: string;
   description?: string;
 }
+const defaultSessionInfo: SessionInfo = {
+  name: '',
+  email: '',
+  description: '',
+};
 
 interface RestaurantInfo {
   name: string;
@@ -23,11 +27,7 @@ interface RestaurantInfo {
   videoParagraph: string;
   videos: string;
 }
-const defaultSessionInfo: SessionInfo = {
-  name: '',
-  email: '',
-  description: '',
-};
+
 const defaultRestaurantInfo: RestaurantInfo = {
   name: '',
   about: '',
@@ -38,19 +38,22 @@ const defaultRestaurantInfo: RestaurantInfo = {
 };
 
 const ProfilePage = () => {
-  const { data: session, status, update  } = useSession();
+  const { data: session, status, update } = useSession();
   const router = useRouter();
   const [sessionInfo, setSessionInfo] = useState<SessionInfo>(defaultSessionInfo);
   const [restaurantInfo, setRestaurantInfo] = useState<RestaurantInfo | null>(null);
   const [imgSrc, setImgSrc] = useState(session?.user?.image || "/images/logo/default.png");
   const [selectedImage, setSelectedImage] = useState(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [showAlert, setShowAlert] = useState(false);
+  const [showAlertP, setShowAlertP] = useState(false);
+  const [alert, setAlert] = useState('');
+  const [personalizedAlert, setPersonalizedAlert] = useState('');
 
   useEffect(() => {
     if (session?.user?.email) {
       axios.get(`/api/user/${session?.user?.email}`)
         .then(response => {
-          console.log('response', response.data)
           setSessionInfo(response.data);
         })
         .catch(error => {
@@ -63,7 +66,6 @@ const ProfilePage = () => {
     if (session?.user?.email) {
       axios.get(`/api/restaurants/${session?.user?.email}`)
         .then(response => {
-          console.log('response', response.data);
           setRestaurantInfo(response.data);
         })
         .catch(error => {
@@ -71,9 +73,8 @@ const ProfilePage = () => {
         });
     }
   }, [status, session]);
-  
+
   useEffect(() => {
-    console.log('Session data:', session);
     if (session?.user?.image) {
       console.log('User image URL:', session.user.image);
       setImgSrc(session.user.image);
@@ -85,45 +86,61 @@ const ProfilePage = () => {
     setImgSrc("/images/logo/default.png");
   };
 
-  const handleImageChange = (event:any) => {
+  const handleImageChange = (event: any) => {
+    console.log('image change triggered')
     const file = event.target.files[0];
-    if (file) {
+    if (file && file.size <= 2 * 1024 * 1024) {
       setSelectedImage(file);
-      setImgSrc(URL.createObjectURL(file));
-      handleImageUpload(file); // Automatically upload the image after selection
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        const base64Image = reader.result as string;
+        handleImageUpload(base64Image);
+      };
+      reader.readAsDataURL(file);
+    } else {
+      setAlert("File size should be less than 2MB");
     }
   };
 
-  const handleImageUpload = async (file) => {
-    const formData = new FormData();
-    formData.append('image', file);
-    formData.append('email', session?.user?.email || '');
-  
-    for (let pair of formData.entries()) {
-      console.log(pair[0] + ': ' + pair[1]);
-    }
-  
+  const handleImageUpload = async (base64Image: string) => {
+    console.log('handleImageUpload triggered')
     try {
-      const response = await axios.post('/api/user/upload', formData, {
-        headers: {
-          'Content-Type': 'multipart/form-data',
-        },
+      const response = await axios.put('/api/user/upload', {
+        image: base64Image,
+        email: session?.user?.email
       });
-  
+
       if (response.status === 200) {
         setImgSrc(response.data.imageUrl);
-        await update(); // Ensure the session is updated with the new image URL
+        setShowAlert(true);
+        setAlert("Image successfully updated!");
+        setTimeout(() => setShowAlert(false), 3000);
+        await update();
       }
     } catch (error) {
       console.error('Error uploading image:', error);
+      setAlert("Error uploading image");
     }
   };
-  
-  
 
   const triggerFileInput = () => {
+    console.log('triggerFileInput triggered')
     fileInputRef?.current?.click();
   };
+
+
+  const personalized = () => {
+    if (session?.user?.link) {
+      router.push(session.user.link);
+    } else {
+      setShowAlertP(true);
+      setPersonalizedAlert("You still don't have a personalized page!");
+      setTimeout(() => setShowAlertP(false), 5000);
+    }
+  };
+
+
+
 
   return (
     <>
@@ -132,19 +149,19 @@ const ProfilePage = () => {
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-                <div className="mt-10 mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight" >
+                {/**  <div className="mt-10 mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight" >
                   <a href="/auth/addRestaurant">
                     <ArrowBackIcon></ArrowBackIcon>
                   </a>
-                </div>
-                <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
+                </div>*/}
+                <div className="mt-20 relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                   {sessionInfo?.name && (
                     <div className="flex">
                       {/* Left Section */}
                       <div className="flex-1/3 flex flex-col items-center">
                         <div className="w-32 h-32 mb-4">
                           <img
-                            src={imgSrc} 
+                            src={imgSrc}
                             alt={sessionInfo?.name}
                             className="rounded-full object-cover w-full h-full"
                             onError={handleError}
@@ -153,19 +170,31 @@ const ProfilePage = () => {
                         <h2 className="text-xl font-bold leading-tight text-black dark:text-white">
                           {sessionInfo.name}
                         </h2>
-                     {/**  <input 
-                          type="file" 
-                          accept="image/*" 
-                          ref={fileInputRef} 
-                          onChange={handleImageChange} 
-                          style={{ display: 'none' }} 
+                        {/**    <input
+                          type="file"
+                          accept="image/*"
+                          ref={fileInputRef}
+                          onChange={handleImageChange}
+                          style={{ display: 'none' }}
                         />
-                        <button 
-                          onClick={triggerFileInput} 
+                        <button
+                          onClick={triggerFileInput}
                           className="mt-2 shadow-submit dark:shadow-submit-dark flex w-full items-center justify-center 
                           rounded-md bg-primary px-18 py-3 text-base font-medium text-white duration-300 hover:bg-primary/90">
                           Change Image
-                        </button> */} 
+                        </button>
+                           {showAlert && (
+                         <Alert severity="success" sx={{ marginBottom: 2 }}>
+                          {alert}
+                         </Alert>
+                             )}   */}
+                        <a href='/auth/addRestaurant'>
+                          <button
+                            className="mt-2 shadow-submit dark:shadow-submit-dark flex items-center justify-center 
+                              rounded-md bg-primary w-64 h-12 text-base font-medium text-white duration-300 hover:bg-black/100">
+                            Request a Personalized Page
+                          </button>
+                        </a>
                       </div>
 
                       {/* Right Section */}
@@ -185,7 +214,7 @@ const ProfilePage = () => {
                           <>
                             <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                               <strong className="text-green underline dark:text-white">Restaurant Name:</strong>{" "}
-                              <a href="https://www.instagram.com/lmidasf?igsh=MXFwazB5MzN3OWN1dw=="> {restaurantInfo?.name} </a>
+                              {restaurantInfo?.name}
                             </p>
                             <p className="mb-1 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
                               <strong className="text-green underline dark:text-white">About Resaturant:</strong>{" "}
@@ -350,6 +379,23 @@ const ProfilePage = () => {
                     </svg>
                   </span>
                 </div>
+
+                <div className="flex flex-col items-center relative z-10 mb-10 overflow-hidden rounded-md  p-8 md:p-9 lg:p-8 xl:p-9">
+                  <button
+                    onClick={personalized}
+                    className="mt-2 shadow-submit dark:shadow-submit-dark flex w-1/3 items-center justify-center 
+                          rounded-md bg-primary px-18 py-3 text-base font-medium text-white duration-300 hover:bg-black/100">
+                    Check your Personalized page
+                  </button>
+                  <div className="flex flex-col items-center mt-3 ">
+                    {showAlertP && (
+                      <Alert severity="info" color="success" sx={{ marginBottom: 2 }}>
+                        {personalizedAlert}
+                      </Alert>
+                    )}
+                  </div>
+                </div>
+
                 <div>
                   <h3 className="font-xl mb-5 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
                     Why Partner with Kanteen?

@@ -4,15 +4,53 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import { signIn, getSession, SignInResponse } from 'next-auth/react';
-
+import { useEffect } from 'react';
 import Link from 'next/link';
+import { useSession } from 'next-auth/react';
+
+
+interface RestaurantInfo {
+  name: string;
+  about: string;
+  customerLove: string;
+  opportunities: string;
+  videoParagraph: string;
+  videos: string;
+}
+
+const defaultRestaurantInfo: RestaurantInfo = {
+  name: '',
+  about: '',
+  customerLove: '',
+  opportunities: '',
+  videoParagraph: '',
+  videos: ''
+};
+
+
 
 const SigninPage = () => {
+  const { data: session, status } = useSession();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const router = useRouter();
+  const [restaurantInfo, setRestaurantInfo] = useState<RestaurantInfo | null>(null);
 
+  useEffect(() => {
+    if (session?.user?.email) {
+      axios.get(`/api/restaurants/${session?.user?.email}`)
+        .then(response => {
+          setRestaurantInfo(response.data);
+          console.log('restaurantInfo', restaurantInfo)
+        })
+        .catch(error => {
+          console.error('Error fetching restaurant info:', error);
+        });
+    }
+  }, [status, session]);
+
+  console.log('restaurantInfo', restaurantInfo)
   const handleSignIn = async (e: React.FormEvent) => {
     e.preventDefault();
     const result = (await signIn('credentials', {
@@ -25,12 +63,17 @@ const SigninPage = () => {
       setError(result.error);
     } else if (result) {
       const session = await getSession();
-      if (session?.user?.link) {
+      
+      if (session?.user?.restaurant) {
+        console.log('session', session.user.restaurant)
+        router.push('/profile');
+      }
+      else if (session?.user?.link) {
         console.log('session', session.user)
-        router.push(session.user.link);
+        router.push('/profile');
       } else {
         console.log('session', session?.user)
-        router.push('/auth/addRestaurant');
+        router.push('/profile');
       }
     } else {
       setError('Unexpected error occurred');

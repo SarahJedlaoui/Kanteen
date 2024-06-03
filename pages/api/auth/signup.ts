@@ -23,12 +23,14 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     }
 
     const hashedPassword = await bcrypt.hash(password, 12);
-
+    const currentDate = new Date();
     await db.collection('users').insertOne({
       email,
       password: hashedPassword,
       name,
-      link: "",  // Set the link attribute to an empty string
+      link: "",
+      restaurant: "", 
+      date: currentDate,
     });
 
     res.status(201).json({ message: 'User created' });

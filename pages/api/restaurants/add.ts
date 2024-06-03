@@ -18,7 +18,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const client = await clientPromise;
     const db = client.db();
-
+    const currentDate = new Date();
     await db.collection('restaurants').insertOne({
       email,
       name,
@@ -26,8 +26,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       customerLove,
       opportunities,
       videoParagraph,
+      date: currentDate,
+      status: 'Pending',
     });
-
+    await db.collection('users').updateOne(
+      { email },
+      { $set: { restaurant: name } }
+    );
     res.status(201).json({ message: 'Restaurant information added successfully' });
   } catch (error) {
     console.error('Add restaurant error:', error);

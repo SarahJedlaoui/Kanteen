@@ -31,6 +31,8 @@ export default NextAuth({
             email: user.email,
             name: user.name,
             link: user.link || "", 
+            restaurant: user.restaurant || "", 
+
           };
         } else {
           return null;
@@ -50,6 +52,7 @@ export default NextAuth({
         token.email = user.email;
         token.name = user.name;
         token.link = user.link; 
+        token.restaurant= user.restaurant ;
       }
       return token;
     },
@@ -59,6 +62,7 @@ export default NextAuth({
         session.user.email = token.email as string;
         session.user.name = token.name as string;
         session.user.link = token.link as string; 
+        session.user.restaurant = token.restaurant as string; 
       }
       return session;
     },
@@ -68,6 +72,6 @@ export default NextAuth({
     signOut: '/auth/signout',
     error: '/auth/error', // Error code passed in query string as ?error=
     verifyRequest: '/auth/verify-request', // (used for check email message)
-    newUser: '/auth/addRestaurant', // Redirect new users to the welcome page
+    newUser: '/profile', // Redirect new users to the welcome page
   },
 });
