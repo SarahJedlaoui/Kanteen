@@ -13,7 +13,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
 
   try {
     const params = {
-      TableName: 'RestaurantsTable', // Replace with your DynamoDB table name
+      TableName: 'restaurants', // Replace with your DynamoDB table name
       Item: {
         email,
         name,
