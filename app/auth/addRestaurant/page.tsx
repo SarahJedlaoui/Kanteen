@@ -71,7 +71,7 @@ const AddRestaurant = () => {
     };
 
     try {
-      const response = await axios.post('/api/restaurants/add', data);
+      const response = await axios.post('/api/restaurants/ajout', data);
       if (response.status === 201) {
         setIsSubmittedSuccessfully(true);
         setOpenSnackbar(true);
