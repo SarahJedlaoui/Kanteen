@@ -1,7 +1,7 @@
 {
     "functions": {
-      "pages/api/restaurants/**/*.ts": {
-        "maxDuration": 30
+      "pages/api/restaurants/media.ts": {
+        "maxDuration": 60
       }
     }
   }
