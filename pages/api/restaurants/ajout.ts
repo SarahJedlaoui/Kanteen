@@ -1,5 +1,14 @@
 import { NextApiRequest, NextApiResponse } from 'next';
-import dynamoDb from '../../../lib/dynamodb';
+import AWS from 'aws-sdk';
+
+AWS.config.update({
+  region: process.env.AWS_REGION,
+  accessKeyId: process.env.AWS_ACCESS_KEY_ID,
+  secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY,
+});
+
+const dynamoDb = new AWS.DynamoDB.DocumentClient();
+
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method not allowed' });
@@ -11,38 +20,27 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     return res.status(400).json({ message: 'All fields are required' });
   }
 
+  const params = {
+    TableName: 'restaurants',
+    Item: {
+      email,
+      name,
+      about,
+      customerLove,
+      opportunities,
+      videoParagraph,
+      date: new Date().toISOString(),
+      status: 'pending',
+    },
+  };
+
   try {
-    const params = {
-      TableName: 'restaurants', // Replace with your DynamoDB table name
-      Item: {
-        email,
-        name,
-        about,
-        customerLove,
-        opportunities,
-        videoParagraph,
-        date: new Date().toISOString(),
-        status: 'pending',
-      },
-    };
-
     await dynamoDb.put(params).promise();
-
-    const userParams = {
-      TableName: 'restaurants',
-      Key: { email },
-      UpdateExpression: 'set restaurant = :name',
-      ExpressionAttributeValues: {
-        ':name': name,
-      },
-    };
-
-    await dynamoDb.update(userParams).promise();
-
-    res.status(201).json({ message: 'Restaurant information added successfully' });
+    res.status(200).json({ message: 'Restaurant added successfully' });
   } catch (error) {
-    console.error('Add restaurant error:', error);
-    res.status(500).json({ message: 'Internal server error' });
+    console.error('Add restaurant error:', error.message);
+    console.error('Stack trace:', error.stack);
+    res.status(500).json({ message: 'Internal server error', error: error.message });
   }
 };
 

@@ -57,33 +57,30 @@ const AddRestaurant = () => {
   }, [status, session]);
 
 
-  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+  
     const data = {
-      email: session?.user?.email,
       name,
       about,
       customerLove,
       opportunities,
       videoParagraph,
-     
-
+      email: session?.user.email,
     };
-
+  
     try {
       const response = await axios.post('/api/restaurants/ajout', data);
-      if (response.status === 201) {
-        setIsSubmittedSuccessfully(true);
-        setOpenSnackbar(true);
-
+      if (response.status === 200) {
+        console.log('Restaurant added successfully');
       } else {
-        console.error('Failed to add restaurant information:', response);
+        console.error('Failed to add restaurant:', response.data);
       }
     } catch (error) {
       console.error('Error submitting form:', error);
-      setIsSubmittedSuccessfully(false);
     }
   };
+  
 
   const handleCloseSnackbar = (event: React.SyntheticEvent | Event, reason?: string) => {
     if (reason === 'clickaway') {
