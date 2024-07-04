@@ -1,0 +1,8 @@
+{
+    "functions": {
+      "api/restaurants/media.ts": {
+        "maxDuration": 80
+      }
+    }
+  }
+  
