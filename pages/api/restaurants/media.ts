@@ -79,7 +79,7 @@ const handler = async (req: NextApiRequest & { files: any }, res: NextApiRespons
         console.log('Request method:', req.method);  // Log request method
         try {
             const client = await clientPromise;
-            console.log('Connected to MongoDB');  // Log successful DB connection
+            console.log('Connecteddd to MongoDB');  // Log successful DB connection
             const db = client.db();
 
             const feedbackEntries = await db.collection('feedback').find().toArray();
