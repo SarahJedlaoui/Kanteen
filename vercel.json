@@ -1,14 +1,7 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "next.config.js",
-        "use": "@vercel/next"
-      }
-    ],
     "functions": {
-      "api/media.ts": {
-        "maxDuration": 60
+      "pages/api/restaurants/**/*.ts": {
+        "maxDuration": 30
       }
     }
   }
