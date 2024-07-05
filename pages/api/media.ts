@@ -24,7 +24,7 @@ const handler = async (req: NextApiRequest & { files: any }, res: NextApiRespons
   if (req.method === 'POST') {
     await runMiddleware(req, res, uploadMiddleware);
 
-    const { name, feedback, rating } = req.body;
+    const { name, feedback, rating, restaurant } = req.body;
 
     try {
       const client = await clientPromise;
@@ -37,7 +37,7 @@ const handler = async (req: NextApiRequest & { files: any }, res: NextApiRespons
         return new Promise((resolve, reject) => {
           const uploadStream = bucket.openUploadStream(file.originalname, {
             contentType: file.mimetype,
-            metadata: { name, feedback, rating },
+            metadata: { name, feedback, rating, restaurant },
           });
           uploadStream.end(file.buffer, (err, file) => {
             if (err) {
@@ -55,6 +55,7 @@ const handler = async (req: NextApiRequest & { files: any }, res: NextApiRespons
         name,
         feedback,
         rating,
+        restaurant,
         files: uploadedFiles.map(file => ({
           id: file._id,
           filename: file.filename,
@@ -73,12 +74,19 @@ const handler = async (req: NextApiRequest & { files: any }, res: NextApiRespons
       const client = await clientPromise;
       const db = client.db();
 
+      const { restaurant } = req.query; // Get the restaurant from query parameters
+      
       const page = parseInt(req.query.page as string) || 1;
-      const limit = parseInt(req.query.limit as string) || 10;
+      const limit = parseInt(req.query.limit as string) || 2;
       const skip = (page - 1) * limit;
 
+
+       // Filter by restaurant if specified
+       const filter = restaurant ? { restaurant } : {};
+
+
       const feedbackEntries = await db.collection('feedback')
-        .find({}, { projection: { name: 1, feedback: 1, rating: 1, files: 1 } })
+        .find(filter, { projection: { name: 1, feedback: 1, rating: 1,restaurant:1, files: 1 } })
         .skip(skip)
         .limit(limit)
         .toArray();

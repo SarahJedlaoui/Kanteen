@@ -8,12 +8,6 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import Rating from "@mui/material/Rating";
 import TextField from "@mui/material/TextField";
 import Box from '@mui/material/Box';
-import MobileStepper from '@mui/material/MobileStepper';
-import Paper from '@mui/material/Paper';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
-import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
-import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 import { useTheme as Tham } from '@mui/material/styles';
@@ -23,60 +17,17 @@ import CircularProgress from '@mui/material/CircularProgress';
 
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
-const images = [
-
-  {
-    label: 'Bird',
-    src:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-  {
-    label: 'Bali, Indonesia',
-    src:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250',
-  },
-  {
-    label: 'Goč, Serbia',
-    src:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-];
-const images2 = [
-
-
-  {
-    label: 'Bali, Indonesia',
-    src:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250',
-  },
-  {
-    label: 'Goč, Serbia',
-    src:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-  {
-    label: 'Bird',
-    src:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
-  },
-];
 
 const BlogDetailsPage = () => {
   const { theme } = useTheme();
-  const theme1 = Tham();
-  const [mediaTypes, setMediaTypes] = useState([]);
-  const [media, setMedia] = useState<any[]>([]);
   const [feedbackEntries, setFeedbackEntries] = useState<any[]>([]);
-  const [email, setEmail] = useState('');
+  const [restaurant, setRestaurant] = useState('grappa');
   const [name, setName] = useState('');
   const [feedback, setfeedback] = useState('');
-  const [contact, setContact] = useState('');
   const [showAlert, setShowAlert] = useState(false);
   const [rating, setRating] = useState<number | undefined>(4);
   const [selectedFiles, setSelectedFiles] = useState<File[]>([]);
   const [loading, setLoading] = useState(false);
-  const [activeStep, setActiveStep] = React.useState(0);
-  const maxSteps = images.length;
   const [loadingg, setLoadingg] = useState(true);
   const [page, setPage] = useState(1);
   const [limit] = useState(2); // Number of entries per page
@@ -101,6 +52,7 @@ const BlogDetailsPage = () => {
     formData.append('name', name);
     formData.append('feedback', feedback);
     formData.append('rating', rating?.toString() || '5');
+    formData.append('restaurant', restaurant);
     selectedFiles.forEach(file => {
       formData.append('media', file);
     });
@@ -133,7 +85,15 @@ const BlogDetailsPage = () => {
     const fetchFeedbackEntries = async () => {
       try {
         setLoadingg(true);
-        const response = await axios.get(`/api/media?page=${page}&limit=${limit}`);
+        console.log('fetching data for restaurant',restaurant)
+        const response = await axios.get(`/api/media`, {
+          params: {
+            page,
+            limit,
+            restaurant, 
+          },
+        });
+        console.log('fetched data',response.data)
         setFeedbackEntries(response.data.feedbackEntries);
         setActiveSteps(response.data.feedbackEntries.map(() => 0));
       } catch (error) {
@@ -144,7 +104,7 @@ const BlogDetailsPage = () => {
     };
 
     fetchFeedbackEntries();
-  }, [page, limit]);
+  }, [page, limit, restaurant]);
 
 
   const handleNextPage = () => {
@@ -165,7 +125,7 @@ const BlogDetailsPage = () => {
                 <div className="mt-10 mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight" > <a href="/influencers"><ArrowBackIcon></ArrowBackIcon></a></div>
 
                 <h2 className="mt-10 mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
-                  Welcome to L&apos;Mida Customers Page
+                  Welcome to Grappa Customers Page
                 </h2>
 
                 <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
@@ -709,10 +669,10 @@ const BlogDetailsPage = () => {
                         ))}
                       </div>
                       <div className="flex justify-center space-x-4 mt-4">
-                        <button onClick={handlePrevPage} disabled={page === 1} className="px-4 py-2 bg-blue-500 text-white rounded">
+                        <button onClick={handlePrevPage} disabled={page === 1}    className="shadow-submit dark:shadow-submit-dark mb-5 flex cursor-pointer items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-black dark:text-white duration-300 hover:bg-primary/90">
                           Previous
                         </button>
-                        <button onClick={handleNextPage} className="px-4 py-2 bg-blue-500 text-white rounded">
+                        <button onClick={handleNextPage}    className="shadow-submit dark:shadow-submit-dark mb-5 flex  cursor-pointer items-center justify-center rounded-sm bg-primary px-9 py-4 text-base font-medium text-black dark:text-white duration-300 hover:bg-primary/90">
                           Next
                         </button>
                       </div>
