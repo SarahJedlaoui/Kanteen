@@ -79,21 +79,32 @@ const handler = async (req: NextApiRequest & { files: any }, res: NextApiRespons
         console.log('Request method:', req.method);  // Log request method
         try {
             const client = await clientPromise;
-            console.log('Connecteddd to MongoDB');  // Log successful DB connection
+            console.log('Connected to MongoDB');
+      
             const db = client.db();
-
-            const feedbackEntries = await db.collection('feedback').find().toArray();
-            console.log('Fetched feedback entries');  // Log successful fetch
-            res.status(200).json({ feedbackEntries });
-        } catch (error) {
-            console.error('Error in GET handler:', error);  // Log general error
+      
+            const page = parseInt(req.query.page as string) || 1;
+            const limit = parseInt(req.query.limit as string) || 10;
+            const skip = (page - 1) * limit;
+      
+            const feedbackEntries = await db.collection('feedback')
+              .find({}, { projection: { name: 1, feedback: 1, rating: 1, files: 1 } }) // Only fetch required fields
+              .skip(skip)
+              .limit(limit)
+              .toArray();
+      
+            console.log('Fetched feedback entries:', feedbackEntries);
+            res.status(200).json({ feedbackEntries, page, limit });
+          } catch (error) {
+            console.error('Error in GET handler:', error.message);
+            console.error('Stack Trace:', error.stack);
             res.status(500).json({ error: 'Failed to retrieve feedback' });
+          }
+        } else {
+          res.setHeader('Allow', ['GET']);
+          res.status(405).end(`Method ${req.method} Not Allowed`);
         }
-    } else {
-        res.setHeader('Allow', ['POST', 'GET']);
-        res.status(405).end(`Method ${req.method} Not Allowed`);
-    }
-};
+      };
 
 export const config = {
     api: {
