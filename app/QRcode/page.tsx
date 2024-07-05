@@ -135,7 +135,7 @@ const BlogDetailsPage = () => {
         setLoadingg(true);
         const response = await axios.get(`/api/media?page=${page}&limit=${limit}`);
         setFeedbackEntries(response.data.feedbackEntries);
-        setActiveSteps(response.data.feedbackEntries.map(() => 0)); // Initialize active steps
+        setActiveSteps(response.data.feedbackEntries.map(() => 0));
       } catch (error) {
         console.error('Error fetching feedback entries:', error);
       } finally {
@@ -145,8 +145,6 @@ const BlogDetailsPage = () => {
 
     fetchFeedbackEntries();
   }, [page, limit]);
-
-
 
 
   const handleNextPage = () => {
@@ -670,13 +668,13 @@ const BlogDetailsPage = () => {
                                             overflow: 'hidden',
                                             width: '100%',
                                           }}
-                                          src={`/api/media/${file.id}`}
+                                          src={`/api/${file.id}`}
                                           alt={file.filename}
                                         />
                                       ) : (
                                         <video
                                           key={fileIndex}
-                                          src={`/api/media/${file.id}`}
+                                          src={`/api/${file.id}`}
                                           controls
                                           className="h-32 w-32 object-cover rounded-sm"
                                         />

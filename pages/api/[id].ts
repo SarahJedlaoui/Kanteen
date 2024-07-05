@@ -1,4 +1,3 @@
-// pages/api/media/[id].ts
 import { NextApiRequest, NextApiResponse } from 'next';
 import clientPromise from '../../lib/mongodb';
 import { ObjectId, GridFSBucket } from 'mongodb';

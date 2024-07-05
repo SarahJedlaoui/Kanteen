@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import clientPromise from '../../lib/mongodb';
 import multer from 'multer';
-import { GridFSBucket, ObjectId } from 'mongodb';
+import { GridFSBucket } from 'mongodb';
 
 const upload = multer({
   storage: multer.memoryStorage(),
@@ -21,8 +21,6 @@ const runMiddleware = (req: NextApiRequest, res: NextApiResponse, fn: any) => {
 };
 
 const handler = async (req: NextApiRequest & { files: any }, res: NextApiResponse) => {
-  console.log('Request method:', req.method);  // Log request method
-
   if (req.method === 'POST') {
     await runMiddleware(req, res, uploadMiddleware);
 
@@ -30,7 +28,6 @@ const handler = async (req: NextApiRequest & { files: any }, res: NextApiRespons
 
     try {
       const client = await clientPromise;
-      console.log('Connected to MongoDB');  // Log successful DB connection
       const db = client.db();
       const bucket = new GridFSBucket(db, {
         bucketName: 'media',
@@ -44,7 +41,7 @@ const handler = async (req: NextApiRequest & { files: any }, res: NextApiRespons
           });
           uploadStream.end(file.buffer, (err, file) => {
             if (err) {
-              console.error('Error uploading file:', err);  // Log upload error
+              console.error('Error uploading file:', err);
               return reject(err);
             }
             resolve(file);
@@ -66,19 +63,14 @@ const handler = async (req: NextApiRequest & { files: any }, res: NextApiRespons
       };
 
       await db.collection('feedback').insertOne(feedbackEntry);
-      console.log('Feedback uploaded successfully');  // Log successful upload
-
       res.status(200).json({ message: 'Feedback uploaded successfully' });
     } catch (error) {
-      console.error('Error in POST handler:', error);  // Log general error
+      console.error('Error in POST handler:', error);
       res.status(500).json({ error: 'Failed to upload feedback' });
     }
   } else if (req.method === 'GET') {
-    console.log('Request method:', req.method);  // Log request method
     try {
       const client = await clientPromise;
-      console.log('Connected to MongoDB');
-
       const db = client.db();
 
       const page = parseInt(req.query.page as string) || 1;
@@ -86,12 +78,11 @@ const handler = async (req: NextApiRequest & { files: any }, res: NextApiRespons
       const skip = (page - 1) * limit;
 
       const feedbackEntries = await db.collection('feedback')
-        .find({}, { projection: { name: 1, feedback: 1, rating: 1, files: 1 } }) // Only fetch required fields
+        .find({}, { projection: { name: 1, feedback: 1, rating: 1, files: 1 } })
         .skip(skip)
         .limit(limit)
         .toArray();
 
-      console.log('Fetched feedback entries:', feedbackEntries);
       res.status(200).json({ feedbackEntries, page, limit });
     } catch (error) {
       console.error('Error in GET handler:', error.message);
@@ -99,7 +90,7 @@ const handler = async (req: NextApiRequest & { files: any }, res: NextApiRespons
       res.status(500).json({ error: 'Failed to retrieve feedback' });
     }
   } else {
-    res.setHeader('Allow', ['GET']);
+    res.setHeader('Allow', ['GET', 'POST']);
     res.status(405).end(`Method ${req.method} Not Allowed`);
   }
 };
