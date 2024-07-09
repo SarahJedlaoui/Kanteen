@@ -21,7 +21,7 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 const BlogDetailsPage = () => {
   const { theme } = useTheme();
   const [feedbackEntries, setFeedbackEntries] = useState<any[]>([]);
-  const [restaurant, setRestaurant] = useState('redCow');
+  const [restaurant, setRestaurant] = useState('matador');
   const [name, setName] = useState('');
   const [feedback, setfeedback] = useState('');
   const [showAlert, setShowAlert] = useState(false);
@@ -122,9 +122,8 @@ const BlogDetailsPage = () => {
           <div className="-mx-4 flex flex-wrap justify-center">
             <div className="w-full px-4 lg:w-8/12">
               <div>
-
                 <h2 className="mt-20 mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
-                  Welcome to Red Cow Customers Page
+                  Welcome to The Matador Customers Page
                 </h2>
 
                 <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">

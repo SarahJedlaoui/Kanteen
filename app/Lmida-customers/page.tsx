@@ -128,7 +128,7 @@ const BlogDetailsPage = () => {
               <div>
                
 
-                <h2 className="mt-10 mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
+                <h2 className="mt-20 mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
                   Welcome to L&apos;Mida Customers Page
                 </h2>
 
